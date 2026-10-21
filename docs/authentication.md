@@ -2,7 +2,7 @@
 
 Decisão: e-mail/senha com bcryptjs e pepper; cookie HttpOnly com token opaco, armazenado como hash no banco. Inatividade de 24h, limite absoluto de 7 dias e renovação limitada a 15 minutos. Heartbeats não contam como atividade. Sem manter conectado nesta etapa.
 
-API local em 3002, acessada pela interface em 5173 através do proxy /api. Produção precisa de HTTPS e reverse proxy de mesma origem; não há deploy configurado.
+API local em 3002, acessada pela interface em 5173 através do proxy /api. Na Vercel, /api/* é atendido pelo mesmo handler via Vercel Function, mantendo HTTPS e mesma origem. A configuração está em vercel.json e os requisitos de publicação em docs/deployment.md; nenhum deploy remoto foi validado nesta etapa.
 
 | Método e caminho              | Contrato                                                                              |
 | ----------------------------- | ------------------------------------------------------------------------------------- |

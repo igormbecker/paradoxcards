@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build:vercel": "npm run build && node infra/scripts/deploy-migrations.mjs",
     "build": "tsc --noEmit && vite build",
     "test": "vitest run",
     "test:e2e": "playwright test",
@@ -36,7 +37,8 @@
     "dev": "npm run setup:env && npm run services:up && npm run services:wait:database && npm run migrations:up && npm run dev:stack",
     "dev:stack": "concurrently -k -n api,web \"npm run dev:api\" \"npm run dev:client\"",
     "users:create": "node infra/scripts/create-user.mjs",
-    "test:auth": "node --import tsx infra/auth.integration.mjs"
+    "test:auth": "node --import tsx infra/auth.integration.mjs",
+    "test:auth:deployment": "node --import tsx infra/auth.integration.mjs --deployment"
   },
   "dependencies": {
     "async-retry": "1.3.3",

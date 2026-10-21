@@ -26,6 +26,7 @@ jobs:
       - run: npm ci
       - run: npm run test:database
       - run: npm run test:auth
+      - run: npm run test:auth:deployment
   build:
     name: build
     runs-on: ubuntu-latest

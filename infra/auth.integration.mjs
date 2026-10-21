@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import { createServer } from "node:http";
+import { createDeploymentHandler } from "./server/vercel.mjs";
 import { randomUUID } from "node:crypto";
 import { loadEnvironment } from "./environment.mjs";
 import { query } from "./database.mjs";
@@ -13,7 +15,24 @@ if (
 const email = `${randomUUID()}@test.local`,
   password = "Test-password-123";
 const user = await createUser(email, password);
-const server = createApplicationServer(["http://localhost:5173"]);
+const deployment = process.argv.includes("--deployment");
+const origin = deployment
+  ? "https://playparadox-preview.vercel.app"
+  : "http://localhost:5173";
+if (deployment) process.env.NODE_ENV = "production";
+const server = deployment
+  ? createServer(
+      createDeploymentHandler({
+        VERCEL_ENV: "preview",
+        VERCEL_URL: "playparadox-preview.vercel.app",
+        APP_ORIGINS: origin,
+        PASSWORD_PEPPER: process.env.PASSWORD_PEPPER,
+        RESEND_API_KEY: "not-used-in-tests",
+        EMAIL_FROM: "test@paradox.test",
+        EMAIL_PREVIEW_RECIPIENTS: "test@paradox.test",
+      }),
+    )
+  : createApplicationServer([origin]);
 await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
 const base = `http://127.0.0.1:${server.address().port}/api/v1`;
 let cookie = "";
@@ -21,12 +40,12 @@ async function request(
   path,
   body,
   method = body ? "POST" : "GET",
-  origin = "http://localhost:5173",
+  requestOrigin = origin,
 ) {
   const response = await fetch(base + path, {
     method,
     headers: {
-      Origin: origin,
+      Origin: requestOrigin,
       Cookie: cookie,
       "Content-Type": "application/json",
     },
@@ -57,6 +76,7 @@ try {
   const header = login.response.headers.get("set-cookie");
   assert.match(header, /HttpOnly/);
   assert.match(header, /SameSite=Lax/);
+  if (deployment) assert.match(header, /; Secure/);
   assert.ok(!("token" in login.data));
   cookie = header.split(";")[0];
   assert.equal((await request("/session")).data.user.email, email);

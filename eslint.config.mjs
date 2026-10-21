@@ -13,6 +13,7 @@ export default tseslint.config(
       "test-results/**",
       "playwright-report/**",
       "coverage/**",
+      ".vercel/**",
     ],
   },
   js.configs.recommended,

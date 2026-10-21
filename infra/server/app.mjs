@@ -35,7 +35,10 @@ async function readBody(request) {
   }
 }
 export function createApplicationServer(origins) {
-  return createServer(async (request, response) => {
+  return createServer(createApplicationHandler(origins));
+}
+export function createApplicationHandler(origins, options = {}) {
+  return async (request, response) => {
     response.setHeader("Content-Type", "application/json; charset=utf-8");
     response.setHeader("Cache-Control", "private, no-store");
     response.setHeader("X-Content-Type-Options", "nosniff");
@@ -59,7 +62,9 @@ export function createApplicationServer(origins) {
         const result = await login(
           body.email,
           body.password,
-          request.socket.remoteAddress ?? "local",
+          options.clientAddress
+            ? options.clientAddress(request)
+            : (request.socket.remoteAddress ?? "local"),
         );
         response.setHeader(
           "Set-Cookie",
@@ -135,5 +140,5 @@ export function createApplicationServer(origins) {
         });
       }
     }
-  });
+  };
 }
