@@ -5,6 +5,7 @@ export async function getNewClient(direct = false) {
   const client = new pg.Client(connectionOptions(process.env, direct));
   try {
     await client.connect();
+    await client.query("SET TIME ZONE 'UTC'");
     return client;
   } catch (error) {
     await client.end().catch(() => {});

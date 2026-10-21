@@ -17,6 +17,7 @@ export async function runDeploymentMigrations(
   )(options);
   try {
     await client.connect();
+    await client.query("SET TIME ZONE 'UTC'");
     await client.query("SET lock_timeout = '60s'");
     return await (dependencies.runner ?? runner)({
       dbClient: client,

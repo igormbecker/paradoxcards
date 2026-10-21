@@ -50,6 +50,7 @@ it("waits for the migration lock, applies forward migrations transactionally and
     }),
   );
   expect(deps.client.end).toHaveBeenCalledOnce();
+  expect(deps.client.query).toHaveBeenCalledWith("SET TIME ZONE 'UTC'");
 });
 it("closes the connection and propagates migration failure so the build stops", async () => {
   const deps = dependencies();

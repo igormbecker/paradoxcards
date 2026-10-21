@@ -1,5 +1,7 @@
 # Autenticação e controle de partida
 
+Datas de sessão, expiração e reserva usam timestamptz e conexões em UTC. O padrão e a comparação com o Trama estão em [database-dates.md](database-dates.md).
+
 Decisão: e-mail/senha com bcryptjs e pepper; cookie HttpOnly com token opaco, armazenado como hash no banco. Inatividade de 24h, limite absoluto de 7 dias e renovação limitada a 15 minutos. Heartbeats não contam como atividade. Sem manter conectado nesta etapa.
 
 API local em 3002, acessada pela interface em 5173 através do proxy /api. Na Vercel, /api/* é atendido pelo mesmo handler via Vercel Function, mantendo HTTPS e mesma origem. A configuração está em vercel.json e os requisitos de publicação em docs/deployment.md; nenhum deploy remoto foi validado nesta etapa.
