@@ -23,4 +23,4 @@ A reserva é por conta, vinculada à sessão e aba; transações com bloqueio de
 
 A primeira versão permanece treino local de uma conta controlando os dois lados, com estado persistido no servidor. Isso não implementa matchmaking ou uma partida competitiva entre duas contas. Sessão expirada exige login novamente; estado fica salvo para retomada. Não há tolerância que estenda autorização após expiração, logout ou revogação.
 
-Contas são criadas pelo comando users:create, lendo credenciais da entrada padrão. Não existe cadastro público ou recuperação de senha nesta etapa. Pepper é gerado localmente e preservado; perdê-lo invalida a verificação das senhas existentes.
+Contas são criadas pelo comando users:create, lendo nome, username, e-mail e senha da entrada padrão. O padrão de perfil, administração e metadados de verificação de e-mail está em [users-schema.md](users-schema.md). Não existe cadastro público, fluxo de verificação de e-mail, painel administrativo ou recuperação de senha nesta etapa. Pepper é gerado localmente e preservado; perdê-lo invalida a verificação das senhas existentes.

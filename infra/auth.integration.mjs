@@ -14,7 +14,11 @@ if (
   throw new Error("Test database required.");
 const email = `${randomUUID()}@test.local`,
   password = "Test-password-123";
-const user = await createUser(email, password);
+const profile = {
+  name: "Test Player",
+  username: `player_${randomUUID().slice(0, 8)}`,
+};
+const user = await createUser(email, password, profile);
 const deployment = process.argv.includes("--deployment");
 const origin = deployment
   ? "https://playparadox-preview.vercel.app"
@@ -55,6 +59,16 @@ async function request(
   return { response, data };
 }
 try {
+  const account = (
+    await query({
+      text: "SELECT name,username,is_admin,email_verification_required FROM paradox.users WHERE id=$1",
+      values: [user.id],
+    })
+  ).rows[0];
+  assert.equal(account.name, profile.name);
+  assert.equal(account.username, profile.username);
+  assert.equal(account.is_admin, false);
+  assert.equal(account.email_verification_required, false);
   assert.equal((await request("/session")).response.status, 401);
   assert.equal(
     (

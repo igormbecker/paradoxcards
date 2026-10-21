@@ -26,7 +26,7 @@
     "setup": "npm ci && npm run setup:env",
     "migrations:down": "node infra/scripts/migrate.mjs down",
     "services:down": "docker compose -f infra/compose.yaml down",
-    "test:database": "npm run setup:env && docker compose -f infra/compose.yaml --profile test up -d database-test && node infra/scripts/wait-for-postgres.mjs test && node infra/database.integration.mjs",
+    "test:database": "npm run setup:env && docker compose -f infra/compose.yaml --profile test up -d database-test && node infra/scripts/wait-for-postgres.mjs test && node infra/database.integration.mjs && node infra/users-schema.integration.mjs",
     "migrations:up": "node infra/scripts/migrate.mjs up",
     "dev:client": "vite --host 0.0.0.0 --port 5173 --strictPort",
     "predev": "node infra/scripts/check-runtime.mjs",

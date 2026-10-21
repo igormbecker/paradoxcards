@@ -2,7 +2,7 @@
 
 O padrão do Paradox Cards é armazenar instantes em colunas timestamptz (timestamp with time zone), usar UTC nas conexões da aplicação e migrations e retornar datas ISO 8601 com indicação de fuso. Conversão para o horário local pertence à apresentação. A região São Paulo da infraestrutura não muda o padrão UTC dos dados.
 
-As oito colunas temporais atuais já foram criadas como timestamptz. Não é necessário converter dados nem adicionar uma migration para alterar seus tipos. As migrations já aplicadas permanecem intactas. Toda nova coluna de instante deve seguir esse tipo; datas de calendário sem horário exigem uma decisão separada.
+As colunas temporais já foram criadas como timestamptz. A migration de padronização de users também usa esse tipo em updated_at e email_verified_at. As migrations já aplicadas permanecem intactas. Toda nova coluna de instante deve seguir esse tipo; datas de calendário sem horário exigem uma decisão separada.
 
 O adaptador configura SET TIME ZONE 'UTC' em cada nova conexão, incluindo as conexões diretas usadas pelos comandos administrativos. O runner de migrations da Vercel também aplica essa configuração antes de executar as migrations.
 

@@ -55,8 +55,16 @@ it("waits for the migration lock, applies forward migrations transactionally and
 it("closes the connection and propagates migration failure so the build stops", async () => {
   const deps = dependencies();
   deps.runner.mockRejectedValue(new Error("migration failed"));
+  const phases: string[] = [];
+  Object.assign(deps, { onPhase: (phase: string) => phases.push(phase) });
   await expect(runDeploymentMigrations(environment, deps)).rejects.toThrow(
     "migration failed",
   );
   expect(deps.client.end).toHaveBeenCalledOnce();
+  expect(phases).toEqual([
+    "direct-database-url",
+    "database-connection",
+    "database-session",
+    "migrations",
+  ]);
 });

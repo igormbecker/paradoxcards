@@ -44,6 +44,8 @@ try {
       "sessions.renewed_at",
       "user_matches.lease_expires_at",
       "users.created_at",
+      "users.email_verified_at",
+      "users.updated_at",
     ],
   );
   assert.ok(

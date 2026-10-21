@@ -44,14 +44,16 @@ try {
     input: process.stdin,
     output: process.stdout,
   });
+  const name = await input.question("Nome: ");
+  const username = await input.question("Username (1 a 30 caracteres): ");
   const email = await input.question("E-mail: ");
   input.close();
   const password = await hiddenPassword();
-  await createUser(email, password);
+  await createUser(email, password, { name, username });
   console.log("Conta criada.");
 } catch {
   console.error(
-    "Conta não criada. Confira o banco, e-mail único e senha de 8 a 128 caracteres.",
+    "Conta não criada. Confira o banco, nome, username e e-mail únicos e senha de 8 a 128 caracteres.",
   );
   process.exitCode = 1;
 }
