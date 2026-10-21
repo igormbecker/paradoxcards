@@ -63,4 +63,3 @@ Este acordo não altera a exigência de equivalência mecânica das 145 cartas d
 A aprovação e a meta vêm da conversa com o usuário. Ainda não existe implementação ou benchmark que comprove 60 fps.
 
 O arquivo de imagem foi copiado para o projeto para preservar a referência. A página do AI-Memory registra o caminho; não representa upload ou incorporação do arquivo binário. Para compartilhar a referência com outro ambiente, disponibilizar também a imagem.
-

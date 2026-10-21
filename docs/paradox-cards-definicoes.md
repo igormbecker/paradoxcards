@@ -40,13 +40,13 @@ Não introduzir bônus de facção, novos recursos, alterações de atributos ou
 
 ## Eras e facções temáticas
 
-| Era | Identidade | Afinidade sugerida para distribuir cartas |
-|---|---|---|
-| Era Primitiva | Criaturas antigas, natureza, pedra e força física | Poder bruto e cartas simples |
-| Era Medieval | Cavaleiros, magos, fortalezas e ordens | Fortalecimento e apoio por posicionamento |
-| Era Futurista | Máquinas, autômatos e tecnologia | Controle do tabuleiro e enfraquecimento |
-| Fim dos Tempos | Entropia, sombras e entidades temporais | Destruição, sacrifício e substituição |
-| Era Perdida ou Mítica | Civilizações antigas e fenômenos extraordinários | Cartas raras, geração e efeitos especiais |
+| Era                   | Identidade                                        | Afinidade sugerida para distribuir cartas |
+| --------------------- | ------------------------------------------------- | ----------------------------------------- |
+| Era Primitiva         | Criaturas antigas, natureza, pedra e força física | Poder bruto e cartas simples              |
+| Era Medieval          | Cavaleiros, magos, fortalezas e ordens            | Fortalecimento e apoio por posicionamento |
+| Era Futurista         | Máquinas, autômatos e tecnologia                  | Controle do tabuleiro e enfraquecimento   |
+| Fim dos Tempos        | Entropia, sombras e entidades temporais           | Destruição, sacrifício e substituição     |
+| Era Perdida ou Mítica | Civilizações antigas e fenômenos extraordinários  | Cartas raras, geração e efeitos especiais |
 
 Essas afinidades orientam a ambientação, sem alterar as habilidades para encaixar cartas em uma era. Cartas de diferentes eras podem ser misturadas no mesmo baralho, respeitando as regras originais.
 
@@ -56,12 +56,12 @@ A distribuição das 145 cartas, o nome definitivo da última era e os nomes ind
 
 **Direção técnica aceita:** começar pelo navegador, usando **TypeScript + Phaser + React**, com **Vite** para desenvolvimento e build.
 
-| Tecnologia | Responsabilidade |
-|---|---|
-| TypeScript | Motor de regras, modelos de cartas e estado da partida |
-| Phaser | Mesa de jogo, interação visual, animações e efeitos |
-| React | Menus, coleção, montagem de baralhos e interfaces auxiliares |
-| Vite | Ambiente de desenvolvimento e preparação da aplicação web |
+| Tecnologia | Responsabilidade                                             |
+| ---------- | ------------------------------------------------------------ |
+| TypeScript | Motor de regras, modelos de cartas e estado da partida       |
+| Phaser     | Mesa de jogo, interação visual, animações e efeitos          |
+| React      | Menus, coleção, montagem de baralhos e interfaces auxiliares |
+| Vite       | Ambiente de desenvolvimento e preparação da aplicação web    |
 
 A recomendação inicial de React para toda a interface evoluiu para Phaser na mesa após a definição de um acabamento visual mais elaborado.
 
