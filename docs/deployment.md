@@ -6,15 +6,15 @@ Status: API adaptada para Vercel Functions e migrations automáticas configurada
 
 Cadastre cada ambiente separadamente. Nunca importe .env.development ou .env.test.
 
-| Variável                 | Production                                                                                  | Preview                                            |
-| ------------------------ | ------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| DATABASE_URL             | URL pooled do Neon de produção                                                              | URL pooled de um banco Neon exclusivo de preview   |
-| DATABASE_URL_UNPOOLED    | URL direta do mesmo banco de produção                                                       | URL direta do mesmo banco de preview               |
-| PASSWORD_PEPPER          | Segredo aleatório exclusivo, mínimo 32 caracteres                                           | Outro segredo aleatório exclusivo                  |
-| APP_ORIGINS              | https://playparadox.com.br e outros domínios efetivamente associados, separados por vírgula | Origem HTTPS de preview explicitamente configurada |
-| RESEND_API_KEY           | Chave restrita ao envio no domínio do jogo                                                  | Chave separada para preview                        |
-| EMAIL_FROM               | Paradox Cards <notificacoes@playparadox.com.br> após verificar o domínio                    | Remetente verificado                               |
-| EMAIL_PREVIEW_RECIPIENTS | Não necessário                                                                              | E-mails permitidos separados por vírgula           |
+| Variável                 | Production                                                                                  | Preview                                               |
+| ------------------------ | ------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| DATABASE_URL             | URL pooled do Neon de produção                                                              | URL pooled de um banco Neon exclusivo de preview      |
+| DATABASE_URL_UNPOOLED    | URL direta do mesmo banco de produção                                                       | URL direta do mesmo banco de preview                  |
+| PASSWORD_PEPPER          | Segredo aleatório exclusivo, mínimo 32 caracteres                                           | Outro segredo aleatório exclusivo                     |
+| APP_ORIGINS              | https://playparadox.com.br e outros domínios efetivamente associados, separados por vírgula | Opcional; VERCEL_URL autoriza a URL do próprio deploy |
+| RESEND_API_KEY           | Chave restrita ao envio no domínio do jogo                                                  | Chave separada para preview                           |
+| EMAIL_FROM               | Paradox Cards <notificacoes@playparadox.com.br> após verificar o domínio                    | Remetente verificado                                  |
+| EMAIL_PREVIEW_RECIPIENTS | Não necessário                                                                              | E-mails permitidos separados por vírgula              |
 
 VERCEL_ENV e VERCEL_URL são fornecidas pela plataforma. Não configure NODE_ENV=preview: o build de preview também é de produção para o Node. Nenhum segredo usa prefixo VITE_. O pepper deve permanecer estável para preservar a verificação das senhas do respectivo banco.
 
@@ -30,7 +30,7 @@ O vercel.json usa Vite, saída dist, API em api/index.ts e rewrite de /api/* par
 
 O comando build:vercel primeiro compila e depois aplica migrations para frente, com transação e advisory lock. Falhas impedem a conclusão do build. Migrations já aplicadas não são revertidas se uma fase posterior do deploy falhar; adicione migrations compatíveis com a versão anterior da aplicação. Reverter um deploy também não reverte o banco. Não há endpoint HTTP para aplicar migrations.
 
-A região inicial da função é iad1 (Washington, D.C.). Ao criar os bancos Neon, escolha AWS US East (N. Virginia) para mantê-los próximos; caso escolha outra região, ajuste regions no vercel.json antes do deploy.
+A região da função é gru1 (São Paulo), próxima aos bancos Neon informados em AWS sa-east-1. Caso os bancos sejam movidos, revise regions no vercel.json.
 
 A Vercel oferece Node 24.x com patches gerenciados. O instalador exclusivo da Vercel verifica a versão principal, usa npm 11.19.1 e desabilita engine-strict apenas no processo de instalação na plataforma. .nvmrc, .npmrc, engines e lockfile locais permanecem preservados. A compatibilidade com a versão de patch efetivamente usada na nuvem deve ser confirmada no primeiro preview.
 

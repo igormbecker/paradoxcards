@@ -4,7 +4,6 @@ export function deploymentOrigins(environment = process.env) {
     .map((value) => value.trim())
     .filter(Boolean);
   if (
-    !origins.length ||
     origins.some((origin) => {
       try {
         const url = new URL(origin);
@@ -27,6 +26,10 @@ export function deploymentOrigins(environment = process.env) {
       throw new Error("Invalid preview hostname.");
     origins.push(`https://${host}`);
   }
+  if (!origins.length)
+    throw new Error(
+      "HTTPS APP_ORIGINS or preview deployment hostname required.",
+    );
   return [...new Set(origins)];
 }
 export function validateDeployment(environment = process.env) {

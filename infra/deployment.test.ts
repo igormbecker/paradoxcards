@@ -18,6 +18,32 @@ const environment = {
   EMAIL_PREVIEW_RECIPIENTS: "tester@example.com",
 };
 afterEach(() => vi.unstubAllEnvs());
+it("allows preview without APP_ORIGINS only when its deployment hostname is available", () => {
+  expect(deploymentOrigins({ ...environment, APP_ORIGINS: undefined })).toEqual(
+    ["https://playparadox-unique.vercel.app"],
+  );
+  expect(() =>
+    deploymentOrigins({
+      ...environment,
+      APP_ORIGINS: undefined,
+      VERCEL_URL: undefined,
+    }),
+  ).toThrow();
+  expect(() =>
+    deploymentOrigins({
+      ...environment,
+      VERCEL_ENV: "production",
+      APP_ORIGINS: undefined,
+    }),
+  ).toThrow();
+  expect(() =>
+    deploymentOrigins({
+      ...environment,
+      APP_ORIGINS: undefined,
+      VERCEL_URL: "attacker.example.com",
+    }),
+  ).toThrow();
+});
 it("uses verified TLS for Neon and a direct connection for migrations", () => {
   const options = connectionOptions(environment);
   expect(options.ssl).toEqual({ rejectUnauthorized: true });
