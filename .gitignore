@@ -6,3 +6,5 @@ test-results/
 playwright-report/
 
 coverage/
+
+!.env.test.example

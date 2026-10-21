@@ -10,3 +10,5 @@
 - As decisões de produto e visual estão em docs e no AI-Memory; as cartas atuais são provisórias.
 
 - Ambiente reproduzível: Node e npm exatos definidos em .nvmrc e package.json. Use nvm install, nvm use e npm run setup em uma nova máquina. Preserve .npmrc, lockfile e versões exatas; npm run check executa a validação local básica. Não atualize engines sem revisar e validar o conjunto.
+
+- Infraestrutura: PostgreSQL do Paradox Cards em Docker (5434 desenvolvimento; 5435 testes), sem compartilhar recursos com o Trama. Use npm run dev para banco, espera, migrations e interface. npm run dev:client inicia apenas a interface. O motor e a apresentação não importam pg ou módulos infra. Migrations .cjs em infra/migrations; adicione novas migrations em vez de editar as já aplicadas. Testes de banco somente em paradoxcards_test. Preserve o volume de desenvolvimento e os arquivos .env existentes.
