@@ -17,6 +17,14 @@ npm run setup
 npm run dev
 ```
 
+Antes do primeiro login, crie uma conta em outro terminal do projeto (com nvm use):
+
+```bash
+npm run users:create
+```
+
+Informe e-mail e senha no próprio terminal; a senha não é mostrada nem passada como argumento. O comando precisa do banco iniciado e das migrations aplicadas, como npm run dev já faz. Não há conta padrão com senha compartilhada.
+
 Abra [localhost:5173](http://localhost:5173). Para parar, use Ctrl+C. O Docker precisa estar ativo. O setup cria .env.development e .env.test a partir dos exemplos sem sobrescrever arquivos existentes. Não há conta externa ou chave de API obrigatória.
 
 `npm run setup` executa `npm ci` e prepara os arquivos de ambiente: instala exatamente o package-lock.json e ativa o hook do Husky. Pode ser repetido após baixar mudanças no lockfile. Ele substitui node_modules, sem alterar arquivos do jogo. Para adicionar dependências, use `npm install nome-do-pacote`; a opção save-exact preserva versões exatas.
@@ -74,7 +82,7 @@ Ctrl+C encerra o Vite; o banco continua ativo até services:stop ou services:dow
 
 Migrations ficam em infra/migrations, usando CommonJS (.cjs) para compatibilidade com o CLI dentro deste projeto ESM. A primeira cria somente o schema paradox; as tabelas de conteúdo serão definidas conforme os requisitos. As migrations aplicadas ficam registradas em pgmigrations. Não edite uma migration já compartilhada/aplicada: crie a próxima.
 
-A camada Node-only em infra/database.mjs fornece query parametrizada e getNewClient. Não importe essa camada na interface ou no motor. A partida ainda roda em memória no navegador: preparar o banco não significa que partidas ou cartas já estejam persistidas. O futuro backend fará essa integração sem alterar o motor puro.
+A camada Node-only em infra/database.mjs fornece query parametrizada e getNewClient. Não importe essa camada na interface ou no motor. O estado da partida de treino é persistido por conta no PostgreSQL e as ações são validadas pela API. O catálogo ainda é provisório em código, sem editor ou coleção persistente. A API Node em infra/server integra autenticação e ações do protótipo com o motor puro; o cliente nunca importa pg.
 
 O CI também roda test:database com Docker. O teste verifica consulta parametrizada, up, idempotência, down e reaplicação, exclusivamente no banco paradoxcards_test.
 
@@ -97,3 +105,15 @@ git commit -m 'chore: configure reproducible development environment'
 GitHub Actions executa checks de formatação, ESLint, tipos, commits, testes, build e navegador em pull requests após publicação dos workflows. A configuração não cria proteção de branch.
 
 Limitação conhecida: o npm audit aponta dependências de desenvolvimento do Commitizen; isso não faz parte do bundle do jogo. Avalie correções compatíveis antes de atualizar essas ferramentas.
+
+Se migrations funcionarem com nvm use mas falharem em outro terminal, confira node -v. Cada terminal mantém sua própria versão do Node. Os comandos de desenvolvimento e migrations verificam a versão antes de executar; a configuração engine-strict restringe a instalação, mas não troca a versão do terminal automaticamente.
+
+## Login, sessão e várias abas
+
+Consulte docs/authentication.md para os endpoints e regras. API local em 3002; navegador em 5173, com proxy de mesma origem. npm run dev inicia os dois processos e encerra ambos com Ctrl+C; o PostgreSQL permanece ativo. Reinicie npm run dev após atualizar os comandos de execução.
+
+Sessão: 24h de inatividade, 7 dias de limite absoluto, renovação a cada 15 minutos de atividade. Cookie HttpOnly e token armazenado como hash no banco. O pepper é gerado pelo setup nos arquivos .env, sem sobrescrever o existente. Preserve esse segredo em mudanças de máquina para manter válidas as senhas de contas transportadas; sem ele será necessário redefini-las.
+
+A partida aceita uma aba de controle por conta. Reserva de 60s renovada a cada 15s, com transferência explícita e bloqueio imediato das ações antigas no servidor. Abas sem controle podem visualizar a mesa. Nova aba ou recarregamento pode exigir Continuar nesta aba; não se usa localStorage para tokens. A autenticação expirada pausa o controle e permite entrar novamente para retomar o estado salvo.
+
+Para testes completos: npm run test:database, npm run test:auth e npm run test:e2e. Playwright usa portas 5174/3003 e exclusivamente o banco de testes. Nenhuma conta de teste é criada no desenvolvimento. Cadastro público, recuperação de senha, matchmaking e multiplayer competitivo ainda não estão implementados. Produção exige HTTPS, APP_ORIGINS explícito e proxy de mesma origem; não foi publicado deploy.

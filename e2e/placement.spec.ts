@@ -1,8 +1,24 @@
 import { expect, test, type Page } from "@playwright/test";
+test.beforeEach(async ({ page }) => {
+  await page.goto("/");
+  await page.getByLabel("E-mail", { exact: true }).fill("player@paradox.test");
+  await page.getByLabel("Senha", { exact: true }).fill("Paradox-test-123");
+  await page.getByRole("button", { name: "Entrar", exact: true }).click();
+  await expect(
+    page.getByRole("button", { name: "Sair", exact: true }),
+  ).toBeVisible();
+  await page.waitForTimeout(200);
+  const takeover = page.getByRole("button", { name: "Continuar nesta aba" });
+  if (await takeover.isVisible()) await takeover.click();
+  await expect(
+    page.getByRole("button", { name: "Reiniciar mesa" }),
+  ).toBeEnabled();
+  await page.getByRole("button", { name: "Reiniciar mesa" }).click();
+  await expect(page.getByTestId("turn")).toContainText("Prepare a mão");
+});
 const cell = (page: Page, name: string) =>
   page.getByRole("button", { name: new RegExp("^" + name + ",") });
 async function begin(page: Page) {
-  await page.goto("/");
   await page.getByRole("button", { name: "Manter mão e confirmar" }).click();
   await page.getByRole("button", { name: "Manter mão e confirmar" }).click();
 }
@@ -10,7 +26,7 @@ const rankOne = (page: Page) => page.locator('.card[data-rank="1"]').first();
 test("prepara mãos, compra, pontua, encerra e recomeça", async ({ page }) => {
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
-  await page.goto("/");
+
   await expect(cell(page, "B1")).toBeDisabled();
   await expect(page.locator(".card")).toHaveCount(5);
   await page.locator(".card").nth(0).click();
@@ -104,7 +120,6 @@ test("prévia e diagramas seguem o lado sem aplicar a jogada", async ({
   await expect(page.getByTestId("turn")).toHaveText("Vez dos Viajantes");
 });
 test("troca cinco de uma vez e permite encerrar empatado", async ({ page }) => {
-  await page.goto("/");
   for (let i = 0; i < 5; i++) await page.locator(".card").nth(i).click();
   await page.getByRole("button", { name: "Trocar 5 e confirmar" }).click();
   await page.getByRole("button", { name: "Manter mão e confirmar" }).click();

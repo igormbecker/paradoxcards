@@ -334,3 +334,57 @@ footer {
 .opening button {
   width: 100%;
 }
+
+.game-controls {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.login {
+  max-width: 460px;
+  margin: 8vh auto;
+}
+.login h2 {
+  margin-top: 32px;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.login input {
+  font: inherit;
+  padding: 12px;
+  background: #172327;
+  color: #dce5df;
+  border: 1px solid #7a7156;
+}
+.login input:focus-visible {
+  outline: 2px solid #93e3dc;
+}
+.account-bar {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+  padding: 16px 32px;
+}
+.control-notice {
+  max-width: 1216px;
+  margin: 12px auto;
+  padding: 24px;
+  background: #233938;
+  border: 1px solid #bca16a;
+}
+.auth-notice {
+  max-width: 1216px;
+  margin: 0 auto;
+  color: #e2b29c;
+  padding: 0 20px;
+}
+.game-controls:disabled .canvas {
+  opacity: 0.65;
+}

@@ -1,344 +1,266 @@
-import { useEffect, useRef, useState } from "react";
+import {
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type FormEvent,
+} from "react";
 import { createRoot } from "react-dom/client";
-import Phaser from "phaser";
-import { PlacementController } from "./application/match-controller";
-import { canPlay, score } from "./game/match";
-import { BoardScene } from "./presentation/phaser/board-scene";
+import {
+  api,
+  PlacementController,
+  RequestError,
+} from "./application/match-controller";
 import "./style.css";
-const names = ["Viajantes", "Guardiões"];
-function App() {
-  const controller = useRef(new PlacementController());
-  const [state, setState] = useState(controller.current.state);
-  const [selected, setSelected] = useState(0);
-  const [message, setMessage] = useState(
-    "Marque as cartas para trocar ou mantenha sua mão inicial.",
+const Game = lazy(() => import("./presentation/react/Game"));
+interface User {
+  id: string;
+  email: string;
+}
+function SessionView({
+  user,
+  onExit,
+}: {
+  user: User;
+  onExit: (message?: string) => void;
+}) {
+  const [ready, setReady] = useState(false),
+    [controlled, setControlled] = useState(false),
+    [busy, setBusy] = useState(false),
+    [revision, setRevision] = useState(0),
+    [notice, setNotice] = useState("");
+  const owned = useRef(false),
+    version = useRef(0);
+  const failed = useCallback(
+    (error: unknown) => {
+      const message =
+        error instanceof Error
+          ? error.message
+          : "Não foi possível conectar ao servidor. Tente novamente.";
+      setNotice(message);
+      owned.current = false;
+      setControlled(false);
+      if (error instanceof RequestError && error.status === 401)
+        onExit(message);
+    },
+    [onExit],
   );
-  const [previewText, setPreviewText] = useState("");
-  const [marked, setMarked] = useState<number[]>([]);
-  const host = useRef<HTMLDivElement>(null);
-  const scene = useRef<BoardScene | null>(null);
-  const player = state.turn,
-    hand = state.hands[player],
-    card = hand[selected];
-  const scores = state.result ?? score(state);
-  const playable = hand.some((_, h) =>
-    state.board.some((_, i) => canPlay(state, player, h, i)),
+  const [controller] = useState(
+    () =>
+      new PlacementController(
+        (value) => {
+          version.current = value.revision;
+          setRevision(value.revision);
+          setReady(true);
+        },
+        failed,
+        setBusy,
+      ),
   );
-  const current = useRef({
-    state,
-    player,
-    card: state.phase === "play" ? card : undefined,
-  });
-  current.current = {
-    state,
-    player,
-    card: state.phase === "play" ? card : undefined,
-  };
-  const place = useRef<(index: number) => void>(() => {});
-  place.current = (index) => {
-    const s = controller.current.state,
-      played = s.hands[s.turn][selected];
-    const result = controller.current.place(s.turn, selected, index);
-    setMessage(
-      result.ok
-        ? `${played.name} em ${"ABC"[Math.floor(index / 5)]}${(index % 5) + 1}. ${result.state.phase === "ended" ? "Sem novas jogadas possíveis. Partida encerrada." : `Vez dos ${names[result.state.turn]}.`}`
-        : "Jogada indisponível. Escolha uma carta da mão e uma casa dourada.",
-    );
-    if (result.ok) {
-      setSelected(0);
-      setState(result.state);
-    }
-  };
+  const claim = useCallback(
+    async (takeover = false) => {
+      try {
+        const value = await api("/match/control", {
+          tabId: controller.tabId,
+          takeover,
+        });
+        controller.update(value);
+        owned.current = true;
+        setControlled(true);
+        setNotice("");
+      } catch (error) {
+        failed(error);
+        try {
+          controller.update(await api("/match"));
+        } catch (e) {
+          failed(e);
+        }
+      }
+    },
+    [controller, failed],
+  );
   useEffect(() => {
-    const board = new BoardScene(
-      () => current.current,
-      (i) => place.current(i),
-      setPreviewText,
-    );
-    scene.current = board;
-    const game = new Phaser.Game({
-      type: Phaser.AUTO,
-      parent: host.current!,
-      width: 756,
-      height: 438,
-      backgroundColor: "#101c20",
-      scene: board,
-      scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH },
-      render: { antialias: true },
-    });
-    return () => {
-      scene.current = null;
-      game.destroy(true);
+    void claim();
+    let stopped = false,
+      running = false;
+    const heartbeat = async () => {
+      if (running || stopped) return;
+      running = true;
+      try {
+        const value = owned.current
+          ? await api("/match/heartbeat", {
+              tabId: controller.tabId,
+              controlVersion: controller.controlVersion,
+            })
+          : await api("/match");
+        if (!stopped && value.revision !== version.current)
+          controller.update(value);
+      } catch (error) {
+        if (!stopped) failed(error);
+      } finally {
+        running = false;
+      }
     };
-  }, []);
-  useEffect(() => {
-    if (scene.current?.sys.isActive()) scene.current.paint();
-  }, [state, selected]);
+    const timer = setInterval(() => void heartbeat(), 15000);
+    let lastActivity = Date.now();
+    const activity = () => {
+      if (Date.now() - lastActivity < 15 * 60000) return;
+      lastActivity = Date.now();
+      void api("/session/activity", {}).catch(failed);
+    };
+    document.addEventListener("pointerdown", activity);
+    document.addEventListener("keydown", activity);
+    return () => {
+      stopped = true;
+      clearInterval(timer);
+      document.removeEventListener("pointerdown", activity);
+      document.removeEventListener("keydown", activity);
+    };
+  }, [claim, controller, failed]);
   return (
-    <main>
-      <header>
-        <div>
-          <p className="subtitle">O observatório temporal</p>
-          <h1>Paradox Cards</h1>
-        </div>
+    <>
+      <nav className="account-bar" aria-label="Conta">
+        <span>{user.email}</span>
         <button
-          onClick={() => {
-            controller.current.reset();
-            setSelected(0);
-            setMarked([]);
-            setState(controller.current.state);
-            setMessage("Nova mão sorteada. Prepare a mão dos Viajantes.");
+          disabled={busy}
+          onClick={async () => {
+            setBusy(true);
+            try {
+              await api("/session", undefined, "DELETE");
+              owned.current = false;
+              onExit();
+            } catch (error) {
+              failed(error);
+            } finally {
+              setBusy(false);
+            }
           }}
         >
-          Reiniciar mesa
+          Sair
         </button>
-      </header>
-      <section className="intro">
-        <h2>A primeira fissura no tempo</h2>
-        <p>
-          Explore o território. Posicione seus guardiões. Abra caminho para a
-          próxima era.
-        </p>
-      </section>
-      <div className="layout">
-        <section className="table">
-          <div className="table-heading">
-            <span>◈ Viajantes</span>
-            <span>Território 3 × 5</span>
-            <span>Guardiões ◈</span>
-          </div>
-          <div className="board-with-scores">
-            <div
-              className="row-scores left"
-              aria-label="Força dos Viajantes por linha"
-            >
-              {scores.rows.map((row, i) => (
-                <span
-                  key={i}
-                  data-testid={`row-score-0-${i}`}
-                  className={row[0] > row[1] ? "winning" : ""}
-                  style={{ top: `${((87 + i * 138) / 438) * 100}%` }}
-                  aria-label={`Linha ${"ABC"[i]}, Viajantes: ${row[0]}`}
-                >
-                  {row[0]}
-                </span>
-              ))}
-            </div>
-            <div
-              ref={host}
-              className="canvas"
-              role="img"
-              aria-label="Mesa de jogo. Use os botões de casas abaixo para jogar pelo teclado."
-            />
-            <div
-              className="row-scores right"
-              aria-label="Força dos Guardiões por linha"
-            >
-              {scores.rows.map((row, i) => (
-                <span
-                  key={i}
-                  data-testid={`row-score-1-${i}`}
-                  className={row[1] > row[0] ? "winning" : ""}
-                  style={{ top: `${((87 + i * 138) / 438) * 100}%` }}
-                  aria-label={`Linha ${"ABC"[i]}, Guardiões: ${row[1]}`}
-                >
-                  {row[1]}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="coordinates" aria-label="Escolher casa">
-            {state.board.map((cell, i) => (
-              <button
-                key={i}
-                disabled={!canPlay(state, player, selected, i)}
-                onFocus={() => scene.current?.preview(i)}
-                onBlur={() => scene.current?.preview(null)}
-                onClick={() => place.current(i)}
-                aria-label={`${"ABC"[Math.floor(i / 5)]}${(i % 5) + 1}, ${cell.rank} peões`}
-              >
-                {"ABC"[Math.floor(i / 5)]}
-                {(i % 5) + 1}
-              </button>
-            ))}
-          </div>
-        </section>
-        <aside>
-          <h2>
-            {state.phase === "ended" ? "Resultado final" : "Resultado geral"}
-          </h2>
-          <div className="total-score" aria-label="Placar geral">
-            <span>
-              Viajantes <b>{scores.total[0]}</b>
-            </span>
-            <span>
-              Guardiões <b>{scores.total[1]}</b>
-            </span>
-          </div>
-          <p className="score-help">
-            {state.phase === "ended"
-              ? "Partida encerrada. Pontuação final."
-              : "Resultado parcial: soma da força nas linhas vencidas. Empates não pontuam."}
+      </nav>
+      {ready && !controlled && (
+        <section className="control-notice">
+          <h2>Esta partida está aberta em outra aba</h2>
+          <p>
+            Você pode visualizar a mesa. Ao continuar aqui, a outra aba perde o
+            controle.
           </p>
-          <h2 data-testid="turn">
-            {state.phase === "opening"
-              ? `Prepare a mão dos ${names[player]}`
-              : state.phase === "ended"
-                ? state.result?.winner === null
-                  ? "Empate"
-                  : `${names[state.result!.winner!]} venceram`
-                : `Vez dos ${names[player]}`}
-          </h2>
-          <p data-testid="deck-counts">
-            Baralhos: {state.decks[0].length} Viajantes ·{" "}
-            {state.decks[1].length} Guardiões
-          </p>
-          <p data-testid="hand-counts">
-            Mãos: {state.hands[0].length} Viajantes · {state.hands[1].length}{" "}
-            Guardiões
-          </p>
-          {card ? (
-            <>
-              <h2>{card.name}</h2>
-              <p>
-                Exige {card.rank} peão. Poder {card.power}.
-              </p>
-            </>
-          ) : (
-            <p>Sua mão está vazia.</p>
-          )}
-          {state.phase === "opening" && (
-            <div className="opening">
-              <p>
-                Marque as cartas que deseja trocar. Você pode confirmar uma
-                única vez, ou manter as cinco.
-              </p>
-              <button
-                onClick={() => {
-                  const r = controller.current.opening(player, marked);
-                  if (r.ok) {
-                    setState(r.state);
-                    setMarked([]);
-                    setSelected(0);
-                    setMessage(
-                      r.state.phase === "play"
-                        ? "Mãos prontas. Vez dos Viajantes."
-                        : "Agora prepare a mão dos Guardiões.",
-                    );
-                  }
-                }}
-              >
-                {marked.length
-                  ? `Trocar ${marked.length} e confirmar`
-                  : "Manter mão e confirmar"}
-              </button>
-            </div>
-          )}
-          {state.phase === "play" && (
-            <>
-              <button
-                onClick={() => {
-                  const r = controller.current.pass();
-                  if (r.ok) {
-                    setState(r.state);
-                    setSelected(0);
-                    setMessage(
-                      r.state.phase === "ended"
-                        ? "Partida encerrada. Confira o resultado final."
-                        : `${names[player]} passaram. Vez dos ${names[r.state.turn]}.`,
-                    );
-                  }
-                }}
-              >
-                {state.passes === 1
-                  ? "Passar e encerrar partida"
-                  : "Passar a vez"}
-              </button>
-              {!playable && (
-                <p className="notice">Sem jogadas disponíveis. Passe a vez.</p>
-              )}
-            </>
-          )}
-          {state.phase === "ended" && (
-            <button
-              onClick={() => {
-                controller.current.reset();
-                setState(controller.current.state);
-                setMarked([]);
-                setSelected(0);
-                setMessage("Nova mão sorteada. Prepare a mão dos Viajantes.");
-              }}
-            >
-              Nova partida
-            </button>
-          )}
-          <p className="notice">
-            Teste local: você controla os dois lados. Baralhos fixos de 15
-            cartas provisórias; somente a ordem é sorteada. Sem habilidades ou
-            IA.
-          </p>
-        </aside>
-      </div>
-      <p aria-live="polite" className="preview-description">
-        {previewText}
-      </p>
-      <p role="status" className="message">
-        {message}
-      </p>
-      <section className="hand" aria-label={`Mão dos ${names[player]}`}>
-        {hand.map((c, i) => (
-          <button
-            key={`${c.id}-${i}`}
-            data-rank={c.rank}
-            data-power={c.power}
-            disabled={state.phase === "ended"}
-            className={`card ${state.phase === "opening" && marked.includes(i) ? "marked" : ""}`}
-            aria-pressed={
-              state.phase === "opening" ? marked.includes(i) : selected === i
-            }
-            onClick={() => {
-              setSelected(i);
-              if (state.phase === "opening")
-                setMarked((previous) =>
-                  previous.includes(i)
-                    ? previous.filter((n) => n !== i)
-                    : [...previous, i],
-                );
-            }}
-          >
-            <span className="card-meta">
-              {"◆".repeat(c.rank)}
-              <b>{c.power}</b>
-            </span>
-            <span className="sigil">◈</span>
-            <strong>{c.name}</strong>
-            <span className="pattern">
-              {Array.from({ length: 9 }, (_, j) => (
-                <i
-                  key={j}
-                  className={
-                    j === 4
-                      ? "origin"
-                      : c.reach.some(
-                            ([r, col]) =>
-                              (r + 1) * 3 +
-                                col * (player === 0 ? 1 : -1) +
-                                1 ===
-                              j,
-                          )
-                        ? "reach"
-                        : ""
-                  }
-                />
-              ))}
-            </span>
-            <small>Expansão territorial</small>
+          <button disabled={busy} onClick={() => void claim(true)}>
+            Continuar nesta aba
           </button>
-        ))}
-      </section>
-      <footer>
-        Protótipo 03 · Preparação e partida · Artes e atributos provisórios
-      </footer>
+        </section>
+      )}
+      <p role="alert" className="auth-notice">
+        {notice}
+      </p>
+      {ready ? (
+        <Suspense fallback={<main>Preparando a mesa…</main>}>
+          <Game
+            remote={controller}
+            enabled={controlled && !busy}
+            revision={revision}
+          />
+        </Suspense>
+      ) : (
+        <main>
+          <p role="status">Carregando sua partida…</p>
+          {notice && (
+            <button onClick={() => void claim()}>Tentar novamente</button>
+          )}
+        </main>
+      )}
+    </>
+  );
+}
+function App() {
+  const [user, setUser] = useState<User | null>(null),
+    [loading, setLoading] = useState(true),
+    [busy, setBusy] = useState(false),
+    [notice, setNotice] = useState("");
+  const exit = useCallback((message = "") => {
+    setUser(null);
+    setNotice(message);
+  }, []);
+  useEffect(() => {
+    let alive = true;
+    api("/session")
+      .then((data) => {
+        if (alive) setUser(data.user);
+      })
+      .catch((error) => {
+        if (alive && !(error instanceof RequestError && error.status === 401))
+          setNotice("Não foi possível conectar à API. Confira npm run dev.");
+      })
+      .finally(() => {
+        if (alive) setLoading(false);
+      });
+    return () => {
+      alive = false;
+    };
+  }, []);
+  async function signIn(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (busy) return;
+    setBusy(true);
+    const form = new FormData(event.currentTarget);
+    try {
+      const data = await api("/session", {
+        email: form.get("email"),
+        password: form.get("password"),
+      });
+      setUser(data.user);
+      setNotice("");
+    } catch (error) {
+      setNotice(
+        error instanceof Error ? error.message : "Não foi possível entrar.",
+      );
+    } finally {
+      setBusy(false);
+    }
+  }
+  if (loading)
+    return (
+      <main>
+        <p role="status">Conectando ao observatório…</p>
+      </main>
+    );
+  if (user) return <SessionView key={user.id} user={user} onExit={exit} />;
+  return (
+    <main className="login">
+      <p className="subtitle">O observatório temporal</p>
+      <h1>Paradox Cards</h1>
+      <h2>Entre para continuar sua partida</h2>
+      <form onSubmit={signIn}>
+        <label htmlFor="email">E-mail</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autoComplete="username"
+          required
+          maxLength={254}
+        />
+        <label htmlFor="password">Senha</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autoComplete="current-password"
+          required
+          maxLength={128}
+        />
+        <button disabled={busy} aria-busy={busy}>
+          {busy ? "Entrando…" : "Entrar"}
+        </button>
+      </form>
+      <p role="alert">{notice}</p>
+      <p className="notice">
+        Acesso por conta criada localmente. Sua partida fica salva para você
+        retomar.
+      </p>
     </main>
   );
 }

@@ -36,7 +36,7 @@ try {
       .value,
     42,
   );
-  await runner({ ...options, direction: "down", count: 1 });
+  await runner({ ...options, direction: "down", count: Infinity });
   assert.equal(
     (
       await query(
