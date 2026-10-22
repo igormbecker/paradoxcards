@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build:vercel": "npm run build && node infra/scripts/deploy-migrations.mjs",
     "build": "tsc --noEmit && vite build",
     "test": "vitest run",
     "test:e2e": "playwright test",
@@ -25,7 +26,7 @@
     "setup": "npm ci && npm run setup:env",
     "migrations:down": "node infra/scripts/migrate.mjs down",
     "services:down": "docker compose -f infra/compose.yaml down",
-    "test:database": "npm run setup:env && docker compose -f infra/compose.yaml --profile test up -d database-test && node infra/scripts/wait-for-postgres.mjs test && node infra/database.integration.mjs",
+    "test:database": "npm run setup:env && docker compose -f infra/compose.yaml --profile test up -d database-test && node infra/scripts/wait-for-postgres.mjs test && node infra/database.integration.mjs && node infra/users-schema.integration.mjs",
     "migrations:up": "node infra/scripts/migrate.mjs up",
     "dev:client": "vite --host 0.0.0.0 --port 5173 --strictPort",
     "predev": "node infra/scripts/check-runtime.mjs",
@@ -36,7 +37,8 @@
     "dev": "npm run setup:env && npm run services:up && npm run services:wait:database && npm run migrations:up && npm run dev:stack",
     "dev:stack": "concurrently -k -n api,web \"npm run dev:api\" \"npm run dev:client\"",
     "users:create": "node infra/scripts/create-user.mjs",
-    "test:auth": "node --import tsx infra/auth.integration.mjs"
+    "test:auth": "node --import tsx infra/auth.integration.mjs",
+    "test:auth:deployment": "node --import tsx infra/auth.integration.mjs --deployment"
   },
   "dependencies": {
     "async-retry": "1.3.3",

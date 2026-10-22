@@ -1,8 +1,10 @@
 # Autenticação e controle de partida
 
+Datas de sessão, expiração e reserva usam timestamptz e conexões em UTC. O padrão e a comparação com o Trama estão em [database-dates.md](database-dates.md).
+
 Decisão: e-mail/senha com bcryptjs e pepper; cookie HttpOnly com token opaco, armazenado como hash no banco. Inatividade de 24h, limite absoluto de 7 dias e renovação limitada a 15 minutos. Heartbeats não contam como atividade. Sem manter conectado nesta etapa.
 
-API local em 3002, acessada pela interface em 5173 através do proxy /api. Produção precisa de HTTPS e reverse proxy de mesma origem; não há deploy configurado.
+API local em 3002, acessada pela interface em 5173 através do proxy /api. Na Vercel, /api/* é atendido pelo mesmo handler via Vercel Function, mantendo HTTPS e mesma origem. A configuração está em vercel.json e os requisitos de publicação em docs/deployment.md; nenhum deploy remoto foi validado nesta etapa.
 
 | Método e caminho              | Contrato                                                                              |
 | ----------------------------- | ------------------------------------------------------------------------------------- |
@@ -21,4 +23,4 @@ A reserva é por conta, vinculada à sessão e aba; transações com bloqueio de
 
 A primeira versão permanece treino local de uma conta controlando os dois lados, com estado persistido no servidor. Isso não implementa matchmaking ou uma partida competitiva entre duas contas. Sessão expirada exige login novamente; estado fica salvo para retomada. Não há tolerância que estenda autorização após expiração, logout ou revogação.
 
-Contas são criadas pelo comando users:create, lendo credenciais da entrada padrão. Não existe cadastro público ou recuperação de senha nesta etapa. Pepper é gerado localmente e preservado; perdê-lo invalida a verificação das senhas existentes.
+Contas são criadas pelo comando users:create, lendo nome, username, e-mail e senha da entrada padrão. O padrão de perfil, administração e metadados de verificação de e-mail está em [users-schema.md](users-schema.md). Não existe cadastro público, fluxo de verificação de e-mail, painel administrativo ou recuperação de senha nesta etapa. Pepper é gerado localmente e preservado; perdê-lo invalida a verificação das senhas existentes.

@@ -1,10 +1,11 @@
 // Node-only adapter. Never import this module from src/game or browser code.
 import pg from "pg";
 import { connectionOptions } from "./environment.mjs";
-export async function getNewClient() {
-  const client = new pg.Client(connectionOptions());
+export async function getNewClient(direct = false) {
+  const client = new pg.Client(connectionOptions(process.env, direct));
   try {
     await client.connect();
+    await client.query("SET TIME ZONE 'UTC'");
     return client;
   } catch (error) {
     await client.end().catch(() => {});

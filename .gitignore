@@ -6,5 +6,6 @@ test-results/
 playwright-report/
 
 coverage/
+.vercel/
 
 !.env.test.example

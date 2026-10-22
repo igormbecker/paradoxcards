@@ -23,9 +23,32 @@ function pepper(password) {
 }
 const emailValue = (value) =>
   typeof value === "string" ? value.trim().toLowerCase() : "";
-export async function createUser(email, password) {
+// Administrative provisioning; public registration is not exposed.
+export async function createUser(email, password, profile = {}) {
   email = emailValue(email);
+  const id = randomUUID();
+  const validProfile =
+    profile &&
+    typeof profile === "object" &&
+    !Array.isArray(profile) &&
+    Object.keys(profile).every((key) => ["name", "username"].includes(key));
+  const name =
+    validProfile && profile.name === undefined
+      ? "Player"
+      : typeof profile?.name === "string"
+        ? profile.name.trim()
+        : "";
+  const username =
+    validProfile && profile.username === undefined
+      ? `player_${id.replaceAll("-", "").slice(0, 23)}`
+      : typeof profile?.username === "string"
+        ? profile.username.trim()
+        : "";
   if (
+    !validProfile ||
+    !name ||
+    name.length > 255 ||
+    !/^[a-zA-Z0-9_.-]{1,30}$/.test(username) ||
     !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
     email.length > 254 ||
     typeof password !== "string" ||
@@ -35,15 +58,14 @@ export async function createUser(email, password) {
     fail(
       400,
       "INVALID_ACCOUNT",
-      "E-mail ou senha inválidos (senha de 8 a 128 caracteres).",
+      "Dados de conta inválidos. Confira nome, username, e-mail e senha de 8 a 128 caracteres.",
     );
-  const hash = await bcrypt.hash(pepper(password), 12),
-    id = randomUUID();
+  const hash = await bcrypt.hash(pepper(password), 12);
   await query({
-    text: "INSERT INTO paradox.users(id,email,password_hash) VALUES($1,$2,$3)",
-    values: [id, email, hash],
+    text: "INSERT INTO paradox.users(id,email,password_hash,name,username,email_verification_required) VALUES($1,$2,$3,$4,$5,false)",
+    values: [id, email, hash, name, username],
   });
-  return { id, email };
+  return { id, email, name, username };
 }
 async function limit(key) {
   const row = (
