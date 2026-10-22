@@ -93,7 +93,7 @@ test("prévia e diagramas seguem o lado sem aplicar a jogada", async ({
   await expect(page.locator(".preview-description")).toContainText("B2");
   await expect(page.getByTestId("row-score-0-1")).toHaveText("0");
   await page
-    .getByRole("heading", { name: "Paradox Cards", exact: true })
+    .getByRole("heading", { name: "Paradox: The Card Game", exact: true })
     .click();
   await expect(page.locator(".preview-description")).toBeEmpty();
   const canvas = page.locator("canvas"),

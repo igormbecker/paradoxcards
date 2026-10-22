@@ -1,0 +1,582 @@
+[
+  {
+    "number": 1,
+    "name": "Security Officer"
+  },
+  {
+    "number": 2,
+    "name": "Riot Trooper"
+  },
+  {
+    "number": 3,
+    "name": "Grenadier"
+  },
+  {
+    "number": 4,
+    "name": "J-Unit Sweeper"
+  },
+  {
+    "number": 5,
+    "name": "Queen Bee"
+  },
+  {
+    "number": 6,
+    "name": "Toxirat"
+  },
+  {
+    "number": 7,
+    "name": "Levrikon"
+  },
+  {
+    "number": 8,
+    "name": "Grasslands Wolf"
+  },
+  {
+    "number": 9,
+    "name": "Mu"
+  },
+  {
+    "number": 10,
+    "name": "Mandragora"
+  },
+  {
+    "number": 11,
+    "name": "Elphadunk"
+  },
+  {
+    "number": 12,
+    "name": "Cactuar"
+  },
+  {
+    "number": 13,
+    "name": "Crystalline Crab"
+  },
+  {
+    "number": 14,
+    "name": "Quetzalcoatl"
+  },
+  {
+    "number": 15,
+    "name": "Zu"
+  },
+  {
+    "number": 16,
+    "name": "Devil Rider"
+  },
+  {
+    "number": 17,
+    "name": "Screamer"
+  },
+  {
+    "number": 18,
+    "name": "Flan"
+  },
+  {
+    "number": 19,
+    "name": "Crawler"
+  },
+  {
+    "number": 20,
+    "name": "Archdragon"
+  },
+  {
+    "number": 21,
+    "name": "Ogre"
+  },
+  {
+    "number": 22,
+    "name": "Deathwheel"
+  },
+  {
+    "number": 23,
+    "name": "Fleetwing"
+  },
+  {
+    "number": 24,
+    "name": "Zemzelett"
+  },
+  {
+    "number": 25,
+    "name": "Ignilisk"
+  },
+  {
+    "number": 26,
+    "name": "Capparwire"
+  },
+  {
+    "number": 27,
+    "name": "Mindflayer\u00a0\u2013 Chapter 4"
+  },
+  {
+    "number": 28,
+    "name": "Scrutineye"
+  },
+  {
+    "number": 29,
+    "name": "Hell Rider II"
+  },
+  {
+    "number": 30,
+    "name": "Flametrooper\u00a0\u2013 Chapter 4"
+  },
+  {
+    "number": 31,
+    "name": "Spearhawk\u00a0\u2013 Chapter 6"
+  },
+  {
+    "number": 32,
+    "name": "Sea Devil\u00a0\u2013 Chapter 6"
+  },
+  {
+    "number": 33,
+    "name": "Shoalopod"
+  },
+  {
+    "number": 34,
+    "name": "Crown Lance"
+  },
+  {
+    "number": 35,
+    "name": "Tonberry King\u00a0\u2013 Chapter 6"
+  },
+  {
+    "number": 36,
+    "name": "Sandhog Pie"
+  },
+  {
+    "number": 37,
+    "name": "Bloatfloat\u00a0\u2013 Chapter 7"
+  },
+  {
+    "number": 38,
+    "name": "Bagnadrana"
+  },
+  {
+    "number": 39,
+    "name": "Cockatrice\u00a0\u2013 Chapter 7"
+  },
+  {
+    "number": 40,
+    "name": "Heatseeker\u00a0\u2013 Chapter 7"
+  },
+  {
+    "number": 41,
+    "name": "Bomb\u00a0\u2013 Chapter 7"
+  },
+  {
+    "number": 42,
+    "name": "Thug\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 43,
+    "name": "Death Claw\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 44,
+    "name": "Landworm"
+  },
+  {
+    "number": 45,
+    "name": "Sandspitter\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 46,
+    "name": "Chimera\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 47,
+    "name": "Joker\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 48,
+    "name": "Amphidex"
+  },
+  {
+    "number": 49,
+    "name": "Frightflower\u00a0\u2013 Gongaga Region > Gongaga Village"
+  },
+  {
+    "number": 50,
+    "name": "Gagighandi\u00a0\u2013 Gongaga Region > Gongaga Village"
+  },
+  {
+    "number": 51,
+    "name": "Insectoid Chimera"
+  },
+  {
+    "number": 52,
+    "name": "Gigantoad\u00a0\u2013 Gongaga Region > Gongaga Village"
+  },
+  {
+    "number": 53,
+    "name": "Maloceros\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 54,
+    "name": "Grandhorn\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 55,
+    "name": "Great Malboro\u00a0\u2013 Gongaga Region > Gongaga Village"
+  },
+  {
+    "number": 56,
+    "name": "Grangalan"
+  },
+  {
+    "number": 57,
+    "name": "Amalgam\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 58,
+    "name": "Skeeskee\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 59,
+    "name": "Griffon\u00a0\u2013 Gongaga Region > Gongaga Village"
+  },
+  {
+    "number": 60,
+    "name": "Basilisk\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 61,
+    "name": "Reapertail\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 62,
+    "name": "Jabberwock\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 63,
+    "name": "Desert Sahagin\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 64,
+    "name": "Cavestalker\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 65,
+    "name": "Stone Golem\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 66,
+    "name": "Two Face\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 67,
+    "name": "Gi Specter\u00a0\u2013 Chapter 10"
+  },
+  {
+    "number": 68,
+    "name": "Valron\u00a0\u2013 Chapter 11"
+  },
+  {
+    "number": 69,
+    "name": "Disgorgon"
+  },
+  {
+    "number": 70,
+    "name": "Dragon\u00a0\u2013 Chapter 11"
+  },
+  {
+    "number": 71,
+    "name": "Twin Brain\u00a0\u2013 Chapter 11"
+  },
+  {
+    "number": 72,
+    "name": "Black Bat"
+  },
+  {
+    "number": 73,
+    "name": "Bahba Velamyu\u00a0\u2013 Chapter 11"
+  },
+  {
+    "number": 74,
+    "name": "Rictus"
+  },
+  {
+    "number": 75,
+    "name": "Adjudicator\u00a0\u2013 Chapter 12"
+  },
+  {
+    "number": 76,
+    "name": "Yin & Yang\u00a0\u2013 Chapter 12"
+  },
+  {
+    "number": 77,
+    "name": "Diabolic Variant"
+  },
+  {
+    "number": 78,
+    "name": "Special Forces Operator\u00a0\u2013 After finishing Story (Post-Game via Chapter Select)"
+  },
+  {
+    "number": 79,
+    "name": "2-C SOLDIER Operator\u00a0\u2013 Chapter 12"
+  },
+  {
+    "number": 80,
+    "name": "Kelzmelzer"
+  },
+  {
+    "number": 81,
+    "name": "Panthera Protector\u00a0\u2013 After finishing Story (Post-Game via Chapter Select)"
+  },
+  {
+    "number": 82,
+    "name": "Hecteyes\u00a0\u2013 After finishing Story (Post-Game via Chapter Select)"
+  },
+  {
+    "number": 83,
+    "name": "Floating Death\u00a0\u2013 After finishing Story (Post-Game via Chapter Select)"
+  },
+  {
+    "number": 84,
+    "name": "Ironclad\u00a0\u2013 After finishing Story (Post-Game via Chapter Select)"
+  },
+  {
+    "number": 85,
+    "name": "Moss-Grown Adamantoise\u00a0\u2013 After finishing Story (Post-Game via Chapter Select)"
+  },
+  {
+    "number": 86,
+    "name": "Cloud- Chapter 12"
+  },
+  {
+    "number": 87,
+    "name": "Barret- Chapter 12"
+  },
+  {
+    "number": 88,
+    "name": "Tifa- Chapter 12"
+  },
+  {
+    "number": 89,
+    "name": "Aerith- Chapter 12"
+  },
+  {
+    "number": 90,
+    "name": "Red XIII- Chapter 12"
+  },
+  {
+    "number": 91,
+    "name": "Yuffie- Chapter 12"
+  },
+  {
+    "number": 92,
+    "name": "Cait Sith- Chapter 12"
+  },
+  {
+    "number": 93,
+    "name": "Cid- Chapter 12"
+  },
+  {
+    "number": 94,
+    "name": "Vincent"
+  },
+  {
+    "number": 95,
+    "name": "Ifrit"
+  },
+  {
+    "number": 96,
+    "name": "Shiva"
+  },
+  {
+    "number": 97,
+    "name": "Ramuh\u00a0\u2013 Chapter 12"
+  },
+  {
+    "number": 98,
+    "name": "Titan"
+  },
+  {
+    "number": 99,
+    "name": "Kujata- Chapter 9"
+  },
+  {
+    "number": 100,
+    "name": "Odin- Chapter\u00a011"
+  },
+  {
+    "number": 101,
+    "name": "Phoenix- Chapter\u00a04"
+  },
+  {
+    "number": 102,
+    "name": "Leviathan\u00a0\u2013 Chapter 12"
+  },
+  {
+    "number": 103,
+    "name": "Alexander- Chapter 9\u00a0\u2013 Grasslands > Thorin\u2019s Card Shop"
+  },
+  {
+    "number": 104,
+    "name": "Bahamut"
+  },
+  {
+    "number": 105,
+    "name": "Bahamut Arisen- Chapter 10"
+  },
+  {
+    "number": 106,
+    "name": "Gilgamesh- Chapter\u00a013"
+  },
+  {
+    "number": 107,
+    "name": "Chocobo & Moogle"
+  },
+  {
+    "number": 108,
+    "name": "Fat Chocobo"
+  },
+  {
+    "number": 109,
+    "name": "Posh Chocobo\u00a0\u2013 Chapter 6"
+  },
+  {
+    "number": 110,
+    "name": "Moogle Trio\u00a0\u2013 Chapter 6"
+  },
+  {
+    "number": 111,
+    "name": "Magic Pot"
+  },
+  {
+    "number": 112,
+    "name": "Materia Guardian\u00a0\u2013 Chapter 9"
+  },
+  {
+    "number": 113,
+    "name": "Midgardsormr\u00a0\u2013 Chapter 4"
+  },
+  {
+    "number": 114,
+    "name": "Mythril Golem"
+  },
+  {
+    "number": 115,
+    "name": "Terror of the Deep\u00a0\u2013 Chapter 5"
+  },
+  {
+    "number": 116,
+    "name": "Grasptropod\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 117,
+    "name": "Custom Valkyrie\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 118,
+    "name": "Gigatrice"
+  },
+  {
+    "number": 119,
+    "name": "Dyne\u00a0\u2013 Chapter 12"
+  },
+  {
+    "number": 120,
+    "name": "Anuran Suppressor"
+  },
+  {
+    "number": 121,
+    "name": "Specimen H1024"
+  },
+  {
+    "number": 122,
+    "name": "Crimson Mare Mk. II\u00a0\u2013 Chapter 12"
+  },
+  {
+    "number": 123,
+    "name": "Gi Nattak- Chapter 12"
+  },
+  {
+    "number": 124,
+    "name": "Forgotten Specimen\u00a0\u2013 Chapter 12"
+  },
+  {
+    "number": 125,
+    "name": "Don Corneo & Abzu\u00a0\u2013 After finishing Story (Post-Game via Chapter Select)"
+  },
+  {
+    "number": 126,
+    "name": "Red Dragon\u00a0\u2013 After finishing Story (Post-Game via Chapter Select)"
+  },
+  {
+    "number": 127,
+    "name": "Demon Gate\u00a0\u2013 After finishing Story (Post-Game via Chapter Select)"
+  },
+  {
+    "number": 128,
+    "name": "Reno"
+  },
+  {
+    "number": 129,
+    "name": "Rude\u00a0\u2013 Chapter 13"
+  },
+  {
+    "number": 130,
+    "name": "Elena\u00a0\u2013 Chapter 13"
+  },
+  {
+    "number": 131,
+    "name": "Tseng"
+  },
+  {
+    "number": 132,
+    "name": "Rufus\u00a0\u2013 Chapter 12"
+  },
+  {
+    "number": 133,
+    "name": "Roche\u00a0\u2013 After finishing Story (Post-Game via Chapter Select)"
+  },
+  {
+    "number": 134,
+    "name": "J-Squad"
+  },
+  {
+    "number": 135,
+    "name": "Chocobo Jockey"
+  },
+  {
+    "number": 136,
+    "name": "Space Ranger\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 137,
+    "name": "Haunted Hotel\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 138,
+    "name": "Skywheel\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 139,
+    "name": "Loveless\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 140,
+    "name": "Saucer Squad\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 141,
+    "name": "Dio\u00a0\u2013 Chapter 8"
+  },
+  {
+    "number": 142,
+    "name": "Ultimate Party Animal"
+  },
+  {
+    "number": 143,
+    "name": "Sephiroth\u00a0\u2013 Chapter 9"
+  },
+  {
+    "number": 144,
+    "name": "Emerald Witch"
+  },
+  {
+    "number": 145,
+    "name": "Shadowblood Queen"
+  }
+]
