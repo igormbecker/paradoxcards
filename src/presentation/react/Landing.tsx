@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent } from "react";
-import { CampfireControls, CampfireScene } from "./Campfire";
+import { CampfireControls } from "./Campfire";
 import "./Landing.css";
 
 export function Landing({
@@ -24,7 +24,13 @@ export function Landing({
   return (
     <main className="landing">
       <div className="landing-backdrop" aria-hidden="true">
-        <CampfireScene moving={moving} />
+        <img
+          className="forest-scene"
+          data-testid="forest-scene"
+          data-animated={moving}
+          src={`/assets/backgrounds/forest-clearing${moving ? "" : "-still"}.svg`}
+          alt=""
+        />
       </div>
       <header className="landing-header">
         <a className="landing-home" href="/" aria-label="Paradox, início">
@@ -131,10 +137,7 @@ export function Landing({
           </div>
         </section>
       </div>
-      <CampfireControls
-        moving={moving}
-        onToggleMotion={() => setMoving((value) => !value)}
-      />
+      <CampfireControls />
       <footer className="landing-footer">
         <span>Paradox: The Card Game</span>
         <span className="developer-credit">

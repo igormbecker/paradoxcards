@@ -1,243 +1,184 @@
 .landing {
+  --display-font: "IM Fell English SC", "Iowan Old Style", Georgia, serif;
+  --body-font: "Spectral", Georgia, serif;
   position: relative;
   isolation: isolate;
   min-height: 100svh;
   max-width: none;
-  padding: 0 clamp(24px, 5vw, 88px);
+  padding: 0 clamp(24px, 4.5vw, 84px);
   display: flex;
   flex-direction: column;
-  background: #091216;
-  color: #efe6d2;
+  background: #04070c;
+  color: #e9e1cf;
+  font-family: var(--body-font);
+  line-height: 1.55;
 }
 .landing-backdrop {
   position: absolute;
   inset: 0;
   z-index: -1;
   overflow: hidden;
-  background: url("/assets/backgrounds/forest-camp-portal.png") center / cover;
 }
-.landing-backdrop::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      180deg,
-      #050d16a6,
-      transparent 28%,
-      #06101524 55%,
-      #061015ed
-    ),
-    linear-gradient(90deg, #06101514 38%, #06101566 65%, #061015c9);
-}
-.campfire-canvas {
-  position: absolute;
-  inset: 0;
+.forest-scene {
   width: 100%;
   height: 100%;
-  pointer-events: none;
-}
-.campfire-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  margin: 0 0 18px;
-}
-.landing .campfire-controls button {
-  padding: 8px 12px;
-  font-size: 11px;
-  color: #e4d4b5;
-  border-color: #dec18a44;
-  background: #071115bb;
-}
-.campfire-controls button > span {
-  margin-right: 5px;
-}
-.campfire-error {
-  color: #ffb6a5;
-  font-size: 12px;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
 }
 .landing-header {
-  min-height: 92px;
+  min-height: 76px;
   padding: 0;
-  border-bottom: 1px solid #dec18a30;
+  border: 0;
   gap: 20px;
 }
 .landing-home {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #e4d4b5;
+  color: #c9a35a;
   text-decoration: none;
-  font:
-    16px Georgia,
-    serif;
-}
-.landing-home > span,
-.panel-emblem {
-  font-family: Georgia, serif;
-  font-variant-emoji: text;
-  color: #dec18a;
+  font-family: var(--display-font);
+  letter-spacing: 0.15em;
 }
 .landing-home > span {
-  font-size: 26px;
+  font-variant-emoji: text;
+  font-size: 23px;
 }
 .access-badge {
-  font-size: 12px;
-  color: #d5d8cf;
   display: flex;
-  gap: 9px;
   align-items: center;
+  gap: 9px;
+  color: #a9b4c4;
+  font-size: 13px;
 }
 .access-badge i {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #83d9dc;
-  box-shadow: 0 0 10px #83d9dc;
+  background: #62d4e4;
+  box-shadow: 0 0 10px #62d4e4;
 }
 .landing-content {
   flex: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 400px;
-  gap: clamp(32px, 6vw, 110px);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 29%);
+  gap: clamp(24px, 4vw, 72px);
+  padding: 16px 0 30px;
   align-items: center;
-  padding: 44px 0;
+  min-height: 640px;
 }
 .landing-story {
   align-self: stretch;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 0 22px;
-  min-height: 580px;
+  gap: 240px;
+  padding-bottom: 8px;
 }
 .landing-story h1 {
-  font:
-    clamp(65px, 7.7vw, 126px)/1 Georgia,
-    serif;
-  letter-spacing: -0.055em;
-  color: #f1d9a5;
-  text-shadow:
-    0 3px 28px #000,
-    0 2px 2px #000;
   margin: 0;
+  font: 400 clamp(3.2rem, 6vw, 6.4rem)/0.95 var(--display-font);
+  letter-spacing: 0.06em;
+  color: #ead9ad;
+  text-shadow:
+    0 2px 24px #000b,
+    0 0 40px #c9a35a2e;
 }
 .landing-story h1 span {
-  display: block;
-  font:
-    20px/1.5 Georgia,
-    serif;
-  letter-spacing: 0.25em;
-  margin: 12px 0 0 7px;
-  color: #efe6d2;
-}
-.story-caption {
-  text-shadow: 0 2px 14px #000;
-  max-width: 520px;
-}
-.temporal-rule {
-  color: #dec18a;
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 14px;
+  margin-top: 16px;
+  font: 400 clamp(0.95rem, 1.5vw, 1.35rem)/1.5 var(--display-font);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #c9a35a;
 }
-.temporal-rule::after {
+.landing-story h1 span::before {
   content: "";
-  width: 108px;
+  width: clamp(28px, 4vw, 64px);
   height: 1px;
-  background: linear-gradient(90deg, #dec18a, transparent);
+  background: #c9a35ab3;
+}
+.story-caption {
+  max-width: 40ch;
+  text-shadow: 0 1px 14px #000;
+}
+.temporal-rule {
+  display: block;
+  font-size: 0;
+  width: 44px;
+  height: 1px;
+  background: #c9a35ab3;
+  margin-bottom: 16px;
 }
 .story-caption h2 {
-  font-size: clamp(26px, 2.5vw, 38px);
-  margin-bottom: 15px;
+  font: 400 clamp(23px, 2.1vw, 30px)/1.25 var(--display-font);
+  color: #ead9ad;
+  margin: 0 0 12px;
 }
 .story-caption p {
-  color: #d3d8d3;
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 17px;
+  font-weight: 300;
   margin: 0;
 }
 .entry-panel {
-  position: relative;
-  background: linear-gradient(150deg, #132126f5, #071115f7);
-  border: 1px solid #92704499;
-  padding: 34px 36px 28px;
+  width: 100%;
+  max-width: 400px;
+  justify-self: end;
+  padding: 30px 28px 26px;
+  background: #05090cb3;
+  border: 1px solid #c9a35a38;
+  border-radius: 3px;
+  backdrop-filter: blur(10px);
   box-shadow:
-    0 25px 80px #0008,
-    inset 0 0 0 5px #dec18a05;
-}
-.entry-panel::before,
-.entry-panel::after {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  pointer-events: none;
-  border-color: #dec18a;
-}
-.entry-panel::before {
-  left: -1px;
-  top: -1px;
-  border-left: 2px solid;
-  border-top: 2px solid;
-  color: #dec18a;
-}
-.entry-panel::after {
-  right: -1px;
-  bottom: -1px;
-  border-right: 2px solid;
-  border-bottom: 2px solid;
-  color: #dec18a;
+    0 30px 80px #0009,
+    0 0 60px #ff963c0d;
 }
 .panel-emblem {
-  text-align: center;
-  font-size: 34px;
-  margin-bottom: 16px;
+  display: none;
 }
 .entry-panel h2 {
-  text-align: center;
-  font-size: 32px;
-  line-height: 1.2;
-  margin: 0 0 14px;
+  margin: 0 0 8px;
+  font: 400 1.7rem/1.2 var(--display-font);
+  letter-spacing: 0.04em;
+  color: #ead9ad;
+}
+.entry-panel h2 br {
+  display: none;
 }
 .entry-description {
-  text-align: center;
-  font-size: 12px;
-  color: #b3c0bc;
-  margin: 0 0 29px;
-  line-height: 1.6;
+  margin: 0 0 22px;
+  font-size: 15px;
+  color: #a9b4c4;
 }
 .entry-panel form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 .entry-field label {
   display: block;
-  font-size: 12px;
-  color: #dfdacb;
-  margin-bottom: 9px;
+  margin-bottom: 6px;
+  font: 400 0.78rem/1.55 var(--display-font);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c9a35a;
 }
 .entry-field input {
-  display: block;
   width: 100%;
   min-width: 0;
   height: 48px;
-  border: 1px solid #68716b77;
-  border-radius: 0;
-  background: #071115b3;
-  color: #efe6d2;
   padding: 12px 14px;
-  font:
-    14px system-ui,
-    sans-serif;
+  font: inherit;
+  color: #e9e1cf;
+  background: #03060cb8;
+  border: 1px solid #c9a35a52;
+  border-radius: 2px;
 }
 .entry-field input::placeholder {
-  color: #94a29e;
+  color: #8995a6;
 }
 .password-field {
   position: relative;
@@ -256,72 +197,88 @@
   place-items: center;
   border: 0;
   background: transparent;
-  color: #b7c6c1;
+  color: #a9b4c4;
 }
 .landing .password-toggle:hover {
   background: #ffffff0c;
 }
 .landing .entry-submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  min-height: 50px;
-  margin-top: 4px;
-  background: linear-gradient(115deg, #d6b678, #b38c50);
-  border: 1px solid #efd5a0;
-  color: #172024;
-  font-weight: 650;
-  box-shadow: 0 4px 24px #b38c5017;
+  width: 100%;
+  margin-top: 6px;
+  padding: 13px 16px;
+  font: 400 1.05rem/1.4 var(--display-font);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #1b1305;
+  background: linear-gradient(180deg, #e8cf92, #b8893c);
+  border: 0;
+  border-radius: 2px;
+}
+.entry-submit > span {
+  display: none;
 }
 .landing .entry-submit:hover:not(:disabled) {
-  background: #e6ca92;
+  background: linear-gradient(180deg, #f2dca4, #c79a4a);
 }
 .landing .entry-submit:disabled {
   opacity: 0.65;
 }
 .landing :is(input, button, a):focus-visible {
-  outline: 2px solid #83d9dc;
-  outline-offset: 4px;
+  outline: 2px solid #62d4e4;
+  outline-offset: 3px;
 }
 .entry-error {
   color: #ffb6a5;
   margin: 0;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 14px;
 }
 .access-notice {
-  border-top: 1px solid #92704455;
-  margin-top: 28px;
-  padding-top: 24px;
-  text-align: center;
+  border-top: 1px solid #c9a35a38;
+  margin-top: 24px;
+  padding-top: 20px;
 }
 .access-notice h3 {
-  font:
-    18px Georgia,
-    serif;
-  color: #dec18a;
-  margin: 0 0 11px;
+  font: 400 18px/1.4 var(--display-font);
+  color: #ead9ad;
+  margin: 0 0 9px;
 }
 .access-notice p {
-  font-size: 13px;
-  line-height: 1.7;
-  color: #cad3cc;
+  font-size: 14px;
+  color: #e9e1cf;
   margin: 0;
 }
 .access-notice .access-detail {
-  font-size: 11px;
-  color: #a4b4af;
-  margin-top: 13px;
+  font-size: 13px;
+  color: #a9b4c4;
+  margin-top: 12px;
+}
+.campfire-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.landing .campfire-controls button {
+  padding: 7px 12px;
+  font-size: 13px;
+  color: #ead9ad;
+  border-color: #c9a35a38;
+  background: #05090cb3;
+}
+.campfire-error {
+  color: #ffb6a5;
+  font-size: 13px;
 }
 .landing-footer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 22px 0;
-  border-top: 1px solid #dec18a30;
-  font-size: 11px;
-  color: #b0b8af;
+  padding: 18px 0;
+  border-top: 1px solid #c9a35a38;
+  font-size: 12px;
+  color: #a9b4c4;
 }
 .landing-footer-links {
   display: flex;
@@ -330,98 +287,61 @@
   gap: 16px;
 }
 .landing-footer-links a {
-  color: #b0b8af;
+  color: #ead9ad;
   text-underline-offset: 4px;
 }
-.landing-footer-links a:hover {
-  color: #efd5a0;
-}
-@media (min-width: 1800px) {
-  .landing-content {
-    max-width: 1650px;
-    width: 100%;
-    margin: auto;
-  }
-}
-@media (max-width: 1000px) {
-  .landing-content {
-    grid-template-columns: minmax(0, 1fr) 360px;
-    gap: 25px;
-  }
-  .entry-panel {
-    padding: 30px 25px;
-  }
-  .landing-story h1 {
-    font-size: 76px;
-  }
-  .landing-story h1 span {
-    font-size: 16px;
-  }
-}
-@media (max-width: 740px) {
+@media (max-width: 819px) {
   .landing {
-    padding: 0 22px;
+    padding: 0 24px;
   }
   .landing-header {
     min-height: 72px;
   }
   .landing-home {
-    font-size: 12px;
-    gap: 7px;
+    font-size: 13px;
   }
   .access-badge {
-    font-size: 10px;
-    gap: 6px;
+    font-size: 12px;
   }
   .landing-content {
     grid-template-columns: minmax(0, 1fr);
-    padding: 30px 0;
-    gap: 30px;
-  }
-  .landing-backdrop {
-    background: url("/assets/backgrounds/forest-camp-portal.png") 36% top / auto
-      710px no-repeat;
-  }
-  .landing-backdrop::after {
-    background: linear-gradient(
-      180deg,
-      #06101555,
-      #06101522 18%,
-      #061015eb 48%,
-      #061015
-    );
+    gap: 28px;
+    padding-top: 20px;
   }
   .landing-story {
-    min-height: 380px;
-    padding: 0;
+    min-height: 680px;
+    gap: 220px;
   }
   .landing-story h1 {
-    font-size: clamp(60px, 16vw, 100px);
+    font-size: clamp(3.2rem, 12vw, 5rem);
   }
   .landing-story h1 span {
-    font-size: 15px;
+    font-size: 0.95rem;
+    letter-spacing: 0.35em;
   }
-  .story-caption h2 {
-    font-size: 27px;
+  .forest-scene {
+    height: 680px;
+    object-position: 30% top;
   }
-  .story-caption p {
-    font-size: 13px;
+  .landing-backdrop::after {
+    content: "";
+    position: absolute;
+    inset: 620px 0 0;
+    background: linear-gradient(180deg, transparent, #04070c 160px);
   }
   .entry-panel {
-    width: 100%;
-    max-width: 440px;
     justify-self: center;
-    padding: 28px;
+    max-width: 440px;
   }
   .landing-footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    text-align: center;
   }
-  .landing-footer .developer-credit {
+  .developer-credit {
     flex-basis: 100%;
     order: 1;
     max-width: 320px;
-    line-height: 1.7;
   }
 }

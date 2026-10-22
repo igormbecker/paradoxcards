@@ -4,6 +4,11 @@ test("landing presents the commercial name, restricted access and usable login o
   page,
 }) => {
   await page.goto("/");
+  await expect(page.getByTestId("forest-scene")).toBeVisible();
+  await expect(page.locator("#game-title")).toHaveCSS(
+    "font-family",
+    /IM Fell English SC/,
+  );
   await expect(page).toHaveTitle("Paradox: The Card Game");
   await expect(
     page.getByRole("link", { name: "Conhecer o tabuleiro" }),
