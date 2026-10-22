@@ -69,6 +69,26 @@ try {
   assert.equal(account.username, profile.username);
   assert.equal(account.is_admin, false);
   assert.equal(account.email_verification_required, false);
+  const admin = await createUser(
+    `admin-${email}`,
+    password,
+    { ...profile, username: `admin_${randomUUID().slice(0, 8)}` },
+    { isAdmin: true },
+  );
+  try {
+    const stored = (
+      await query({
+        text: "SELECT is_admin FROM paradox.users WHERE id=$1",
+        values: [admin.id],
+      })
+    ).rows[0];
+    assert.equal(stored.is_admin, true);
+  } finally {
+    await query({
+      text: "DELETE FROM paradox.users WHERE id=$1",
+      values: [admin.id],
+    });
+  }
   assert.equal((await request("/session")).response.status, 401);
   assert.equal(
     (

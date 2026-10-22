@@ -22,7 +22,7 @@ Se houver dados antigos maiores que os novos limites ou e-mails duplicados quand
 
 Ao alterar o e-mail para outro endereço, a trigger limpa email_verified_at, exige nova verificação e incrementa email_verification_version. Mudanças apenas de maiúsculas não invalidam a verificação. Toda atualização de usuário atualiza updated_at em UTC.
 
-users:create solicita nome, username, e-mail e senha. A função administrativa createUser continua compatível com seus chamadores anteriores e rejeita flags de privilégio/verificação fornecidas no perfil. O provisionamento administrativo cria contas comuns isentas da verificação, pois não há cadastro público nesta etapa. Não concede privilégios administrativos nem considera essas contas verificadas.
+users:create solicita nome, username, e-mail, a escolha de administrador (`Administrador? [s/N]:`) e senha. Enter mantém uma conta comum; `s` ou `sim` cria uma conta com is_admin=true. Respostas inválidas repetem a pergunta. A função administrativa createUser aceita a opção booleana isAdmin separada do perfil, mantém false como padrão e continua rejeitando flags de privilégio/verificação no perfil. As contas provisionadas ficam isentas da verificação, sem serem consideradas verificadas. O comando requer acesso ao código e às credenciais do banco e pepper do ambiente; não é disponibilizado pela interface pública.
 
 Os campos de administração e verificação são a fundação do modelo: endpoints administrativos, envio de links, consumo de tokens e bloqueio de login por verificação ainda não foram implementados. Nenhuma permissão nova depende apenas destes metadados nesta etapa.
 

@@ -24,7 +24,7 @@ function pepper(password) {
 const emailValue = (value) =>
   typeof value === "string" ? value.trim().toLowerCase() : "";
 // Administrative provisioning; public registration is not exposed.
-export async function createUser(email, password, profile = {}) {
+export async function createUser(email, password, profile = {}, options = {}) {
   email = emailValue(email);
   const id = randomUUID();
   const validProfile =
@@ -45,6 +45,11 @@ export async function createUser(email, password, profile = {}) {
         ? profile.username.trim()
         : "";
   if (
+    !options ||
+    typeof options !== "object" ||
+    Array.isArray(options) ||
+    Object.keys(options).some((key) => key !== "isAdmin") ||
+    (options.isAdmin !== undefined && typeof options.isAdmin !== "boolean") ||
     !validProfile ||
     !name ||
     name.length > 255 ||
@@ -62,8 +67,8 @@ export async function createUser(email, password, profile = {}) {
     );
   const hash = await bcrypt.hash(pepper(password), 12);
   await query({
-    text: "INSERT INTO paradox.users(id,email,password_hash,name,username,email_verification_required) VALUES($1,$2,$3,$4,$5,false)",
-    values: [id, email, hash, name, username],
+    text: "INSERT INTO paradox.users(id,email,password_hash,name,username,email_verification_required,is_admin) VALUES($1,$2,$3,$4,$5,false,$6)",
+    values: [id, email, hash, name, username, options.isAdmin ?? false],
   });
   return { id, email, name, username };
 }

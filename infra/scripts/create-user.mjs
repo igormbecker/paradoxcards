@@ -47,9 +47,22 @@ try {
   const name = await input.question("Nome: ");
   const username = await input.question("Username (1 a 30 caracteres): ");
   const email = await input.question("E-mail: ");
+  let adminAnswer;
+  do {
+    adminAnswer = (await input.question("Administrador? [s/N]: "))
+      .trim()
+      .toLowerCase();
+  } while (!["", "s", "sim", "n", "não", "nao"].includes(adminAnswer));
   input.close();
   const password = await hiddenPassword();
-  await createUser(email, password, { name, username });
+  await createUser(
+    email,
+    password,
+    { name, username },
+    {
+      isAdmin: ["s", "sim"].includes(adminAnswer),
+    },
+  );
   console.log("Conta criada.");
 } catch {
   console.error(
