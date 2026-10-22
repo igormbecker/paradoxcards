@@ -1,23 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { animateCampfire } from "./campfire-renderer";
-
-export function CampfireScene({ moving }: { moving: boolean }) {
-  const canvas = useRef<HTMLCanvasElement>(null);
-  const [ready, setReady] = useState(false);
-  useEffect(() => {
-    if (!moving || !canvas.current) return;
-    return animateCampfire(canvas.current, () => setReady(true));
-  }, [moving]);
-  return (
-    <canvas
-      ref={canvas}
-      className="campfire-canvas"
-      data-testid="campfire-canvas"
-      data-animated={moving && ready}
-      aria-hidden="true"
-    />
-  );
-}
 
 export function CampfireControls() {
   const audio = useRef<HTMLAudioElement>(null);
