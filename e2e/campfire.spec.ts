@@ -35,7 +35,7 @@ test("forest clearing moves on desktop and mobile while ambient sound remains op
   await expect(
     page.getByRole("button", { name: /Pausar animação/ }),
   ).toHaveCount(0);
-  await expect(scene).toHaveAttribute("src", /forest-clearing\.svg$/);
+  await expect(scene.locator("svg.scene")).toBeVisible();
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(scene).toHaveAttribute("data-animated", "true");
   const mobileFrame = await scene.screenshot();
@@ -55,10 +55,10 @@ test("reduced motion starts with a static scene and audio failures leave the con
     "false",
   );
   const scene = page.getByTestId("forest-scene");
-  await expect(scene).toHaveAttribute("src", /forest-clearing-still\.svg$/);
+  await expect(scene.locator("svg.scene")).toBeVisible();
   await expect
     .poll(() =>
-      scene.evaluate((element: HTMLImageElement) => element.naturalWidth),
+      scene.evaluate((element) => element.getBoundingClientRect().width),
     )
     .toBeGreaterThan(0);
   const staticFrame = await scene.screenshot();
