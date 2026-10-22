@@ -142,7 +142,11 @@ export function Landing({
         </span>
         <span className="landing-footer-links">
           <a href="/status">Status do sistema</a>
-          <span>Em desenvolvimento</span>
+          <span>
+            {__BUILD_VERSION__
+              ? `Em desenvolvimento: ${__BUILD_VERSION__}`
+              : "Em desenvolvimento"}
+          </span>
         </span>
       </footer>
     </main>
