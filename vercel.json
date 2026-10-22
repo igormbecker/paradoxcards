@@ -5,7 +5,9 @@
   "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist",
   "regions": ["gru1"],
-  "functions": { "api/index.ts": { "maxDuration": 30 } },
+  "functions": {
+    "api/index.ts": { "maxDuration": 30, "includeFiles": ".server-build/**" }
+  },
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/index" },
     { "source": "/status", "destination": "/index.html" }

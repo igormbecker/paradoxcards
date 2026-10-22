@@ -19,13 +19,7 @@ export function CampfireScene({ moving }: { moving: boolean }) {
   );
 }
 
-export function CampfireControls({
-  moving,
-  onToggleMotion,
-}: {
-  moving: boolean;
-  onToggleMotion: () => void;
-}) {
+export function CampfireControls() {
   const audio = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
   const [pending, setPending] = useState(false);
@@ -92,16 +86,7 @@ export function CampfireControls({
             ? "Som ligado"
             : "Som da fogueira"}
       </button>
-      <button
-        type="button"
-        onClick={onToggleMotion}
-        aria-pressed={moving}
-        aria-label={
-          moving ? "Pausar animação da fogueira" : "Ativar animação da fogueira"
-        }
-      >
-        {moving ? "Pausar chamas" : "Animar chamas"}
-      </button>
+
       {error && (
         <span className="campfire-error" role="status">
           Não foi possível reproduzir o som. Tente novamente.
