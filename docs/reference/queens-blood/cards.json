@@ -1,0 +1,4378 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-10-21",
+  "sourceUrl": "https://www.queensbloodonline.com/decks/",
+  "numberingSourceUrl": "https://www.powerpyx.com/final-fantasy-7-vii-rebirth-all-queens-blood-card-locations/",
+  "status": "reference capture, not an engine-ready or independently verified ruleset",
+  "coordinateConvention": {
+    "origin": [0, 0],
+    "offsetFormat": ["row", "column"],
+    "positiveRow": "down",
+    "positiveColumn": "right, toward opponent for left-side player",
+    "opponentPerspective": "mirror column offsets",
+    "legend": {
+      "O": "card origin",
+      "R": "territory/rank expansion",
+      "E": "ability affected tile",
+      "B": "both expansion and ability",
+      ".": "unaffected"
+    },
+    "note": "All offsets are relative to card origin. An affected tile is not an additional occupied tile; each placed card occupies its origin."
+  },
+  "cards": [
+    {
+      "id": "qb-001",
+      "originalNumber": 1,
+      "nameEn": "Security Officer",
+      "sourceNameEn": "Security Officer",
+      "sourceSlug": "security-officer",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", ".ROR.", "..R..", "....."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/security-officer.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-security-officer.webp",
+      "imageSha256": "f3c77b35859c54602deecde2a1de879cfc29e04dd2d8e3f1493d8f2b18aefa98",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-002",
+      "originalNumber": 2,
+      "nameEn": "Riot Trooper",
+      "sourceNameEn": "Riot Trooper",
+      "sourceSlug": "riot-trooper",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-1, 0],
+        [0, 1],
+        [1, 0],
+        [2, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["..R..", "..R..", "..OR.", "..R..", "..R.."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/riot-trooper.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-riot-trooper.webp",
+      "imageSha256": "2214c07e99a5a46480f75458e4cba57921f960b6ed19c351efcc000f1c0139af",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-003",
+      "originalNumber": 3,
+      "nameEn": "Grenadier",
+      "sourceNameEn": "Grenadier",
+      "sourceSlug": "grenadier",
+      "power": 1,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [[0, 2]],
+      "pattern5x5": [".....", ".....", "..O.E", ".....", "....."],
+      "abilityTextEn": "When played, lower the power of enemy cards on affected tiles by 4.",
+      "image": "images/grenadier.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-grenadier.webp",
+      "imageSha256": "7aeddd9989d8b2f8e51253bb8e967bf19c9dd54cb46fabd8149dca45c1ad2975",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-004",
+      "originalNumber": 4,
+      "nameEn": "J-Unit Sweeper",
+      "sourceNameEn": "J-Unit Sweeper",
+      "sourceSlug": "j-unit-sweeper",
+      "power": 2,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [-1, 1],
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..RR.", "..O..", "..RR.", "....."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/j-unit-sweeper.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-j-unit-sweeper.webp",
+      "imageSha256": "05066187ea1dbd76b69304d33e837d616ffcddca4698fc9c33d29e6f586a0700",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-005",
+      "originalNumber": 5,
+      "nameEn": "Queen Bee",
+      "sourceNameEn": "Queen Bee",
+      "sourceSlug": "queen-bee",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [2, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["..R..", ".....", "..O..", ".....", "..R.."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/queen-bee.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-queen-bee.webp",
+      "imageSha256": "c220648d045ff745a37ca04bf6f699e1ba9d2a8811e7679321cb50b382aef779",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-006",
+      "originalNumber": 6,
+      "nameEn": "Toxirat",
+      "sourceNameEn": "Toxirat",
+      "sourceSlug": "toxirat",
+      "power": 2,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [[1, 1]],
+      "pattern5x5": [".....", ".....", "..O..", "..RB.", "....."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 3.",
+      "image": "images/toxirat.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-toxirat.webp",
+      "imageSha256": "9775faaed07444cc5e3588429fdd5cf1fccde0ed9c02305e8d067a7f49b2c99a",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-007",
+      "originalNumber": 7,
+      "nameEn": "Levrikon",
+      "sourceNameEn": "Levikron",
+      "sourceSlug": "levikron",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..OR.", "..R..", "....."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/levikron.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-levikron.webp",
+      "imageSha256": "c2e087bb4550c757525db82e628b1bac3f9744f05985c762ef4bce1325823a35",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-008",
+      "originalNumber": 8,
+      "nameEn": "Grasslands Wolf",
+      "sourceNameEn": "Grasslands Wolf",
+      "sourceSlug": "grasslands-wolf",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", "..OR.", ".....", "....."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/grasslands-wolf.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-grasslands-wolf.webp",
+      "imageSha256": "baa3476b5f370950a5822853531f88a2eec6304e13badf61d9a26336af56ed7f",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-009",
+      "originalNumber": 9,
+      "nameEn": "Mu",
+      "sourceNameEn": "Mu",
+      "sourceSlug": "mu",
+      "power": 1,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 1],
+        [0, 1]
+      ],
+      "effectOffsets": [[1, 0]],
+      "pattern5x5": [".....", "...R.", "..OR.", "..E..", "....."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 1 while this card in in play.",
+      "image": "images/mu.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-mu.webp",
+      "imageSha256": "8f0051c23fceda77557adf5972ee1ba58242d0dbab801cee0d0c06e78f55faea",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-010",
+      "originalNumber": 10,
+      "nameEn": "Mandragora",
+      "sourceNameEn": "Mandragora",
+      "sourceSlug": "mandragora",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..OR.", "..R..", "....."],
+      "abilityTextEn": "When played, add Mandragora Minion to your hand.",
+      "image": "images/mandragora.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-mandragora.webp",
+      "imageSha256": "bf44f9d61015f20854449d89e32138320b67025dfdfd0b91ba443f8d7384166f",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-011",
+      "originalNumber": 11,
+      "nameEn": "Elphadunk",
+      "sourceNameEn": "Elphadunk",
+      "sourceSlug": "elphadunk",
+      "power": 4,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", ".RO..", "..R..", "....."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/elphadunk.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-elphadunk.webp",
+      "imageSha256": "0fbcd8020c7329231be28f459ce8dccfa41582d57705880092e9d74c78952ae7",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-012",
+      "originalNumber": 12,
+      "nameEn": "Cactuar",
+      "sourceNameEn": "Cactuar",
+      "sourceSlug": "cactuar",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [[2, 1]],
+      "pattern5x5": [".....", ".....", "..OR.", "..R..", "...E."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 3 while this card is in play.",
+      "image": "images/cactuar.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-cactuar.webp",
+      "imageSha256": "55eaa4902d1be1decff7e3b459097c113bbc438a0008b57cbced6054d1d520e8",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-013",
+      "originalNumber": 13,
+      "nameEn": "Crystalline Crab",
+      "sourceNameEn": "Crystalline Crab",
+      "sourceSlug": "crystalline-crab",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1]
+      ],
+      "effectOffsets": [[-1, 0]],
+      "pattern5x5": [".....", "..B..", ".ROR.", ".....", "....."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 2 while this card is in play.",
+      "image": "images/crystalline-crab.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-crystalline-crab.webp",
+      "imageSha256": "2d2fc5b9a483f4c6dc7af89f4527d92d046a10fe59d4306b28d441a3bbced2bc",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-014",
+      "originalNumber": 14,
+      "nameEn": "Quetzalcoatl",
+      "sourceNameEn": "Quetzalcoatl",
+      "sourceSlug": "quetzalcoatl",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-1, 1],
+        [1, 1],
+        [2, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["..R..", "...R.", "..O..", "...R.", "..R.."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/quetzalcoatl.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-quetzalcoatl.webp",
+      "imageSha256": "bf16f97e53362544dfac70629225ec3e92d5f537568e5a8c5a394871eb18f69a",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-015",
+      "originalNumber": 15,
+      "nameEn": "Zu",
+      "sourceNameEn": "Zu",
+      "sourceSlug": "zu",
+      "power": 2,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".R.R.", "..O..", ".R.R.", "....."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/zu.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-zu.webp",
+      "imageSha256": "15c6004f54eef4f8eb03d9a4649b984fab1b4f102bb530b70990ae044b365bf1",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-016",
+      "originalNumber": 16,
+      "nameEn": "Devil Rider",
+      "sourceNameEn": "Devil Rider",
+      "sourceSlug": "devil-rider",
+      "power": 4,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -2],
+        [0, -2],
+        [0, -1],
+        [1, -2]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "R....", "RRO..", "R....", "....."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/devil-rider.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-devil-rider.webp",
+      "imageSha256": "0592d9ec8ac78688b167ac3973661191df82dd54af732a1b75564d067712766c",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-017",
+      "originalNumber": 17,
+      "nameEn": "Screamer",
+      "sourceNameEn": "Screamer",
+      "sourceSlug": "screamer",
+      "power": 1,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".RRR.", ".ROR.", ".RRR.", "....."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/screamer.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-screamer.webp",
+      "imageSha256": "d48e4e51ca5b5f65f71dbf5b115a8bf2a81f80ffca87b3dfbb6c54130dfe75ab",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-018",
+      "originalNumber": 18,
+      "nameEn": "Flan",
+      "sourceNameEn": "Flan",
+      "sourceSlug": "flan",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [0, -1],
+        [1, -1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".R...", ".RO..", ".R...", "....."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/flan.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-flan.webp",
+      "imageSha256": "9a65bd679654fbdbea1ea092f9d274a2761bb44887f14cfdc94410e12fe8c0f8",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-019",
+      "originalNumber": 19,
+      "nameEn": "Crawler",
+      "sourceNameEn": "Crawler",
+      "sourceSlug": "crawler",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [1, -1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".RR..", "..O..", ".RR..", "....."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/crawler.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-crawler.webp",
+      "imageSha256": "7dc698f45964b0881d6ac8b6a9836c0983951c2281c8395eaeabbd738da84d53",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-020",
+      "originalNumber": 20,
+      "nameEn": "Archdragon",
+      "sourceNameEn": "Archdragon",
+      "sourceSlug": "archdragon",
+      "power": 3,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [0, 1],
+        [1, -1]
+      ],
+      "effectOffsets": [[0, 1]],
+      "pattern5x5": [".....", ".R...", "..OB.", ".R...", "....."],
+      "abilityTextEn": "When played, lower the power of enemy cards on affected tiles by 3.",
+      "image": "images/archdragon.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-archdragon.webp",
+      "imageSha256": "55634c2a1725f1a3b5bbb30065f892305c564ea73088e2e748340abe1546cf0f",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-021",
+      "originalNumber": 21,
+      "nameEn": "Ogre",
+      "sourceNameEn": "Ogre",
+      "sourceSlug": "ogre",
+      "power": 5,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-2, 1],
+        [2, 0],
+        [2, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["..RR.", ".....", "..O..", ".....", "..RR."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/ogre.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-ogre.webp",
+      "imageSha256": "8e20f99aa1aa65e9a8c0554a3c756b11755243f788e62b59575f326280f3bb47",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-022",
+      "originalNumber": 22,
+      "nameEn": "Deathwheel",
+      "sourceNameEn": "Deathwheel",
+      "sourceSlug": "deathwheel",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [
+        [-2, 2],
+        [2, 2]
+      ],
+      "pattern5x5": ["....E", ".....", "..O..", ".....", "....E"],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 3.",
+      "image": "images/deathwheel.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-deathwheel.webp",
+      "imageSha256": "6512944c8d1d928656469861f4488a1bb49af3bb20b47ff8a68cb964820b267b",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-023",
+      "originalNumber": 23,
+      "nameEn": "Fleetwing",
+      "sourceNameEn": "Fleetwing",
+      "sourceSlug": "fleetwing",
+      "power": 3,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, -2],
+        [-1, -1],
+        [1, -1],
+        [2, -2]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["R....", ".R...", "..O..", ".R...", "R...."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/fleetwing.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-fleetwing.webp",
+      "imageSha256": "6e453a36f7920ce2ddbf76d13fe0899e0456c0863ce0e059884342507e8ea572",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-024",
+      "originalNumber": 24,
+      "nameEn": "Zemzelett",
+      "sourceNameEn": "Zemzelett",
+      "sourceSlug": "zemzelett",
+      "power": 1,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [[0, -1]],
+      "pattern5x5": [".....", "..R..", ".EO..", "..RR.", "....."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 3 while this card is in play.",
+      "image": "images/zemzelett.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-zemzelett.webp",
+      "imageSha256": "20195445e89bf3f12729b45425a6379f8b440a24647a4699e02f4e572f9e371a",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-025",
+      "originalNumber": 25,
+      "nameEn": "Ignilisk",
+      "sourceNameEn": "Ignilisk",
+      "sourceSlug": "ignilisk",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [2, 0]
+      ],
+      "effectOffsets": [
+        [0, 1],
+        [2, 0]
+      ],
+      "pattern5x5": [".....", ".....", "..OB.", ".....", "..B.."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 2 while this card is in play.",
+      "image": "images/ignilisk.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-ignilisk.webp",
+      "imageSha256": "26ea27464bf43a52a5c084cb03bed9d3b944a57db91d9a46705820b0aad661e6",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-026",
+      "originalNumber": 26,
+      "nameEn": "Capparwire",
+      "sourceNameEn": "Capparwire",
+      "sourceSlug": "capparwire",
+      "power": 3,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "pattern5x5": [".....", "..B..", "..OR.", "..B..", "....."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 1.",
+      "image": "images/capparwire.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-capparwire.webp",
+      "imageSha256": "02a7239b58fcd3d96d83c37a7ea6d575c3f78d74ce3e794d2f04730a7bbb0ca8",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-027",
+      "originalNumber": 27,
+      "nameEn": "Mindflayer",
+      "sourceNameEn": "Mindflayer",
+      "sourceSlug": "mindflayer",
+      "power": 1,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [-1, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [-1, 1],
+        [1, 0],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", "..BB.", "..O..", "..BE.", "....."],
+      "abilityTextEn": "Lower the power of allied and enemy cards on affected tiles by 1 while this card in in play.",
+      "image": "images/mindflayer.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-mindflayer.webp",
+      "imageSha256": "b7b25afed371424a241e5f67caf1180dc75b0427902ccf1b4321603f85221f59",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-028",
+      "originalNumber": 28,
+      "nameEn": "Scrutineye",
+      "sourceNameEn": "Scrutineye",
+      "sourceSlug": "scrutineye",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [2, 0]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "pattern5x5": ["..R..", "..E..", "..O..", "..E..", "..R.."],
+      "abilityTextEn": "Raise the power of allied and enemy cards on affected tiles by 1 while this card is in play.",
+      "image": "images/scrutineye.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-scrutineye.webp",
+      "imageSha256": "3cda284a84dc7a877e2f51201474d125d0f3d80927f428e9367710769f6b48ae",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-029",
+      "originalNumber": 29,
+      "nameEn": "Hell Rider II",
+      "sourceNameEn": "Hell Rider II",
+      "sourceSlug": "hell-rider-ii",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [
+        [0, 1],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".....", "..OB.", ".RRB.", "....."],
+      "abilityTextEn": "When played, lower the power of enemy cards on affected tiles by 3.",
+      "image": "images/hell-rider-ii.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-hell-rider-ii.webp",
+      "imageSha256": "bdb2451a17a3f25c3b383c39b911ab026dc0d10bcd4bfb26c742005f04e12ca6",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-030",
+      "originalNumber": 30,
+      "nameEn": "Flametrooper",
+      "sourceNameEn": "Flametrooper",
+      "sourceSlug": "flametrooper",
+      "power": 3,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [0, -1],
+        [1, -1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, -1],
+        [0, -1],
+        [1, -1]
+      ],
+      "pattern5x5": [".....", ".BR..", ".BO..", ".BR..", "....."],
+      "abilityTextEn": "When destroyed, lower the power of allied and enemy cards on affected tiles by 3.",
+      "image": "images/flametrooper.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-flametrooper.webp",
+      "imageSha256": "88022eecbade513e7aed7c62734bae44c63424edd17a85520ae79a9c3933d34b",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-031",
+      "originalNumber": 31,
+      "nameEn": "Spearhawk",
+      "sourceNameEn": "Spearhawk",
+      "sourceSlug": "spearhawk",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [[1, 0]],
+      "pattern5x5": [".....", ".....", ".ROR.", "..B..", "....."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 2 while this card is in play.",
+      "image": "images/spearhawk.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-spearhawk.webp",
+      "imageSha256": "6d43a1b5c0aae3ba31131d6e288e80473c34e2743ed632b7b0b6153fc0c1d05c",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-032",
+      "originalNumber": 32,
+      "nameEn": "Sea Devil",
+      "sourceNameEn": "Sea Devil",
+      "sourceSlug": "sea-devil",
+      "power": 1,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", ".ROR.", ".....", "....."],
+      "abilityTextEn": "When allied cards are played from hand, raise this card's power by 1.",
+      "image": "images/sea-devil.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-sea-devil.webp",
+      "imageSha256": "8808f085cf845e6f87548a5c1c5c023219bccdef676029e24400b8baa3addbce",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-033",
+      "originalNumber": 33,
+      "nameEn": "Shoalopod",
+      "sourceNameEn": "Shoalopod",
+      "sourceSlug": "shoalopod",
+      "power": 1,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [-1, 1],
+        [0, 1]
+      ],
+      "effectOffsets": [[-1, 0]],
+      "pattern5x5": [".....", "..BR.", "..OR.", ".....", "....."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 4 while this card is in play.",
+      "image": "images/shoalopod.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-shoalopod.webp",
+      "imageSha256": "9161584bbb062a00804db6582e64854b1a0d890cb01846ca284b917902822ce6",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-034",
+      "originalNumber": 34,
+      "nameEn": "Crown Lance",
+      "sourceNameEn": "Crown Lance",
+      "sourceSlug": "crown-lance",
+      "power": 2,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [1, 0],
+        [1, 1],
+        [2, 1]
+      ],
+      "effectOffsets": [
+        [1, 1],
+        [2, 1]
+      ],
+      "pattern5x5": [".....", ".....", "..O..", "..RB.", "...B."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 2.",
+      "image": "images/crown-lance.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-crown-lance.webp",
+      "imageSha256": "1e4676df0e6020a8fb22a7d0f8c385232d294b4f4cc216e6dc667d1822d58680",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-035",
+      "originalNumber": 35,
+      "nameEn": "Tonberry King",
+      "sourceNameEn": "Tonberry King",
+      "sourceSlug": "tonberry-king",
+      "power": 1,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [[0, 1]],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..OR.", ".....", "....."],
+      "abilityTextEn": "When allied cards are destroyed, raise this card's power by 2.",
+      "image": "images/tonberry-king.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-tonberry-king.webp",
+      "imageSha256": "66d250dc2ad7b68346bb8c0e6f3e87994398f5c6e264d1f63d0218274d0a0252",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-036",
+      "originalNumber": 36,
+      "nameEn": "Sandhog Pie",
+      "sourceNameEn": "Sandhog Pie",
+      "sourceSlug": "sandhog-pie",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [0, 1]
+      ],
+      "pattern5x5": [".....", "..B..", "..OB.", ".....", "....."],
+      "abilityTextEn": "When destroyed, raise the power of allied cards on affected tiles by 3.",
+      "image": "images/sandhog-pie.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-sandhog-pie.webp",
+      "imageSha256": "103a56c2e10d42b248e91ef6a452af6914fbf329a08ed8c983a1e45c002cd1a6",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-037",
+      "originalNumber": 37,
+      "nameEn": "Bloatfloat",
+      "sourceNameEn": "Bloatfloat",
+      "sourceSlug": "bloatfloat",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [[0, 2]],
+      "pattern5x5": [".....", ".....", "..ORE", "..R..", "....."],
+      "abilityTextEn": "When destroyed, lower the power of allied and enemy cards on affected tiles by 4.",
+      "image": "images/bloatfloat.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-bloatfloat.webp",
+      "imageSha256": "347f7d75f618b3f24a669a85ada3e2d5f9c8c9b8d968404da414c8256cb6fe45",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-038",
+      "originalNumber": 38,
+      "nameEn": "Bagnadrana",
+      "sourceNameEn": "Bagnadrana",
+      "sourceSlug": "bagnadrana",
+      "power": 2,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..OR.", "...R.", "....."],
+      "abilityTextEn": "When enemy cards are played from hand, raise this card's power by 1.",
+      "image": "images/bagnadrana.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-bagnadrana.webp",
+      "imageSha256": "b3511de57d9e47e8f094b09802e15d252363cbfea930c98a5a670fa513f8a785",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-039",
+      "originalNumber": 39,
+      "nameEn": "Cockatrice",
+      "sourceNameEn": "Cockatrice",
+      "sourceSlug": "cockatrice",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [[0, 1]],
+      "effectOffsets": [[0, 1]],
+      "pattern5x5": [".....", ".....", "..OB.", ".....", "....."],
+      "abilityTextEn": "When played, destroy allied and enemy cards on affected tiles.",
+      "image": "images/cockatrice.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-cockatrice.webp",
+      "imageSha256": "96f9fbfeec0c9378c9a23a4d59fb591ce2ce1b2ac3797758157abab6d4d2b26d",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-040",
+      "originalNumber": 40,
+      "nameEn": "Heatseeker",
+      "sourceNameEn": "Heatseeker",
+      "sourceSlug": "heatseeker",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", ".ROR.", "..R..", "....."],
+      "abilityTextEn": "When destroyed, add Heatseeker Minion to your hand.",
+      "image": "images/heatseeker.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-heatseeker.webp",
+      "imageSha256": "9d7f3f180ffc0e885278b0e63334cd8d03300729a0d103e1ceac5e237aa80b74",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-041",
+      "originalNumber": 41,
+      "nameEn": "Bomb",
+      "sourceNameEn": "Bomb",
+      "sourceSlug": "bomb",
+      "power": 2,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".EBE.", ".BOB.", ".EBE.", "....."],
+      "abilityTextEn": "When destroyed, lower the power of allied and enemy cards on affected tiles by 4.",
+      "image": "images/bomb.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-bomb.webp",
+      "imageSha256": "b69e1224af7d7081fa5f16b9fcb6ce6f2be74e75600d69c2e28b289ce4de93e5",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-042",
+      "originalNumber": 42,
+      "nameEn": "Thug",
+      "sourceNameEn": "Thug",
+      "sourceSlug": "thug",
+      "power": 4,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 1],
+        [0, -1],
+        [0, 1],
+        [2, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["...R.", ".....", ".ROR.", ".....", "...R."],
+      "abilityTextEn": "This card has no abilities.",
+      "image": "images/thug.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-thug.webp",
+      "imageSha256": "941a49eb92c5037b8d08842a334c3ce2c64d72a46e33f3b546d03893ffbc115b",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-043",
+      "originalNumber": 43,
+      "nameEn": "Death Claw",
+      "sourceNameEn": "Death Claw",
+      "sourceSlug": "death-claw",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", "..OR.", ".....", "....."],
+      "abilityTextEn": "When enemy cards are destroyed, raise this card's power by 1.",
+      "image": "images/death-claw.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-death-claw.webp",
+      "imageSha256": "86743b2081c552172a3d9d1b20cca7056299e5cdecfcea5ebf0043b01b7397f8",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-044",
+      "originalNumber": 44,
+      "nameEn": "Landworm",
+      "sourceNameEn": "Landworm",
+      "sourceSlug": "landworm",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..OR.", "..RR.", "....."],
+      "abilityTextEn": "When enemy cards are destroyed, raise this card's power by 2.",
+      "image": "images/landworm.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-landworm.webp",
+      "imageSha256": "1ed188c9c35b8f4ed3fdb640a57a4c0fcd5b69a34dceef88558ecb2e0fa3de76",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-045",
+      "originalNumber": 45,
+      "nameEn": "Sandspitter",
+      "sourceNameEn": "Sandspitter",
+      "sourceSlug": "sandspitter",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-2, 1],
+        [2, 0],
+        [2, 1]
+      ],
+      "effectOffsets": [
+        [-2, 0],
+        [-2, 1],
+        [2, 0],
+        [2, 1]
+      ],
+      "pattern5x5": ["..BB.", ".....", "..O..", ".....", "..BB."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 1.",
+      "image": "images/sandspitter.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-sandspitter.webp",
+      "imageSha256": "f588e5957fcc3fd6ad257351e9c61cf32299be880c37d024d7ff06aa6fb20323",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-046",
+      "originalNumber": 46,
+      "nameEn": "Chimera",
+      "sourceNameEn": "Chimera",
+      "sourceSlug": "chimera",
+      "power": 4,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", "..OR.", "..R..", "....."],
+      "abilityTextEn": "Raise power by 2 for each enfeebled enemy card.",
+      "image": "images/chimera.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-chimera.webp",
+      "imageSha256": "5c89a247c1d795e9794b9ecacb70f117b495dab5997a4a53aa072415f1d369b1",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-047",
+      "originalNumber": 47,
+      "nameEn": "Joker",
+      "sourceNameEn": "Joker",
+      "sourceSlug": "joker",
+      "power": 2,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-2, 1],
+        [2, 0],
+        [2, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["..RR.", ".....", "..O..", ".....", "..RR."],
+      "abilityTextEn": "When allied and enemy cards are detroyed, raise this card's power by 1.",
+      "image": "images/joker.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-joker.webp",
+      "imageSha256": "25db12dba3b86f6a3bc81439d9bdca5310071fb772ff6ae68e285eaa0467485e",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-048",
+      "originalNumber": 48,
+      "nameEn": "Amphidex",
+      "sourceNameEn": "Amphidex",
+      "sourceSlug": "amphidex",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [
+        [-2, 0],
+        [-1, 0]
+      ],
+      "pattern5x5": ["..B..", "..E..", "..OR.", ".....", "....."],
+      "abilityTextEn": "The first time this card is enhanced, raise the power of allied cards on affected tiles by 3.",
+      "image": "images/amphidex.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-amphidex.webp",
+      "imageSha256": "2eec0559f6c4037b825e2e9bb7e1c46d88423432d3fce3d001d5a6343ac53c0f",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-049",
+      "originalNumber": 49,
+      "nameEn": "Frightflower",
+      "sourceNameEn": "Frightflower",
+      "sourceSlug": "frightflower",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-2, -2],
+        [-2, 0],
+        [-2, 2],
+        [0, -2],
+        [0, 2],
+        [2, -2],
+        [2, 0],
+        [2, 2]
+      ],
+      "pattern5x5": ["E.E.E", "..R..", "ERORE", "..R..", "E.E.E"],
+      "abilityTextEn": "When destroyed, raise the power of allied and enemy cards on affected tiles by 2.",
+      "image": "images/frightflower.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-frightflower.webp",
+      "imageSha256": "5bd8f63c7258233410aec6524194ae187fe1a86d37e203329438a8981d70876e",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-050",
+      "originalNumber": 50,
+      "nameEn": "Gagighandi",
+      "sourceNameEn": "Gagighandi",
+      "sourceSlug": "gagighandi",
+      "power": 4,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0],
+        [2, 0]
+      ],
+      "effectOffsets": [
+        [1, 1],
+        [2, 1]
+      ],
+      "pattern5x5": [".....", ".....", "..OR.", "..RE.", "..RE."],
+      "abilityTextEn": "When first enhanced, lower the power of enemy cards on affected tiles by 2.",
+      "image": "images/gagighandi.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-gagighandi.webp",
+      "imageSha256": "1e9c188f251ca78e5ddbe55c936e99dc3dc958a20932a4edd1ca2234fb58e5d6",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-051",
+      "originalNumber": 51,
+      "nameEn": "Insectoid Chimera",
+      "sourceNameEn": "Insectoid Chimera",
+      "sourceSlug": "insectoid-chimera",
+      "power": 2,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", ".ROR.", "..R..", "....."],
+      "abilityTextEn": "Destroy an allied card and replace it.",
+      "image": "images/insectoid-chimera.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-insectoid-chimera.webp",
+      "imageSha256": "31cde7ab1eb22650146ecbd29c1872920ec624deb11741b9c87ab317f666ac60",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-052",
+      "originalNumber": 52,
+      "nameEn": "Gigantoad",
+      "sourceNameEn": "Gigantoad",
+      "sourceSlug": "gigantoad",
+      "power": 3,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", "..OR.", ".....", "....."],
+      "abilityTextEn": "Destroy an allied card and replace it.",
+      "image": "images/gigantoad.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-gigantoad.webp",
+      "imageSha256": "8cbc81a6a82f00edd262f40c33abd565b4bdd11829b1bda14ff68794069e5de8",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-053",
+      "originalNumber": 53,
+      "nameEn": "Maloceros",
+      "sourceNameEn": "Maloceros",
+      "sourceSlug": "maloceros",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 1],
+        [0, -1],
+        [0, 1],
+        [2, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["...R.", ".....", ".ROR.", ".....", "...R."],
+      "abilityTextEn": "When you win the lane, receive a score bonus of 10.",
+      "image": "images/maloceros.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-maloceros.webp",
+      "imageSha256": "362c28698ac95092069de790e868c122bdc9b44c095871223bc6e0d67cf4fc55",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-054",
+      "originalNumber": 54,
+      "nameEn": "Grandhorn",
+      "sourceNameEn": "Grandhorn",
+      "sourceSlug": "grandhorn",
+      "power": 3,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..OR.", "..R..", "....."],
+      "abilityTextEn": "Destroy an allied card and replace it.",
+      "image": "images/grandhorn.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-grandhorn.webp",
+      "imageSha256": "bdc0ca9d588acb787b706660910feb27d33533c35d9f9498180ee073b88f1fb8",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-055",
+      "originalNumber": 55,
+      "nameEn": "Great Malboro",
+      "sourceNameEn": "Great Malboro",
+      "sourceSlug": "great-malboro",
+      "power": 3,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 1],
+        [0, 1],
+        [1, 1]
+      ],
+      "effectOffsets": [
+        [-1, 1],
+        [0, 1],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", "...B.", "..OB.", "...B.", "....."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 6.",
+      "image": "images/great-malboro.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-great-malboro.webp",
+      "imageSha256": "b042b0df870b33f5283af97537d0788abc5837eca85d93a711952b773b0c2dcd",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-056",
+      "originalNumber": 56,
+      "nameEn": "Grangalan",
+      "sourceNameEn": "Grangalan",
+      "sourceSlug": "grangalan",
+      "power": 3,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..RR.", ".ROR.", ".RR..", "....."],
+      "abilityTextEn": "When played, add Grangalan Junior to your hand.",
+      "image": "images/grangalan.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-grangalan.webp",
+      "imageSha256": "c86c84537ee9745d0ff14e9724e5c0c04177782fecf18c74af59fa7e1725615b",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-057",
+      "originalNumber": 57,
+      "nameEn": "Amalgam",
+      "sourceNameEn": "Amalgam",
+      "sourceSlug": "amalgam",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, -1],
+        [0, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", ".ROR.", ".....", "....."],
+      "abilityTextEn": "When destroyed, add Resurrected Amalgam to your hand.",
+      "image": "images/amalgam.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-amalgam.webp",
+      "imageSha256": "b0966cb0f19805e4eeb3c68ac0cf8822025ee0ba19e61a7621ce4b240928794c",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-058",
+      "originalNumber": 58,
+      "nameEn": "Skeeskee",
+      "sourceNameEn": "Skeeskee",
+      "sourceSlug": "skeeskee",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", ".ROR.", ".....", "....."],
+      "abilityTextEn": "When allied cards are destroyed, raise this card's power by 1.",
+      "image": "images/skeeskee.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-skeeskee.webp",
+      "imageSha256": "a05ed6f936b84e531c09e138cb86a104b1b03ca4843fa0133e3725c19c66d4d8",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-059",
+      "originalNumber": 59,
+      "nameEn": "Griffon",
+      "sourceNameEn": "Griffon",
+      "sourceSlug": "griffon",
+      "power": 1,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [[-1, 1]],
+      "pattern5x5": [".....", "..RE.", "..OR.", ".....", "....."],
+      "abilityTextEn": "Replace an ally and raise the power of allied cards on affected tiles by the replaced ally's power.",
+      "image": "images/griffon.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-griffon.webp",
+      "imageSha256": "a0bde90a922234f647ea2137021fd0ab76e80e33b02f95e301d20c0da656e329",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-060",
+      "originalNumber": 60,
+      "nameEn": "Basilisk",
+      "sourceNameEn": "Basilisk",
+      "sourceSlug": "basilisk",
+      "power": 2,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "effectOffsets": [[1, 1]],
+      "pattern5x5": [".....", "...R.", "..O..", ".R.B.", "....."],
+      "abilityTextEn": "When played, destroy enemy cards on affected tiles.",
+      "image": "images/basilisk.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-basilisk.webp",
+      "imageSha256": "d5db7c28a2aa2a4b711ed1757b4db9845f769aec5bd9d10109519192b4b1e443",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-061",
+      "originalNumber": 61,
+      "nameEn": "Reapertail",
+      "sourceNameEn": "Reapertail",
+      "sourceSlug": "reapertail",
+      "power": 3,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [
+        [-2, 1],
+        [-1, 1]
+      ],
+      "pattern5x5": ["...E.", "..RE.", "..OR.", ".....", "....."],
+      "abilityTextEn": "When first enfeebled, lower the power of enemy cards on affected tiles by 2.",
+      "image": "images/reapertail.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-reapertail.webp",
+      "imageSha256": "6b68168ec092f089f9f7f05219a0e21b20e583443802e9fd2c79cd0c0f2cee7e",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-062",
+      "originalNumber": 62,
+      "nameEn": "Jabberwock",
+      "sourceNameEn": "Jabberwock",
+      "sourceSlug": "jabberwock",
+      "power": 6,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [0, -1],
+        [1, -1],
+        [1, 0]
+      ],
+      "pattern5x5": [".....", ".EB..", ".EO..", ".EB..", "....."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 1.",
+      "image": "images/jabberwock.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-jabberwock.webp",
+      "imageSha256": "4caa7fa2c9b8694948d7a1b94c9ac8d6936065f1a1cb42a727b6bd9bbf4fcbd1",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-063",
+      "originalNumber": 63,
+      "nameEn": "Desert Sahagin",
+      "sourceNameEn": "Desert Sahagin",
+      "sourceSlug": "desert-sahagin",
+      "power": 3,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [[1, 0]],
+      "pattern5x5": [".....", ".....", "..OR.", "..B..", "....."],
+      "abilityTextEn": "When first enfeebled, raise the power of allied cards on affected tiles by 4.",
+      "image": "images/desert-sahagin.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-desert-sahagin.webp",
+      "imageSha256": "a6d31f20428a41d1a814995bb802cf93b4722f286685c3d5e884b94b47f737f7",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-064",
+      "originalNumber": 64,
+      "nameEn": "Cavestalker",
+      "sourceNameEn": "Cavestalker",
+      "sourceSlug": "cavestalker",
+      "power": 4,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-1, 1],
+        [1, 1],
+        [2, 0]
+      ],
+      "effectOffsets": [
+        [-1, 1],
+        [0, 1],
+        [1, 1]
+      ],
+      "pattern5x5": ["..R..", "...B.", "..OE.", "...B.", "..R.."],
+      "abilityTextEn": "When first enfeebled, lower the power of enemy cards on affected tiles by 2.",
+      "image": "images/cavestalker.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-cavestalker.webp",
+      "imageSha256": "0ab2a967d7a82372e644bfc2b262d373c247052a024dc534adc76d349ae78f4c",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-065",
+      "originalNumber": 65,
+      "nameEn": "Stone Golem",
+      "sourceNameEn": "Stone Golem",
+      "sourceSlug": "stone-golem",
+      "power": 4,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [[0, 1]],
+      "pattern5x5": [".....", ".....", "..OE.", ".....", "....."],
+      "abilityTextEn": "When first enhanced, lower the power of enemy cards on affected tiles by 4.",
+      "image": "images/stone-golem.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-stone-golem.webp",
+      "imageSha256": "4a96387907bc782311e49805f7f52dd17219617099abc51fd008136a9ff6f339",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-066",
+      "originalNumber": 66,
+      "nameEn": "Two Face",
+      "sourceNameEn": "Two Face",
+      "sourceSlug": "two-face",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "pattern5x5": [".....", "..B..", "..O..", "..B..", "....."],
+      "abilityTextEn": "Enhanced: raise power of allied and enemy cards on affected tiles by 4. Enfeebled: lower their power by 4.",
+      "image": "images/two-face.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-two-face.webp",
+      "imageSha256": "66b6e981745d59496fbaf2f9b69400b79a107e9e94279c37a12b7ac73b5ecb40",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-067",
+      "originalNumber": 67,
+      "nameEn": "Gi Specter",
+      "sourceNameEn": "Gi Specter",
+      "sourceSlug": "gi-specter",
+      "power": 2,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [[1, 1]],
+      "pattern5x5": [".....", ".....", "..O..", "..RB.", "....."],
+      "abilityTextEn": "Replace an ally and lower the power of allied and enemy cards on affected tiles by the replaced ally's power.",
+      "image": "images/gi-specter.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-gi-specter.webp",
+      "imageSha256": "513f93b5fa11269d66e7bbba16ecab3bdd54b6d176dad54a374958744b50fbbf",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-068",
+      "originalNumber": 68,
+      "nameEn": "Valron",
+      "sourceNameEn": "Valron",
+      "sourceSlug": "valron",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".R.R.", "..O..", ".R.R.", "....."],
+      "abilityTextEn": "Raise power by 2 for each enfeebled allied card.",
+      "image": "images/valron.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-valron.webp",
+      "imageSha256": "889a0f5059b322de06d69f42cc8ff833b0ff7523879df375a646cd1714a0b249",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-069",
+      "originalNumber": 69,
+      "nameEn": "Disgorgon",
+      "sourceNameEn": "Disgorgon",
+      "sourceSlug": "disgorgon",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 1],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "...R.", "..O..", "...R.", "....."],
+      "abilityTextEn": "When played, raise position ranks by 2.",
+      "image": "images/disgorgon.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-disgorgon.webp",
+      "imageSha256": "d35c6d2a5f0cd62832cad605aa120684dfc7d281a5f8022404a770acdd24ea5d",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-070",
+      "originalNumber": 70,
+      "nameEn": "Dragon",
+      "sourceNameEn": "Dragon",
+      "sourceSlug": "dragon",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      "pattern5x5": [".....", "..B..", "..OB.", "..B..", "....."],
+      "abilityTextEn": "When played, lower the power of enemy cards on affected tiles by 4.",
+      "image": "images/dragon.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-dragon.webp",
+      "imageSha256": "25b9a50ec37ff62531a8186f6dcab0f1ca01c41969880ca9fcbf0716349a76d4",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-071",
+      "originalNumber": 71,
+      "nameEn": "Twin Brain",
+      "sourceNameEn": "Twin Brain",
+      "sourceSlug": "twin-brain",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [2, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["..R..", ".....", "..O..", ".....", "..R.."],
+      "abilityTextEn": "When played, raise position ranks by 2.",
+      "image": "images/twin-brain.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-twin-brain.webp",
+      "imageSha256": "1112342be1e608a0a9ba86dbab2f875c64f4331d697f701e4fae8bc491a1c30a",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-072",
+      "originalNumber": 72,
+      "nameEn": "Black Bat",
+      "sourceNameEn": "Black Bat",
+      "sourceSlug": "black-bat",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "pattern5x5": [".....", "..B..", ".BOB.", "..B..", "....."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 1.",
+      "image": "images/black-bat.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-black-bat.webp",
+      "imageSha256": "3727bcff435e2227598f247ee195aad2de70a29623a0a67cd1a52f18de6c5a1b",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-073",
+      "originalNumber": 73,
+      "nameEn": "Bahba Velamyu",
+      "sourceNameEn": "Bahba Velamyu",
+      "sourceSlug": "bahba-velamyu",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1]
+      ],
+      "effectOffsets": [
+        [-2, 1],
+        [-1, 1],
+        [0, 1],
+        [1, 1],
+        [2, 1]
+      ],
+      "pattern5x5": ["...E.", "..RE.", ".ROB.", "...E.", "...E."],
+      "abilityTextEn": "When destroyed, lower the power of enemy cards on affected tiles by 1.",
+      "image": "images/bahba-velamyu.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-bahba-velamyu.webp",
+      "imageSha256": "c9d4b88f8837c5b1343dfeffacda3da91d3cabcfab10099934a112cdd67a8a21",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-074",
+      "originalNumber": 74,
+      "nameEn": "Rictus",
+      "sourceNameEn": "Rictus",
+      "sourceSlug": "rictus",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", ".ROR.", "..R..", "....."],
+      "abilityTextEn": "Raise power by 1 for each enfeebled allied and enemy card.",
+      "image": "images/rictus.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-rictus.webp",
+      "imageSha256": "c9e566fa46955bd0143f9b40ad4140c2afacf721cb23b50153c972ba3bb9edbe",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-075",
+      "originalNumber": 75,
+      "nameEn": "Adjudicator",
+      "sourceNameEn": "Adjudicator",
+      "sourceSlug": "adjudicator",
+      "power": 1,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..O..", ".....", "....."],
+      "abilityTextEn": "Raise power by 1 for each other enhanced or enfeebled allied and enemy card.",
+      "image": "images/adjudicator.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-adjudicator.webp",
+      "imageSha256": "9f3a7ee8564a2d24f6487e73c2325c02a6ed13aea7e06c39ab5a3783de56eb50",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-076",
+      "originalNumber": 76,
+      "nameEn": "Yin & Yang",
+      "sourceNameEn": "Yin & Yang",
+      "sourceSlug": "yin-yang",
+      "power": 3,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [
+        [0, -1],
+        [0, 1]
+      ],
+      "effectOffsets": [
+        [-2, 0],
+        [2, 0]
+      ],
+      "pattern5x5": ["..E..", ".....", ".ROR.", ".....", "..E.."],
+      "abilityTextEn": "Replace an ally and raise the power of allied cards on affected tiles by the replaced ally's power.",
+      "image": "images/yin-yang.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-yin-yang.webp",
+      "imageSha256": "b606a58c87a902eb156f838eeb0091fa8d94024b69e800350e0b5e4fa69da54c",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-077",
+      "originalNumber": 77,
+      "nameEn": "Diabolic Variant",
+      "sourceNameEn": "Diabolic Variant",
+      "sourceSlug": "diabolic-variant",
+      "power": 2,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [
+        [0, -1],
+        [0, 1]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "pattern5x5": [".....", "..E..", ".ROR.", "..E..", "....."],
+      "abilityTextEn": "Replace an ally and lower the power of allied and enemy cards on affected tiles by the replaced ally's power.",
+      "image": "images/diabolic-variant.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-diabolic-variant.webp",
+      "imageSha256": "9a83838bfaff5fb03d09bc6e81c0fe64773b866507c719aa1cfc9faaea281e99",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-078",
+      "originalNumber": 78,
+      "nameEn": "Special Forces Operator",
+      "sourceNameEn": "Special Forces Operator",
+      "sourceSlug": "special-forces-operator",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [0, 1],
+        [2, 0]
+      ],
+      "effectOffsets": [
+        [-2, 0],
+        [2, 0]
+      ],
+      "pattern5x5": ["..B..", ".....", "..OR.", ".....", "..B.."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 2 while this card is in play.",
+      "image": "images/special-forces-operator.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-special-forces-operator.webp",
+      "imageSha256": "d792d65773a1ad60624beecf754d48821c003bce4ffe856257aa8a66c30702a0",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-079",
+      "originalNumber": 79,
+      "nameEn": "2-C SOLDIER Operator",
+      "sourceNameEn": "2-C SOLDIER Operator",
+      "sourceSlug": "2-c-soldier-operator",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-2, 1],
+        [0, 1]
+      ],
+      "effectOffsets": [[-2, 0]],
+      "pattern5x5": ["..BR.", ".....", "..OR.", ".....", "....."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 3 while this card is in play.",
+      "image": "images/2-c-soldier-operator.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-2-c-soldier-operator.webp",
+      "imageSha256": "80130116d61b849c0ecdc8f18c0ecb72c3165a21f4990c750bde2a26ab426758",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-080",
+      "originalNumber": 80,
+      "nameEn": "Kelzmelzer",
+      "sourceNameEn": "Kelzmelzer",
+      "sourceSlug": "kelzmelzer",
+      "power": 3,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-2, 1],
+        [2, 1]
+      ],
+      "pattern5x5": ["...E.", "..R..", "..OR.", "..R..", "...E."],
+      "abilityTextEn": "Replace an ally and lower the power of allied and enemy cards on affected tiles by the replaced ally's power.",
+      "image": "images/kelzmelzer.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-kelzmelzer.webp",
+      "imageSha256": "6ba5ab9f60db41623be01960f6c1e35f64e7ef5e738bc2433ee6cab4f71ef51f",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-081",
+      "originalNumber": 81,
+      "nameEn": "Panthera Protector",
+      "sourceNameEn": "Panthera Protector",
+      "sourceSlug": "panthera-protector",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, 1]
+      ],
+      "effectOffsets": [[0, 1]],
+      "pattern5x5": [".....", ".RRR.", "..OB.", ".....", "....."],
+      "abilityTextEn": "The first time this card is enhanced, raise the power of allied cards on affected tiles by 4.",
+      "image": "images/panthera-protector.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-panthera-protector.webp",
+      "imageSha256": "7cf6df768ce9cc6191ed3377226ed8fa49c8e885b3076622f907578bba630dfc",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-082",
+      "originalNumber": 82,
+      "nameEn": "Hecteyes",
+      "sourceNameEn": "Hecteyes",
+      "sourceSlug": "hecteyes",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [
+        [-2, -2],
+        [-2, 0],
+        [-2, 2],
+        [0, -2],
+        [0, 2],
+        [2, -2],
+        [2, 0],
+        [2, 2]
+      ],
+      "pattern5x5": ["E.E.E", ".....", "E.O.E", ".....", "E.E.E"],
+      "abilityTextEn": "When destroyed, raise the power of allied cards on affected tiles by 3.",
+      "image": "images/hecteyes.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-hecteyes.webp",
+      "imageSha256": "1fda25ef5af7e666d1950fb54861a5cedbee526394cc9f027fba786c38f55907",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-083",
+      "originalNumber": 83,
+      "nameEn": "Floating Death",
+      "sourceNameEn": "Floating Death",
+      "sourceSlug": "floating-death",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".EEE.", ".EOE.", ".EEE.", "....."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 1.",
+      "image": "images/floating-death.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-floating-death.webp",
+      "imageSha256": "cf46d8a101832adcabd7f227fa3fb1a20d24cacad483843c40f518fa2bd7d84a",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-084",
+      "originalNumber": 84,
+      "nameEn": "Ironclad",
+      "sourceNameEn": "Ironclad",
+      "sourceSlug": "ironclad",
+      "power": 1,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..OR.", "..R..", "....."],
+      "abilityTextEn": "Raise power by 3 for each enhanced enemy card.",
+      "image": "images/ironclad.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-ironclad.webp",
+      "imageSha256": "588515a86c37720051ef9e5999b962342e0c23e20ea5c5453bf95ecc674bb615",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-085",
+      "originalNumber": 85,
+      "nameEn": "Moss-Grown Adamantoise",
+      "sourceNameEn": "Moss-Grown Adamantoise",
+      "sourceSlug": "moss-grown-adamantoise",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".RRR.", "..O..", ".RRR.", "....."],
+      "abilityTextEn": "When played, raise position ranks by 3.",
+      "image": "images/moss-grown-adamantoise.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-moss-grown-adamantoise.webp",
+      "imageSha256": "91bc2da0373b7d0f350b99444f2a38dce249322646e8fa45031c53df70385362",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-086",
+      "originalNumber": 86,
+      "nameEn": "Cloud",
+      "sourceNameEn": "Cloud",
+      "sourceSlug": "cloud",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [[0, 1]],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".EEE.", ".EOB.", ".EEE.", "....."],
+      "abilityTextEn": "When this card's power first reaches 7, raise the power of allied cards on affected tiles by 2.",
+      "image": "images/cloud.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-cloud.webp",
+      "imageSha256": "1b357bbeb19487e894cf1b749ae16c6c02e3bf4126d91d24f72668de93605ca6",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-087",
+      "originalNumber": 87,
+      "nameEn": "Barret",
+      "sourceNameEn": "Barret",
+      "sourceSlug": "barret",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [0, 2]
+      ],
+      "effectOffsets": [[0, 2]],
+      "pattern5x5": [".....", ".....", "..ORB", ".....", "....."],
+      "abilityTextEn": "When played, lower the power of enemy cards on affected tiles by 8.",
+      "image": "images/barret.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-barret.webp",
+      "imageSha256": "87d4bd3cbc96e1a6387d3b99ceeb940c67bbeca00f4d86d81a0b452704dfbc78",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-088",
+      "originalNumber": 88,
+      "nameEn": "Tifa",
+      "sourceNameEn": "Tifa",
+      "sourceSlug": "tifa",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0],
+        [2, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..OR.", "..R..", "..R.."],
+      "abilityTextEn": "When you win the lane, receive a score bonus of 5.",
+      "image": "images/tifa.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-tifa.webp",
+      "imageSha256": "afd04801da6a436a2839112959bbeeaf34ec1d7b93fcf4d53685a24cfd1e8821",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-089",
+      "originalNumber": 89,
+      "nameEn": "Aerith",
+      "sourceNameEn": "Aerith",
+      "sourceSlug": "aerith",
+      "power": 1,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, -1],
+        [0, 1]
+      ],
+      "effectOffsets": [
+        [0, -1],
+        [0, 1]
+      ],
+      "pattern5x5": [".....", ".....", ".BOB.", ".....", "....."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 3 while this card is in play.",
+      "image": "images/aerith.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-aerith.webp",
+      "imageSha256": "add93475f0ad8281fdb9d4fb5ed9f2dd278d8111b9129cd50be30213427c296d",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-090",
+      "originalNumber": 90,
+      "nameEn": "Red XIII",
+      "sourceNameEn": "Red XIII",
+      "sourceSlug": "red-xiii",
+      "power": 3,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [
+        [-2, -2],
+        [-2, 0],
+        [-2, 2],
+        [0, -2],
+        [0, 2],
+        [2, -2],
+        [2, 0],
+        [2, 2]
+      ],
+      "pattern5x5": ["E.E.E", "..R..", "E.ORE", ".....", "E.E.E"],
+      "abilityTextEn": "When first enfeebled, lower the power of enemy cards on affected tiles by 2.",
+      "image": "images/red-xiii.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-red-xiii.webp",
+      "imageSha256": "3a36bf74a206cd98c89f38beb3d4012716f99eb26a36c8b55a9329fc52b9bc40",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-091",
+      "originalNumber": 91,
+      "nameEn": "Yuffie",
+      "sourceNameEn": "Yuffie",
+      "sourceSlug": "yuffie",
+      "power": 1,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".EBE.", ".BOB.", ".EBE.", "....."],
+      "abilityTextEn": "Replace an ally and lower the power of allied and enemy cards on affected tiles by the replaced ally's power.",
+      "image": "images/yuffie.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-yuffie.webp",
+      "imageSha256": "b2739caa68f6ba83b2c18b4458560f9c8836e1fd44410dd0931c4f407b890ff1",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-092",
+      "originalNumber": 92,
+      "nameEn": "Cait Sith",
+      "sourceNameEn": "Cait Sith",
+      "sourceSlug": "cait-sith",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", ".ROR.", "..R..", "....."],
+      "abilityTextEn": "When played, add Moogle to your hand.",
+      "image": "images/cait-sith.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-cait-sith.webp",
+      "imageSha256": "31d3f32af9d2534e95ab14516058a49a1495ce993814994212cc8f239a49cac6",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-093",
+      "originalNumber": 93,
+      "nameEn": "Cid",
+      "sourceNameEn": "Cid",
+      "sourceSlug": "cid",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["..R..", ".....", "..OR.", ".....", "....."],
+      "abilityTextEn": "When played, add The Tiny Bronco to your hand.",
+      "image": "images/cid.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-cid.webp",
+      "imageSha256": "ce849071f99f8806d98a19545cb4f4bda701d10d93d07195916870e1b6c166fc",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-094",
+      "originalNumber": 94,
+      "nameEn": "Vincent",
+      "sourceNameEn": "Vincent",
+      "sourceSlug": "vincent",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", "..OR.", "..R..", "....."],
+      "abilityTextEn": "When destroyed, add Galian Beast to your hand.",
+      "image": "images/vincent.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-vincent.webp",
+      "imageSha256": "3e4d2fabeaa44c68f6e238d513ebb450cb1fa9735385d25db95b407ad319978a",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-095",
+      "originalNumber": 95,
+      "nameEn": "Ifrit",
+      "sourceNameEn": "Ifrit",
+      "sourceSlug": "ifrit",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", "..O..", "..R..", "....."],
+      "abilityTextEn": "Raise power by 2 for each other enhanced allied card.",
+      "image": "images/ifrit.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-ifrit.webp",
+      "imageSha256": "a282ebb7688ec88030d1d298eac45ee935f8a58f307a63d05ad5c7d849169ba5",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-096",
+      "originalNumber": 96,
+      "nameEn": "Shiva",
+      "sourceNameEn": "Shiva",
+      "sourceSlug": "shiva",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..O..", ".....", "....."],
+      "abilityTextEn": "When played, spawn Diamond Dust of power 2, 4, or 6 in emtpy positions.",
+      "image": "images/shiva.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-shiva.webp",
+      "imageSha256": "0dd65ed436ec52f0784f2335ff499983d4ad1b9e56804d8b51c0b31d7a5a3c37",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-097",
+      "originalNumber": 97,
+      "nameEn": "Ramuh",
+      "sourceNameEn": "Ramuh",
+      "sourceSlug": "ramuh",
+      "power": 3,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, -2],
+        [-2, 2],
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1],
+        [2, -2],
+        [2, 2]
+      ],
+      "effectOffsets": [
+        [-2, -2],
+        [-2, 2],
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1],
+        [2, -2],
+        [2, 2]
+      ],
+      "pattern5x5": ["B...B", ".B.B.", "..O..", ".B.B.", "B...B"],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 3.",
+      "image": "images/ramuh.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-ramuh.webp",
+      "imageSha256": "6eb02e2c4dd382c2a885f7094468b81a949b8b266c0b2cbc1ca7ca28d6a61fcd",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-098",
+      "originalNumber": 98,
+      "nameEn": "Titan",
+      "sourceNameEn": "Titan",
+      "sourceSlug": "titan",
+      "power": 5,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", "..OR.", "..R..", "....."],
+      "abilityTextEn": "When played, raise position ranks by 2.",
+      "image": "images/titan.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-titan.webp",
+      "imageSha256": "4f5c598d16691e34f9f1be73201ba07dc1dd0833ae76480fb1f156bff8d152d1",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-099",
+      "originalNumber": 99,
+      "nameEn": "Kujata",
+      "sourceNameEn": "Kujata",
+      "sourceSlug": "kujata",
+      "power": 6,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 1],
+        [0, -1],
+        [1, 1]
+      ],
+      "effectOffsets": [
+        [-1, 1],
+        [0, -1],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", "...B.", ".BO..", "...B.", "....."],
+      "abilityTextEn": "When first enhanced, lower the power of enemy cards on affected tiles by 5.",
+      "image": "images/kujata.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-kujata.webp",
+      "imageSha256": "3298d4235adb62a84c482cd793e8be99ca9fa881319cb312e355e4c287fbe804",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-100",
+      "originalNumber": 100,
+      "nameEn": "Odin",
+      "sourceNameEn": "Odin",
+      "sourceSlug": "odin",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".R.R.", "..O..", ".R.R.", "....."],
+      "abilityTextEn": "Raise power by 2 for each other enhanced enemy card.",
+      "image": "images/odin.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-odin.webp",
+      "imageSha256": "497bc9a7feb9af81cefb4737800b61739e4cf13a8dfd69fe3bbedf4f2d07710f",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-101",
+      "originalNumber": 101,
+      "nameEn": "Phoenix",
+      "sourceNameEn": "Phoenix",
+      "sourceSlug": "phoenix",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".B.B.", "..O..", ".B.B.", "....."],
+      "abilityTextEn": "When destroyed, raise the power of allied cards on affected tiles by 5.",
+      "image": "images/phoenix.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-phoenix.webp",
+      "imageSha256": "0505810180d1ca391e14c12981c4089b912a12c686083de97399d1ed060fd6cc",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-102",
+      "originalNumber": 102,
+      "nameEn": "Leviathan",
+      "sourceNameEn": "Leviathan",
+      "sourceSlug": "leviathan",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [0, -2],
+        [0, 2],
+        [2, 0]
+      ],
+      "effectOffsets": [
+        [-2, -2],
+        [-2, 0],
+        [-2, 2],
+        [0, -2],
+        [0, 2],
+        [2, -2],
+        [2, 0],
+        [2, 2]
+      ],
+      "pattern5x5": ["E.B.E", ".....", "B.O.B", ".....", "E.B.E"],
+      "abilityTextEn": "Lower the power of enemy cards on affected tiles by 3 while this card is in play.",
+      "image": "images/leviathan.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-leviathan.webp",
+      "imageSha256": "6ab9dd2c1f73c65724c0020c1bcd331a8eb3afe8235877eecbec624acaf23a8c",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-103",
+      "originalNumber": 103,
+      "nameEn": "Alexander",
+      "sourceNameEn": "Alexander",
+      "sourceSlug": "alexander",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", ".ROR.", "..R..", "....."],
+      "abilityTextEn": "Raise power by 3 for each other enfeebled allied card.",
+      "image": "images/alexander.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-alexander.webp",
+      "imageSha256": "580db527a12ec99a89399b3a40651c38ab829789383cb7359b055ec8f1ff8591",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-104",
+      "originalNumber": 104,
+      "nameEn": "Bahamut",
+      "sourceNameEn": "Bahamut",
+      "sourceSlug": "bahamut",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [0, 2],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [0, 1],
+        [0, 2]
+      ],
+      "pattern5x5": [".....", "..R..", ".ROBB", "..R..", "....."],
+      "abilityTextEn": "When played, lower the power of enemy cards on affected tiles by 5.",
+      "image": "images/bahamut.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-bahamut.webp",
+      "imageSha256": "bc2d7873d1594555308ff6066340a359d7e44ee72fd0f9880807320fd3cf2d84",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-105",
+      "originalNumber": 105,
+      "nameEn": "Bahamut Arisen",
+      "sourceNameEn": "Bahamut Arisen",
+      "sourceSlug": "bahamut-arisen",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..O..", ".....", "....."],
+      "abilityTextEn": "When played, spawn Elementals--cards that enanche when destroyed--in your empty positions.",
+      "image": "images/bahamut-arisen.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-bahamut-arisen.webp",
+      "imageSha256": "d33954151ae2c3b8af26b78d653a405ca4d019868a566a8a61bb6ab27bda40b1",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-106",
+      "originalNumber": 106,
+      "nameEn": "Gilgamesh",
+      "sourceNameEn": "Gilgamesh",
+      "sourceSlug": "gilgamesh",
+      "power": 3,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [],
+      "effectOffsets": [
+        [-2, -2],
+        [-2, 2],
+        [2, -2],
+        [2, 2]
+      ],
+      "pattern5x5": ["E...E", ".....", "..O..", ".....", "E...E"],
+      "abilityTextEn": "Replace an ally and lower the power of allied and enemy cards on affected tiles by the replaced ally's power.",
+      "image": "images/gilgamesh.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-gilgamesh.webp",
+      "imageSha256": "bb54c31997e9d9cbf49418d8907cd28fbfc21fa1246fb7dbf4e416feda863248",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-107",
+      "originalNumber": 107,
+      "nameEn": "Chocobo & Moogle",
+      "sourceNameEn": "Chocobo Moogle",
+      "sourceSlug": "chocobo-moogle",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", "..OR.", "..R..", "....."],
+      "abilityTextEn": "Raise power by 1 for each other enhanced allied card.",
+      "image": "images/chocobo-moogle.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-chocobo-moogle.webp",
+      "imageSha256": "30c2dce52299198dce6dd9fc338d5cb18e1734eb6c921d23737b52eb5155337e",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-108",
+      "originalNumber": 108,
+      "nameEn": "Fat Chocobo",
+      "sourceNameEn": "Fat Chocobo",
+      "sourceSlug": "fat-chocobo",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-1, -1],
+        [-1, 1],
+        [0, -2],
+        [0, 2],
+        [1, -1],
+        [1, 1],
+        [2, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["..R..", ".R.R.", "R.O.R", ".R.R.", "..R.."],
+      "abilityTextEn": "Creates a surfeit of positions around it when played.",
+      "image": "images/fat-chocobo.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-fat-chocobo.webp",
+      "imageSha256": "9a32c7765017e55388ff2fd24a9e9575e80115b93f75c12236188f06df9f2ca0",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-109",
+      "originalNumber": 109,
+      "nameEn": "Posh Chocobo",
+      "sourceNameEn": "Posh Chocobo",
+      "sourceSlug": "posh-chocobo",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, -1],
+        [0, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", ".ROR.", ".....", "....."],
+      "abilityTextEn": "When you win the lane, receive a score bonus of 3.",
+      "image": "images/posh-chocobo.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-posh-chocobo.webp",
+      "imageSha256": "4bc564df7de55e3750479e56a50fae96967e87a8f2871d9dd89f8eeb63792566",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-110",
+      "originalNumber": 110,
+      "nameEn": "Moogle Trio",
+      "sourceNameEn": "Moogle Trio",
+      "sourceSlug": "moogle-trio",
+      "power": 1,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 1],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "...R.", "..O..", "...R.", "....."],
+      "abilityTextEn": "When played, add both Moogle Mage and Moogle Bard to your hand.",
+      "image": "images/moogle-trio.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-moogle-trio.webp",
+      "imageSha256": "43f51c948106d52267e625e2a7e6b343b9259af45b2de6174bcdc875cea2fda8",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-111",
+      "originalNumber": 111,
+      "nameEn": "Magic Pot",
+      "sourceNameEn": "Magic Pot",
+      "sourceSlug": "magic-pot",
+      "power": 1,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".E.E.", "..O..", ".E.E.", "....."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 2 while this card is in play.",
+      "image": "images/magic-pot.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-magic-pot.webp",
+      "imageSha256": "76e3f814d0cf5f5bec5fc22aa6eaa1026e7f07996c3f68ea41f723875078eb1c",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-112",
+      "originalNumber": 112,
+      "nameEn": "Materia Guardian",
+      "sourceNameEn": "Materia Guardian",
+      "sourceSlug": "materia-guardian",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-1, 0],
+        [0, 1],
+        [1, 0],
+        [2, 0]
+      ],
+      "effectOffsets": [
+        [-2, -2],
+        [-2, -1],
+        [-2, 1],
+        [-2, 2],
+        [2, -2],
+        [2, -1],
+        [2, 1],
+        [2, 2]
+      ],
+      "pattern5x5": ["EEREE", "..R..", "..OR.", "..R..", "EEREE"],
+      "abilityTextEn": "When first enfeebled, lower the power of enemy cards on affected tiles by 6.",
+      "image": "images/materia-guardian.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-materia-guardian.webp",
+      "imageSha256": "f9bef7c401c9e962c933dda7b7ca3eb5ae860cac5ed8b2c9a821385d3b3f9ea9",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-113",
+      "originalNumber": 113,
+      "nameEn": "Midgardsormr",
+      "sourceNameEn": "Midgardsormr",
+      "sourceSlug": "midgardsormr",
+      "power": 6,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", "..OR.", "..R..", "....."],
+      "abilityTextEn": "When allied and enemy cards are destroyed, raise this card's power by 1.",
+      "image": "images/midgardsormr.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-midgardsormr.webp",
+      "imageSha256": "d8694ceb3a9a1596912fb839f481dd20c5c3a84ef7f0cea6d2377af8e414f333",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-114",
+      "originalNumber": 114,
+      "nameEn": "Mythril Golem",
+      "sourceNameEn": "Mythril Golem",
+      "sourceSlug": "mythril-golem",
+      "power": 8,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", "..O..", "..R..", "....."],
+      "abilityTextEn": "Possesse a crystal-hard resolve and overwhelming amount of power.",
+      "image": "images/mythril-golem.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-mythril-golem.webp",
+      "imageSha256": "4be0edd6b2d68e3cc08c93787df879be0699f0edfbda701ef9e36776bd2dca7e",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-115",
+      "originalNumber": 115,
+      "nameEn": "Terror of the Deep",
+      "sourceNameEn": "Terror of the Deep",
+      "sourceSlug": "terror-of-the-deep",
+      "power": 2,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".BBB.", ".BOB.", ".BBB.", "....."],
+      "abilityTextEn": "Lower the power of allied and enemy cards on affected tiles by 1 while this card is in play.",
+      "image": "images/terror-of-the-deep.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-terror-of-the-deep.webp",
+      "imageSha256": "faeb93471510d2113420fe49ce04b30547a295f53db2bef0d516d03e905d55eb",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-116",
+      "originalNumber": 116,
+      "nameEn": "Grasptropod",
+      "sourceNameEn": "Grasptropod",
+      "sourceSlug": "grasptropod",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "effectOffsets": [
+        [-2, -2],
+        [-2, 2],
+        [-1, -2],
+        [-1, 2],
+        [1, -2],
+        [1, 2],
+        [2, -2],
+        [2, 2]
+      ],
+      "pattern5x5": ["E...E", "ER.RE", "..O..", "ER.RE", "E...E"],
+      "abilityTextEn": "When first enhanced, lower the power of allied and enemy cards on affected tiles by 4.",
+      "image": "images/grasptropod.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-grasptropod.webp",
+      "imageSha256": "50d0cf08050673d1b9317c2e42ca702cb61a99107efd6faee3ab425a7aac9a19",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-117",
+      "originalNumber": 117,
+      "nameEn": "Custom Valkyrie",
+      "sourceNameEn": "Custom Valkyrie",
+      "sourceSlug": "custom-valkyrie",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".B.B.", "..O..", ".B.B.", "....."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 4.",
+      "image": "images/custom-valkyrie.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-custom-valkyrie.webp",
+      "imageSha256": "54258ad4956d2d0304bdbea2a747e023734b79a429e7ba2b32b13f13b6f96e98",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-118",
+      "originalNumber": 118,
+      "nameEn": "Gigatrice",
+      "sourceNameEn": "Gigatrice",
+      "sourceSlug": "gigatrice",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-2, 1],
+        [-1, 0],
+        [1, 0],
+        [2, 0],
+        [2, 1]
+      ],
+      "effectOffsets": [
+        [-2, 1],
+        [2, 1]
+      ],
+      "pattern5x5": ["..RB.", "..R..", "..O..", "..R..", "..RB."],
+      "abilityTextEn": "When played, destroy allied and enemy cards on affected tiles.",
+      "image": "images/gigatrice.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-gigatrice.webp",
+      "imageSha256": "b6cef42c19f82890a26983b8e4244f06b5b03505bb2f1fab787886acc22157eb",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-119",
+      "originalNumber": 119,
+      "nameEn": "Dyne",
+      "sourceNameEn": "Dyne",
+      "sourceSlug": "dyne",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 1],
+        [-1, 2],
+        [1, 2],
+        [2, 1]
+      ],
+      "effectOffsets": [
+        [-2, 1],
+        [-1, 2],
+        [1, 2],
+        [2, 1]
+      ],
+      "pattern5x5": ["...B.", "....B", "..O..", "....B", "...B."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 5.",
+      "image": "images/dyne.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-dyne.webp",
+      "imageSha256": "685692861beb415a96097323b5083367d5f7656e02944f881e5bb7c52a5335f8",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-120",
+      "originalNumber": 120,
+      "nameEn": "Anuran Suppressor",
+      "sourceNameEn": "Anuran Suppressor",
+      "sourceSlug": "anuran-suppressor",
+      "power": 2,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [2, 0],
+        [2, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..OR.", ".....", "..RR."],
+      "abilityTextEn": "When enemy cards are destroyed, raise this card's power by 2.",
+      "image": "images/anuran-suppressor.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-anuran-suppressor.webp",
+      "imageSha256": "816e5736cf1e8f68dbb77103823a977ba4f4b0a7990aafaf6ede0c651eb42eba",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-121",
+      "originalNumber": 121,
+      "nameEn": "Specimen H1024",
+      "sourceNameEn": "Specimen H1024",
+      "sourceSlug": "specimen-h1024",
+      "power": 6,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-2, -2],
+        [-2, 0],
+        [-2, 2],
+        [0, -2],
+        [0, 2],
+        [2, -2],
+        [2, 0],
+        [2, 2]
+      ],
+      "pattern5x5": ["E.E.E", "..R..", "ERORE", "..R..", "E.E.E"],
+      "abilityTextEn": "Raise the power of allied and enemy cards on affected tiles by 3 while this card is in play.",
+      "image": "images/specimen-h1024.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-specimen-h1024.webp",
+      "imageSha256": "b2790f54badf867961a3278fc4ace37fa22048166e093bcc66750e754435e5b8",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-122",
+      "originalNumber": 122,
+      "nameEn": "Crimson Mare Mk. II",
+      "sourceNameEn": "Crimson Mare Mk. II",
+      "sourceSlug": "crimson-mare-mk-ii",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [-1, 1],
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "pattern5x5": [".....", "..BR.", ".EOE.", "..BR.", "....."],
+      "abilityTextEn": "When first enfeebled, lower the power of allied and enemy cards on affected tiles by 5.",
+      "image": "images/crimson-mare-mk-ii.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-crimson-mare-mk-ii.webp",
+      "imageSha256": "c10c8f11bb09e59da21d16d75c05ed9c383af17e23c871127139e74ac8c98aa5",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-123",
+      "originalNumber": 123,
+      "nameEn": "Gi Nattak",
+      "sourceNameEn": "Gi Nattak",
+      "sourceSlug": "gi-nattak",
+      "power": 1,
+      "rank": 0,
+      "placementType": "replacement",
+      "expansionOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "pattern5x5": [".....", "..B..", "..O..", "..B..", "....."],
+      "abilityTextEn": "Replace an ally and raise the power of allied cards on affected tiles by the replaced ally's power.",
+      "image": "images/gi-nattak.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-gi-nattak.webp",
+      "imageSha256": "e54aa882bb2f3e894e07672b421a44934cf4ed246227f367d49830c5fcd912fa",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-124",
+      "originalNumber": 124,
+      "nameEn": "Forgotten Specimen",
+      "sourceNameEn": "Forgotten Specimen",
+      "sourceSlug": "forgotten-specimen",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 1],
+        [-1, 1]
+      ],
+      "effectOffsets": [
+        [1, -1],
+        [2, -1]
+      ],
+      "pattern5x5": ["...R.", "...R.", "..O..", ".E...", ".E..."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 3 while this card is in play.",
+      "image": "images/forgotten-specimen.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-forgotten-specimen.webp",
+      "imageSha256": "422dbaac84cd09ca7c9227490e7a81c9dfffa4611bc648b8844f921b43677444",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-125",
+      "originalNumber": 125,
+      "nameEn": "Don Corneo & Abzu",
+      "sourceNameEn": "Don Corneo & Abzu",
+      "sourceSlug": "don-corneo-abzu",
+      "power": 4,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..O..", ".....", "....."],
+      "abilityTextEn": "When played, add both Cacneo and Donberry to your hand.",
+      "image": "images/don-corneo-abzu.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-don-corneo-abzu.webp",
+      "imageSha256": "f004beb268a90839e7aaaecf32bb7de0f164173afbcfe5b4c58ac10ff969560e",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-126",
+      "originalNumber": 126,
+      "nameEn": "Red Dragon",
+      "sourceNameEn": "Red Dragon",
+      "sourceSlug": "red-dragon",
+      "power": 6,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-1, 1],
+        [0, 2],
+        [1, 1],
+        [2, 0]
+      ],
+      "effectOffsets": [
+        [-2, 0],
+        [-1, 1],
+        [0, 2],
+        [1, 1],
+        [2, 0]
+      ],
+      "pattern5x5": ["..B..", "...B.", "..O.B", "...B.", "..B.."],
+      "abilityTextEn": "When played, lower the power of allied and enemy cards on affected tiles by 4.",
+      "image": "images/red-dragon.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-red-dragon.webp",
+      "imageSha256": "3821255307914eca651b31f7702241131c1eb964a5f9a04466b2f81e828a8bfa",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-127",
+      "originalNumber": 127,
+      "nameEn": "Demon Gate",
+      "sourceNameEn": "Demon Gate",
+      "sourceSlug": "demon-gate",
+      "power": 5,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".B.B.", ".BOB.", ".B.B.", "....."],
+      "abilityTextEn": "When destroyed, lower the power of enemy cards on affected tiles by 9.",
+      "image": "images/demon-gate.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-demon-gate.webp",
+      "imageSha256": "21cb9f00c978ee03b42a22e17a33da21a4a2d822535cb749730a7feef0c2726c",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-128",
+      "originalNumber": 128,
+      "nameEn": "Reno",
+      "sourceNameEn": "Reno",
+      "sourceSlug": "reno",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [1, -1],
+        [2, 0]
+      ],
+      "pattern5x5": [".....", ".....", "..OR.", ".ER..", "..E.."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 2 while this card is in play.",
+      "image": "images/reno.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-reno.webp",
+      "imageSha256": "789b39ab547b994da69e15dee48cecaa6d9352908897dcc093b747d4552a80fc",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-129",
+      "originalNumber": 129,
+      "nameEn": "Rude",
+      "sourceNameEn": "Rude",
+      "sourceSlug": "rude",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [
+        [-2, 0],
+        [-1, -1]
+      ],
+      "pattern5x5": ["..E..", ".ER..", "..OR.", ".....", "....."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 2 while this card is in play.",
+      "image": "images/rude.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-rude.webp",
+      "imageSha256": "ffc7112280e91506714032ff4c7dca2fc9b31dc17cc07a025df4982bbdba0305",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-130",
+      "originalNumber": 130,
+      "nameEn": "Elena",
+      "sourceNameEn": "Elena",
+      "sourceSlug": "elena",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [[0, 1]],
+      "effectOffsets": [[0, 1]],
+      "pattern5x5": [".....", ".....", "..OB.", ".....", "....."],
+      "abilityTextEn": "When first enhanced, lower the power of allied and enemy cards on affected tiles by 99.",
+      "image": "images/elena.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-elena.webp",
+      "imageSha256": "95c572b3e436d108c7f6d09f62a4c3ab2956c290f6769a2e7e5510c7c7e41194",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-131",
+      "originalNumber": 131,
+      "nameEn": "Tseng",
+      "sourceNameEn": "Tseng",
+      "sourceSlug": "tseng",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [[0, 2]],
+      "pattern5x5": [".....", "..R..", "..ORE", "..R..", "....."],
+      "abilityTextEn": "The first time this card in enhanced, raise the power of allied cards on affected tiles by 4.",
+      "image": "images/tseng.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-tseng.webp",
+      "imageSha256": "419b77b08c706b78bd5b332f7afd94b1db19ab9fc2e69b99ea176d75583936dd",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-132",
+      "originalNumber": 132,
+      "nameEn": "Rufus",
+      "sourceNameEn": "Rufus",
+      "sourceSlug": "rufus",
+      "power": 4,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, -1],
+        [-2, 1],
+        [-1, -1],
+        [-1, 1],
+        [1, -1],
+        [1, 1],
+        [2, -1],
+        [2, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".R.R.", ".R.R.", "..O..", ".R.R.", ".R.R."],
+      "abilityTextEn": "Creates an intimidatingly large number of positions around him when played.",
+      "image": "images/rufus.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-rufus.webp",
+      "imageSha256": "c3f124cceb1b835834057a792be46866acbdc5a04e7d453568a4430906071621",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-133",
+      "originalNumber": 133,
+      "nameEn": "Roche",
+      "sourceNameEn": "Roche",
+      "sourceSlug": "roche",
+      "power": 5,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-2, -2],
+        [-2, 0],
+        [-2, 2],
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -2],
+        [0, -1],
+        [0, 1],
+        [0, 2],
+        [1, -1],
+        [1, 0],
+        [1, 1],
+        [2, -2],
+        [2, 0],
+        [2, 2]
+      ],
+      "pattern5x5": ["E.E.E", ".EBE.", "EBOBE", ".EBE.", "E.E.E"],
+      "abilityTextEn": "When played, lower the power of allied cards on affected tiles by 1.",
+      "image": "images/roche.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-roche.webp",
+      "imageSha256": "85156f9f543ba7cb2a7d0a85985cb9cdd220e0557369562473a23da1cb69643b",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-134",
+      "originalNumber": 134,
+      "nameEn": "J-Squad",
+      "sourceNameEn": "J-Squad",
+      "sourceSlug": "j-squad",
+      "power": 2,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..O..", ".....", "....."],
+      "abilityTextEn": "When played, spawn Hype Johnnys--cards that enhance while in play--in your empty positions.",
+      "image": "images/j-squad.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-j-squad.webp",
+      "imageSha256": "7a66aa3b66c10444b4303bfa3619870a691f74dbad10421a47af95eceb408e5f",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-135",
+      "originalNumber": 135,
+      "nameEn": "Chocobo Jockey",
+      "sourceNameEn": "Chocobo Jockey",
+      "sourceSlug": "chocobo-jockey",
+      "power": 2,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [[0, 1]],
+      "effectOffsets": [],
+      "pattern5x5": [".....", ".....", "..OR.", ".....", "....."],
+      "abilityTextEn": "When you win the lane, receive a score bonus of 10.",
+      "image": "images/chocobo-jockey.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-chocobo-jockey.webp",
+      "imageSha256": "b58902223ca4f59611747522cf63182d903708e4e8e3d8bf8ab6f64b3dafc3d2",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-136",
+      "originalNumber": 136,
+      "nameEn": "Space Ranger",
+      "sourceNameEn": "Space Ranger",
+      "sourceSlug": "space-ranger",
+      "power": 2,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 0],
+        [-1, 0],
+        [0, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["..R..", "..R..", "..OR.", ".....", "....."],
+      "abilityTextEn": "Raise power by 1 for each other enhanced enemy card.",
+      "image": "images/space-ranger.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-space-ranger.webp",
+      "imageSha256": "858b3076ea40c49379af88581b84bd73902d58563359fe100f214808977b6987",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-137",
+      "originalNumber": 137,
+      "nameEn": "Haunted Hotel",
+      "sourceNameEn": "Haunted Hotel",
+      "sourceSlug": "haunted-hotel",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, 1],
+        [-1, 2],
+        [1, 1],
+        [1, 2]
+      ],
+      "pattern5x5": [".....", "..REE", "..O..", "..REE", "....."],
+      "abilityTextEn": "Raise the power of allied cards on affected tiles by 2 while this card is in play.",
+      "image": "images/haunted-hotel.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-haunted-hotel.webp",
+      "imageSha256": "677b16f2c6be8bedf6feca1266df593900eca9d28634e62aacdf1b2114fc3be1",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-138",
+      "originalNumber": 138,
+      "nameEn": "Skywheel",
+      "sourceNameEn": "Skywheel",
+      "sourceSlug": "skywheel",
+      "power": 2,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, -1],
+        [-2, 1],
+        [-1, -2],
+        [-1, 2],
+        [1, -2],
+        [1, 2],
+        [2, -1],
+        [2, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".R.R.", "R...R", "..O..", "R...R", ".R.R."],
+      "abilityTextEn": "Adds positions in the shape of a certain Gold Saucer attraction.",
+      "image": "images/skywheel.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-skywheel.webp",
+      "imageSha256": "3cb0eb28417cfeb90ef6f24cb28f1819e998c41f5f209300f5c6043cb03d2c68",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-139",
+      "originalNumber": 139,
+      "nameEn": "Loveless",
+      "sourceNameEn": "Loveless",
+      "sourceSlug": "loveless",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [],
+      "effectOffsets": [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1]
+      ],
+      "pattern5x5": [".....", ".EEE.", ".EOE.", ".EEE.", "....."],
+      "abilityTextEn": "When played, raise the power of allied and enemy cards on affected tiles by 1.",
+      "image": "images/loveless.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-loveless.webp",
+      "imageSha256": "1821f6a622bb33a0c1487c21f469cf57e0b6145dda4c59149e911ba877b85939",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-140",
+      "originalNumber": 140,
+      "nameEn": "Saucer Squad",
+      "sourceNameEn": "Saucer Squad",
+      "sourceSlug": "saucer-squad",
+      "power": 3,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-2, 1],
+        [-1, 0],
+        [0, 1],
+        [1, 0],
+        [2, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": ["...R.", "..R..", "..OR.", "..R..", "...R."],
+      "abilityTextEn": "Make use of its adorable nature to enlive the battlefield.",
+      "image": "images/saucer-squad.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-saucer-squad.webp",
+      "imageSha256": "f0ba8078b69ae8f06a7fbb6506c108a50bb3950b37571871dc6c592763be4a1d",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-141",
+      "originalNumber": 141,
+      "nameEn": "Dio",
+      "sourceNameEn": "Dio",
+      "sourceSlug": "dio",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", ".ROR.", "..R..", "....."],
+      "abilityTextEn": "Raise power by 1 for each other enhanced allied and enemy card.",
+      "image": "images/dio.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-dio.webp",
+      "imageSha256": "3f8815be18deaebb6a91c1e6d24fa7ebdfbc628212a7887eee0ace0bd5e4943b",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-142",
+      "originalNumber": 142,
+      "nameEn": "Ultimate Party Animal",
+      "sourceNameEn": "Ultimate Party Animal",
+      "sourceSlug": "ultimate-party-animal",
+      "power": 1,
+      "rank": 1,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..R..", ".ROR.", "..R..", "....."],
+      "abilityTextEn": "If this card is in play when the round ends, the loser of each lane's score is added to the victor's",
+      "image": "images/ultimate-party-animal.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-ultimate-party-animal.webp",
+      "imageSha256": "94da6babfa82f85426cc1f436517a88799472f2a30964033b8e6d1baf7c9b933",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-143",
+      "originalNumber": 143,
+      "nameEn": "Sephiroth",
+      "sourceNameEn": "Sephiroth",
+      "sourceSlug": "sephiroth",
+      "power": 4,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-1, 0],
+        [1, 0]
+      ],
+      "pattern5x5": [".....", "..B..", ".ROR.", "..B..", "....."],
+      "abilityTextEn": "When played, destroy enemy cards on affected tiles.",
+      "image": "images/sephiroth.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-sephiroth.webp",
+      "imageSha256": "499dba0c60498eead790a6e7455f0a22abb9ff5340a35706d795b4663810767d",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-144",
+      "originalNumber": 144,
+      "nameEn": "Emerald Witch",
+      "sourceNameEn": "Emerald Witch",
+      "sourceSlug": "emerald-witch",
+      "power": 2,
+      "rank": 2,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [0, -1],
+        [0, 1],
+        [1, 0]
+      ],
+      "effectOffsets": [
+        [-2, 0],
+        [-1, -1],
+        [-1, 1],
+        [0, -2],
+        [0, 2],
+        [1, -1],
+        [1, 1],
+        [2, 0]
+      ],
+      "pattern5x5": ["..E..", ".ERE.", "ERORE", ".ERE.", "..E.."],
+      "abilityTextEn": "Raise the power of allied and enemy cards on affected tiles by 2 while this card is in play.",
+      "image": "images/emerald-witch.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-emerald-witch.webp",
+      "imageSha256": "452828a7674689e650c0bfafc8f6d8c086f964b259bdb9aaf036b580ea48005f",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    },
+    {
+      "id": "qb-145",
+      "originalNumber": 145,
+      "nameEn": "Shadowblood Queen",
+      "sourceNameEn": "Shadowblood Queen",
+      "sourceSlug": "shadowblood-queen",
+      "power": 3,
+      "rank": 3,
+      "placementType": "rank",
+      "expansionOffsets": [
+        [-1, 0],
+        [-1, 1],
+        [1, 0],
+        [1, 1]
+      ],
+      "effectOffsets": [],
+      "pattern5x5": [".....", "..RR.", "..O..", "..RR.", "....."],
+      "abilityTextEn": "Raise power by 3 for each other enfeebled allied and enemy card.",
+      "image": "images/shadowblood-queen.webp",
+      "imageUrl": "https://www.queensbloodonline.com/cards/player-shadowblood-queen.webp",
+      "imageSha256": "19ed58f6e20faca912685c756a15651113a2b99c33692f02a7338316a58c6a85",
+      "verification": {
+        "stats": "visually transcribed from source card image",
+        "patterns": "extracted from colored cells in source card image",
+        "ability": "transcribed from rendered source tooltip",
+        "originalNumber": "matched against supplementary original-number reference",
+        "originalMechanics": "not independently verified against FFVII Rebirth"
+      }
+    }
+  ]
+}
