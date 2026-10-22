@@ -1,5 +1,6 @@
 node_modules/
 dist/
+.server-build/
 .env*
 !.env.example
 test-results/

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build:vercel": "npm run build && node infra/scripts/deploy-migrations.mjs",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && npm run build:server",
+    "build:server": "node infra/scripts/build-server.mjs",
     "test": "vitest run",
     "test:e2e": "playwright test",
     "lint:prettier:check": "prettier --check .",

@@ -26,6 +26,8 @@ Adicionar playparadox.com.br no Resend, configurar os registros DNS fornecidos p
 
 ## Build e publicação
 
+`npm run build:server` compila o servidor e o motor TypeScript em `.server-build/handler.mjs` com Vite SSR. O build principal executa essa etapa automaticamente. `api/index.ts` exporta esse handler e `vercel.json` inclui o artefato no pacote da função. A pasta gerada não é versionada; deve ser criada antes do empacotamento na Vercel. Assim, a função publicada não depende de carregar `src/game/*.ts` nem de `tsx` em execução. O teste `infra/server-bundle.test.ts` inicia o artefato isolado dos fontes e verifica saúde e sessão sem autenticação.
+
 O vercel.json usa Vite, saída dist, API em api/index.ts e rewrite de /api/* para a mesma função. O handler é compartilhado com o servidor local; as regras continuam em src/game. O estado durável continua no PostgreSQL. A função não abre uma porta nem depende de memória entre chamadas. O IP é lido do x-forwarded-for sobrescrito pela Vercel apenas no ambiente Vercel; servidores locais usam o endereço do socket.
 
 O comando build:vercel primeiro compila e depois aplica migrations para frente, com transação e advisory lock. Falhas impedem a conclusão do build. Migrations já aplicadas não são revertidas se uma fase posterior do deploy falhar; adicione migrations compatíveis com a versão anterior da aplicação. Reverter um deploy também não reverte o banco. Não há endpoint HTTP para aplicar migrations.
