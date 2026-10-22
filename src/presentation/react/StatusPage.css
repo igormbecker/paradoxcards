@@ -1,0 +1,231 @@
+.system-page {
+  max-width: none;
+  min-height: 100svh;
+  margin: 0;
+  padding: 0 clamp(22px, 5vw, 80px);
+  color: #efe6d2;
+  background:
+    linear-gradient(110deg, #071115e8, #071115ed),
+    url("/assets/backgrounds/forest-camp-portal.png") center / cover;
+  display: flex;
+  flex-direction: column;
+}
+.system-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid #dec18a30;
+  color: #dec18a;
+  font:
+    14px Georgia,
+    serif;
+}
+.system-nav a {
+  color: #dec18a;
+  text-underline-offset: 5px;
+}
+.system-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 50px 0;
+}
+.system-heading {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  border: 0;
+  padding-bottom: 30px;
+}
+.system-heading h1 {
+  font-size: clamp(36px, 4vw, 56px);
+  margin: 0 0 14px;
+}
+.system-heading p {
+  margin: 0;
+  color: #b3c0bc;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.system-heading .system-kicker {
+  margin-bottom: 12px;
+  color: #dec18a;
+  font:
+    16px Georgia,
+    serif;
+}
+.system-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  border: 1px solid #dec18a66;
+  color: #dec18a;
+  background: #dec18a0c;
+}
+.system-badge::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.system-badge.operational {
+  color: #93e3dc;
+  border-color: #93e3dc55;
+  background: #93e3dc0c;
+}
+.system-badge.unavailable {
+  color: #ffb6a5;
+  border-color: #ffb6a566;
+  background: #ffb6a50c;
+}
+.system-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 26px;
+}
+.system-panel {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid #92704499;
+  background: linear-gradient(145deg, #14262bf5, #071115f5);
+  box-shadow: 0 20px 45px #0004;
+}
+.system-panel h2 {
+  font-size: 26px;
+  margin: 0;
+  color: #efd5a0;
+}
+.system-panel-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.system-panel-heading > span {
+  color: #93e3dc;
+  font-size: 12px;
+}
+.system-panel p {
+  color: #b3c0bc;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.system-connection {
+  margin: 14px 0 18px;
+}
+.system-metrics {
+  margin: 0 0 24px;
+}
+.system-metrics > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 0;
+  border-bottom: 1px solid #dec18a22;
+}
+.system-metrics dt {
+  color: #b3c0bc;
+  font-size: 14px;
+}
+.system-metrics dd {
+  margin: 0;
+  color: #efe6d2;
+  overflow-wrap: anywhere;
+}
+.system-capacity > div {
+  display: flex;
+  justify-content: space-between;
+  color: #b3c0bc;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.system-capacity meter {
+  display: block;
+  width: 100%;
+  height: 12px;
+  accent-color: #93e3dc;
+}
+.system-capacity meter::-webkit-meter-bar {
+  background: #071115;
+  border: 1px solid #93e3dc33;
+  border-radius: 0;
+}
+.system-capacity meter::-webkit-meter-optimum-value {
+  background: #93e3dc;
+}
+.system-capacity meter::-moz-meter-bar {
+  background: #93e3dc;
+}
+.system-response pre {
+  margin: 22px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: #b8e1d9;
+  font:
+    13px/1.8 Consolas,
+    monospace;
+}
+.system-error {
+  color: #ffb6a5;
+  background: #ffb6a50a;
+  border-left: 2px solid #ffb6a5;
+  padding: 16px 20px;
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.system-update {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: 26px;
+  color: #b3c0bc;
+  font-size: 13px;
+}
+.system-update p {
+  margin: 0 0 7px;
+}
+.system-update span {
+  color: #95aaa4;
+  font-size: 12px;
+}
+.system-update button {
+  color: #efd5a0;
+  border-color: #92704499;
+  background: #101f24;
+  white-space: nowrap;
+}
+.system-page :is(a, button):focus-visible {
+  outline: 2px solid #93e3dc;
+  outline-offset: 5px;
+}
+.system-footer {
+  border-top: 1px solid #dec18a30;
+  padding: 24px 0;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #b3c0bc;
+}
+@media (max-width: 800px) {
+  .system-content {
+    padding: 34px 0;
+  }
+  .system-grid {
+    grid-template-columns: 1fr;
+  }
+  .system-panel {
+    padding: 24px 20px;
+  }
+  .system-update {
+    flex-direction: column;
+    align-items: start;
+  }
+  .system-nav {
+    font-size: 12px;
+  }
+}

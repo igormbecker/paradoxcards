@@ -17,6 +17,7 @@ import "./style.css";
 import { Landing } from "./presentation/react/Landing";
 const Game = lazy(() => import("./presentation/react/Game"));
 const BoardPreview = lazy(() => import("./presentation/react/BoardPreview"));
+const StatusPage = lazy(() => import("./presentation/react/StatusPage"));
 interface User {
   id: string;
   email: string;
@@ -235,7 +236,11 @@ function App() {
   return <Landing busy={busy} notice={notice} onSignIn={signIn} />;
 }
 createRoot(document.getElementById("root")!).render(
-  new URLSearchParams(location.search).get("preview") === "board" ? (
+  location.pathname.replace(/\/$/, "") === "/status" ? (
+    <Suspense fallback={<main>Consultando o sistema…</main>}>
+      <StatusPage />
+    </Suspense>
+  ) : new URLSearchParams(location.search).get("preview") === "board" ? (
     <Suspense fallback={<main>Preparando a prévia…</main>}>
       <BoardPreview />
     </Suspense>

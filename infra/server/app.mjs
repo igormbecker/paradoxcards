@@ -9,6 +9,7 @@ import {
   clearCookie,
 } from "../auth/service.mjs";
 import { matchOperation } from "./matches.mjs";
+import { systemStatus } from "./status.mjs";
 function cookie(request) {
   return (request.headers.cookie ?? "")
     .split(";")
@@ -51,6 +52,15 @@ export function createApplicationHandler(origins, options = {}) {
         method = request.method;
       if (method === "GET" && path === "/api/health") {
         send(200, { ok: true });
+        return;
+      }
+      if (path === "/api/v1/status") {
+        if (method !== "GET") {
+          response.setHeader("Allow", "GET");
+          fail(405, "METHOD_NOT_ALLOWED", "Método não permitido.");
+        }
+        const status = await systemStatus();
+        send(status.code, status.body);
         return;
       }
       if (!["GET", "POST", "DELETE"].includes(method))

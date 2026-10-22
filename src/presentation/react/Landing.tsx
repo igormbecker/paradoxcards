@@ -141,6 +141,7 @@ export function Landing({
           Desenvolvido por &gt;.Bectec Tecnologia e Desenvolvimento de Softwares
         </span>
         <span className="landing-footer-links">
+          <a href="/status">Status do sistema</a>
           <span>Em desenvolvimento</span>
         </span>
       </footer>

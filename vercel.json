@@ -6,5 +6,8 @@
   "outputDirectory": "dist",
   "regions": ["gru1"],
   "functions": { "api/index.ts": { "maxDuration": 30 } },
-  "rewrites": [{ "source": "/api/:path*", "destination": "/api/index" }]
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/index" },
+    { "source": "/status", "destination": "/index.html" }
+  ]
 }
