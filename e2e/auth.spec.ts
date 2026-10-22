@@ -7,6 +7,9 @@ test("login, transferência entre abas, ação rejeitada na aba antiga e logout"
   await page.getByLabel("E-mail", { exact: true }).fill("player@paradox.test");
   await page.getByLabel("Senha", { exact: true }).fill("Paradox-test-123");
   await page.getByRole("button", { name: "Entrar", exact: true }).click();
+  await expect(
+    page.getByRole("button", { name: "Reiniciar mesa" }),
+  ).toBeVisible();
   const takeover = page.getByRole("button", { name: "Continuar nesta aba" });
   if (await takeover.isVisible()) await takeover.click();
   await expect(

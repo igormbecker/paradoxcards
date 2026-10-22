@@ -14,7 +14,9 @@ import {
   RequestError,
 } from "./application/match-controller";
 import "./style.css";
+import { Landing } from "./presentation/react/Landing";
 const Game = lazy(() => import("./presentation/react/Game"));
+const BoardPreview = lazy(() => import("./presentation/react/BoardPreview"));
 interface User {
   id: string;
   email: string;
@@ -192,7 +194,9 @@ function App() {
       })
       .catch((error) => {
         if (alive && !(error instanceof RequestError && error.status === 401))
-          setNotice("Não foi possível conectar à API. Confira npm run dev.");
+          setNotice(
+            "Não foi possível conectar ao observatório. Tente novamente em instantes.",
+          );
       })
       .finally(() => {
         if (alive) setLoading(false);
@@ -228,40 +232,14 @@ function App() {
       </main>
     );
   if (user) return <SessionView key={user.id} user={user} onExit={exit} />;
-  return (
-    <main className="login">
-      <p className="subtitle">O observatório temporal</p>
-      <h1>Paradox Cards</h1>
-      <h2>Entre para continuar sua partida</h2>
-      <form onSubmit={signIn}>
-        <label htmlFor="email">E-mail</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="username"
-          required
-          maxLength={254}
-        />
-        <label htmlFor="password">Senha</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          autoComplete="current-password"
-          required
-          maxLength={128}
-        />
-        <button disabled={busy} aria-busy={busy}>
-          {busy ? "Entrando…" : "Entrar"}
-        </button>
-      </form>
-      <p role="alert">{notice}</p>
-      <p className="notice">
-        Acesso por conta criada localmente. Sua partida fica salva para você
-        retomar.
-      </p>
-    </main>
-  );
+  return <Landing busy={busy} notice={notice} onSignIn={signIn} />;
 }
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(
+  new URLSearchParams(location.search).get("preview") === "board" ? (
+    <Suspense fallback={<main>Preparando a prévia…</main>}>
+      <BoardPreview />
+    </Suspense>
+  ) : (
+    <App />
+  ),
+);

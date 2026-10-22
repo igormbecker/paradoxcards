@@ -94,7 +94,7 @@ export default function Game({
         <header>
           <div>
             <p className="subtitle">O observatório temporal</p>
-            <h1>Paradox Cards</h1>
+            <h1>Paradox: The Card Game</h1>
           </div>
           <button
             onClick={async () => {
