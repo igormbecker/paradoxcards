@@ -107,6 +107,7 @@ try {
   );
   const login = await request("/session", { email, password });
   assert.equal(login.response.status, 201);
+  assert.equal(login.data.user.username, profile.username);
   const header = login.response.headers.get("set-cookie");
   assert.match(header, /HttpOnly/);
   assert.match(header, /SameSite=Lax/);
@@ -114,6 +115,10 @@ try {
   assert.ok(!("token" in login.data));
   cookie = header.split(";")[0];
   assert.equal((await request("/session")).data.user.email, email);
+  assert.equal(
+    (await request("/session")).data.user.username,
+    profile.username,
+  );
   const stored = (
     await query({
       text: "SELECT * FROM paradox.sessions WHERE user_id=$1",

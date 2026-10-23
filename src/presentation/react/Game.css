@@ -1,0 +1,671 @@
+.session-screen {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #081318;
+}
+.session-screen .account-bar {
+  height: 36px;
+  flex: 0 0 36px;
+  width: 100%;
+  max-width: none;
+  padding: 3px 20px;
+  gap: 16px;
+  background: #081318eb;
+  font-size: 12px;
+}
+.session-screen .account-bar button {
+  padding: 3px 14px;
+}
+.session-screen .auth-notice {
+  margin: 0;
+  font-size: 12px;
+}
+.session-screen .auth-notice:empty {
+  display: none;
+}
+.session-screen .control-notice {
+  margin: 6px auto;
+  padding: 8px 18px;
+  font-size: 12px;
+}
+.session-screen .control-notice h2 {
+  margin: 0;
+  font-size: 18px;
+}
+.session-screen .control-notice p {
+  margin: 4px 0;
+}
+.game-surface {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  color: #e8d7af;
+  background:
+    linear-gradient(#040a1044, #040a1022 50%, #040a1077),
+    url("/assets/board/observatory-environment.png") center / cover;
+  font-family: "Spectral", Georgia, serif;
+  position: relative;
+  padding: 0;
+  border: 0;
+  overflow: clip;
+}
+.game-surface .observatory {
+  max-width: none;
+  min-height: 0;
+  gap: 6px;
+  display: block;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.game-surface .observatory-header {
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  gap: 16px;
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  right: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.game-surface h1 {
+  font:
+    400 28px "IM Fell English SC",
+    Georgia,
+    serif;
+  margin: 0;
+  color: #ead9ad;
+  text-shadow: 0 2px 12px #000;
+  font-size: 28px;
+}
+.game-surface .subtitle {
+  display: none;
+}
+.game-surface .turn-banner {
+  font:
+    400 23px "IM Fell English SC",
+    Georgia,
+    serif;
+  text-align: center;
+  background: #081317ed;
+  border: 1px solid #b99454;
+  padding: 7px 24px;
+  margin: 0;
+  box-shadow: inset 0 0 0 3px #17282a;
+  font-size: 23px;
+}
+.game-surface button {
+  font-family: "IM Fell English SC", Georgia, serif;
+}
+.game-surface .observatory-header button {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.game-surface .opponent-hand {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 0;
+  z-index: 3;
+  position: absolute;
+  top: 45px;
+  right: 100px;
+  margin: 0;
+  padding: 0;
+  width: 950px;
+  height: var(--card-height);
+  container-type: normal;
+  gap: 8px;
+}
+.game-surface .opponent-card {
+  position: absolute;
+  top: 0;
+  flex: 0 0 auto;
+  margin-left: -7px;
+  border: 1px solid #c2a066;
+  border-radius: 4px;
+  background: #10121c url("/assets/board/card-back.png") center / 100% 100%
+    no-repeat;
+  box-shadow: 0 7px 12px #0009;
+  width: var(--card-width);
+  height: var(--card-height);
+  aspect-ratio: auto;
+  margin: 0;
+  transform: rotate(var(--back-tilt, 0deg));
+}
+.game-surface .layout {
+  min-height: 0;
+  min-width: 0;
+  gap: 16px;
+  align-items: center;
+  position: static;
+  display: block;
+  container-type: normal;
+}
+.game-surface .player-identity {
+  min-width: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #c6d8d0;
+  position: absolute;
+  top: 430px;
+  width: 220px;
+  padding: 8px;
+}
+.game-surface .player-right {
+  color: #dfb5a0;
+  right: 20px;
+}
+.game-surface .player-identity strong {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font:
+    400 22px "IM Fell English SC",
+    Georgia,
+    serif;
+  padding: 6px 8px;
+  border: 1px solid #8f7145;
+  background: #0a1d26e8;
+  font-size: 22px;
+}
+.game-surface .player-right strong {
+  background: #2b171ee8;
+}
+.game-surface .player-identity[data-active="true"] strong {
+  border-color: #d9bd83;
+  box-shadow: 0 0 14px #d9bd8333;
+}
+.game-surface .player-identity > span:not(.player-emblem),
+.game-surface .player-identity small {
+  font-size: 11px;
+}
+.game-surface .player-emblem {
+  display: grid;
+  place-items: center;
+  width: min(100%, 104px);
+  aspect-ratio: 1;
+  margin: 0 auto 8px;
+  border: 2px solid #8f7145;
+  border-radius: 50%;
+  background: radial-gradient(circle, #335254, #08151b 70%);
+  box-shadow:
+    inset 0 0 0 5px #10262b,
+    0 10px 20px #0008;
+  color: #a2ede3;
+  font-size: 60px;
+}
+.game-surface .player-right .player-emblem {
+  background: radial-gradient(circle, #5b3234, #180e15 70%);
+  color: #e6b19a;
+}
+.game-surface .table {
+  align-self: center;
+  min-width: 0;
+  border: 3px ridge #9a7c4e;
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg, #36403d22, #08131a11 40%, #1d292622);
+  box-shadow:
+    inset 0 0 0 3px #0b151a,
+    0 7px 0 #5f4c30,
+    0 12px 0 #171715,
+    0 24px 30px #0009;
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  width: calc(var(--board-width) + 96px);
+  padding: 6px;
+  margin: 0;
+  transform: translateX(-50%) perspective(1800px) rotateX(20deg);
+}
+.game-surface .table-heading {
+  display: none;
+}
+.game-surface .board-with-scores {
+  display: grid;
+  grid-template-columns: 40px var(--board-width) 40px;
+  gap: 0;
+}
+.game-surface .canvas {
+  min-width: 0;
+  position: relative;
+  width: var(--board-width);
+  height: var(--board-height);
+  aspect-ratio: auto;
+}
+.game-surface .row-scores {
+  font:
+    22px Georgia,
+    serif;
+  font-size: 22px;
+}
+.game-surface .row-scores span {
+  margin: 0 1px;
+  border: 1px solid #8e754e;
+  background: radial-gradient(circle, #263a38, #0b151b);
+  border-radius: 50%;
+  padding: 4px 0;
+  box-shadow:
+    0 3px 8px #0008,
+    inset 0 0 0 2px #1b2528;
+  color: #a0aca6;
+}
+.game-surface .row-scores.right span {
+  background: radial-gradient(circle, #482a2c, #171118);
+}
+.game-surface .row-scores .winning {
+  color: #d4fff1;
+  border-color: #b8a06e;
+}
+.game-surface .row-scores.right .winning {
+  color: #ffd6b7;
+}
+.game-surface .match-feedback {
+  min-width: 0;
+  text-align: center;
+  text-shadow: 0 1px 3px #000;
+  position: absolute;
+  left: 200px;
+  right: 200px;
+  top: 790px;
+  height: 48px;
+}
+.game-surface .match-feedback p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  min-height: 0;
+  font-size: 14px;
+  line-height: 15px;
+}
+.game-surface .selection-description {
+  color: #ead9ad;
+}
+.game-surface .preview-description {
+  color: #b7e8e0;
+}
+.game-surface .message {
+  color: #bfcbbd;
+}
+.game-surface .preview-description:not(:empty) + .message {
+  display: none;
+}
+.game-surface .hand-actions {
+  min-width: 0;
+  min-height: 0;
+  gap: 16px;
+  align-items: center;
+  position: static;
+  display: block;
+}
+.game-surface .hand {
+  min-width: 0;
+  min-height: 0;
+  flex-wrap: nowrap;
+  overflow: visible;
+  margin: 0;
+  align-items: center;
+  position: absolute;
+  left: 40px;
+  top: 850px;
+  width: 1120px;
+  height: var(--card-height);
+  padding: 0;
+  container-type: normal;
+  gap: 8px;
+  justify-content: flex-start;
+  display: block;
+}
+.game-surface .card {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  padding: 0;
+  gap: 0;
+  border: 1px solid #b8985b;
+  border-radius: 4px;
+  background: linear-gradient(155deg, var(--team-light), var(--team-dark) 80%);
+  box-shadow:
+    inset 0 0 0 2px #131d20,
+    0 8px 14px #000a;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+  width: var(--card-width);
+  height: var(--card-height);
+  aspect-ratio: auto;
+  transform: none;
+}
+.game-surface .card:hover:not(:disabled) {
+  transform: translateY(-4px);
+  filter: brightness(1.12);
+}
+.game-surface .card[aria-pressed="true"] {
+  transform: translateY(-8px);
+  border-color: #93e3dc;
+  background: linear-gradient(145deg, var(--team-light), var(--team-dark) 75%);
+  box-shadow:
+    inset 0 0 0 2px var(--team-dark),
+    0 0 14px #62cec977,
+    0 10px 18px #000a;
+}
+.game-surface .card.marked {
+  border-color: #e2b29c;
+  box-shadow: 0 0 0 2px #e2b29c;
+}
+.game-surface .card.marked::after {
+  position: absolute;
+  inset: auto 0 2px;
+  font-size: 10px;
+  background: #081318e8;
+}
+.game-surface .card-art {
+  display: block;
+  width: 100%;
+  background-image: url("/assets/board/card-cutouts.png");
+  background-size: 400% 200%;
+  background-repeat: no-repeat;
+}
+.game-surface .card > .card-art {
+  position: absolute;
+  inset: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+.game-surface .card strong {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  width: auto;
+  height: 20%;
+  display: grid;
+  place-items: center;
+  padding: 1px;
+  font:
+    400 14px "IM Fell English SC",
+    Georgia,
+    serif;
+  color: #ead9ad;
+  background: var(--team-shade);
+  line-height: 1;
+  overflow: hidden;
+  font-size: 14px;
+}
+.game-surface .card-meta {
+  position: absolute;
+  z-index: 1;
+  left: 8px;
+  right: 8px;
+  top: 8px;
+  width: auto;
+  font-size: 12px;
+  color: #f6dfaa;
+  text-shadow: 0 1px 4px #000;
+  background: transparent;
+  border-radius: 3px;
+}
+.game-surface .card-meta b {
+  border: 1px solid #c5a36b;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  font:
+    18px Georgia,
+    serif;
+  background: var(--team-dark);
+}
+.game-surface .pattern {
+  position: absolute;
+  left: 50%;
+  bottom: 23%;
+  transform: translateX(-50%);
+  grid-template-columns: repeat(3, 5px);
+  gap: 2px;
+  padding: 2px;
+  margin: 0;
+  background: var(--team-dark);
+  border: 1px solid #8f714566;
+}
+.game-surface .pattern i {
+  height: 5px;
+}
+.game-surface .card small {
+  display: none;
+}
+.game-surface .match-actions {
+  min-width: 0;
+  text-align: center;
+  padding: 8px;
+  position: absolute;
+  right: 20px;
+  top: 875px;
+  width: 230px;
+}
+.game-surface .match-actions button {
+  width: 100%;
+  padding: 12px 8px;
+  background: linear-gradient(#4f3d21, #211a10);
+  border-color: #c4a165;
+  color: #f2e0b7;
+  font-size: 16px;
+}
+.game-surface .match-actions p {
+  font-size: 11px;
+  line-height: 1.3;
+  margin: 4px 0;
+}
+.game-surface .opening {
+  padding: 0;
+}
+.game-surface .match-result h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+.game-surface .notice {
+  padding: 4px 0 0;
+  border: 0;
+}
+.game-surface footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0;
+  font-size: 9px;
+  color: #bdc1ad;
+  text-shadow: 0 1px 3px #000;
+  line-height: 14px;
+  white-space: nowrap;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 1px;
+}
+.game-surface .match-counts {
+  display: flex;
+  gap: 12px;
+}
+.game-surface .match-counts p {
+  margin: 0;
+}
+.game-surface button:focus-visible {
+  outline: 2px solid #93e3dc;
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .game-surface .card {
+    transition: none;
+  }
+}
+
+.game-surface .hand[data-side="0"] {
+  --team-light: #45305f;
+  --team-dark: #180d2a;
+  --team-shade: #29133fd9;
+}
+.game-surface .hand[data-side="1"] {
+  --team-light: #692634;
+  --team-dark: #270910;
+  --team-shade: #45121fd9;
+}
+.game-surface .card-rank {
+  padding: 2px 3px;
+  color: #ffe6ac;
+  filter: drop-shadow(0 1px 1px #000);
+  background: linear-gradient(135deg, var(--team-dark), var(--team-shade));
+  border-radius: 3px;
+}
+.game-surface .phaser-mount,
+.game-surface .board-targets {
+  position: absolute;
+  inset: 0;
+}
+.game-surface .board-targets {
+  z-index: 2;
+}
+.game-surface .phaser-mount canvas {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
+.game-surface .board-target {
+  position: absolute;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+}
+.game-surface .board-target:hover:not(:disabled),
+.game-surface .board-target:disabled {
+  background: transparent;
+  opacity: 1;
+}
+.game-surface .board-target:focus-visible {
+  outline: 2px solid #93e3dc;
+  outline-offset: -2px;
+}
+
+/* Geometry is expressed in logical table units. Only table-stage scales. */
+.table-stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+}
+.game-surface .player-left {
+  left: 20px;
+}
+.table-stage[data-portrait="true"] .observatory-header {
+  height: 90px;
+  flex-wrap: wrap;
+}
+.table-stage[data-portrait="true"] .opponent-hand {
+  top: 130px;
+  right: 30px;
+  width: 740px;
+}
+.table-stage[data-portrait="true"] .table {
+  top: 375px;
+}
+.table-stage[data-portrait="true"] .player-identity {
+  top: 295px;
+  width: 320px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.table-stage[data-portrait="true"] .player-emblem {
+  width: 54px;
+  margin: 0;
+  font-size: 30px;
+}
+.table-stage[data-portrait="true"] .player-identity strong {
+  width: 230px;
+}
+.table-stage[data-portrait="true"] .player-identity small,
+.table-stage[data-portrait="true"] .player-identity > span:not(.player-emblem) {
+  display: none;
+}
+.table-stage[data-portrait="true"] .match-feedback {
+  top: 950px;
+  left: 20px;
+  right: 20px;
+}
+.table-stage[data-portrait="true"] .hand {
+  top: 1010px;
+  left: 20px;
+  width: 760px;
+  height: 350px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+}
+.table-stage[data-portrait="true"] .match-actions {
+  top: 1380px;
+  right: 20px;
+  width: 350px;
+}
+.table-stage[data-portrait="true"] footer {
+  font-size: 14px;
+}
+.game-surface .card[data-reference="true"] {
+  border: 0;
+  background: transparent;
+  box-shadow: 0 6px 14px #0009;
+}
+.game-surface .card[data-reference="true"] > .card-art {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.game-surface .card[data-reference="true"] .card-meta,
+.game-surface .card[data-reference="true"] .pattern {
+  display: none;
+}
+.game-surface .card[data-reference="true"] strong {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+.game-surface .card[data-reference="true"][aria-pressed="true"] {
+  outline: 2px solid #93e3dc;
+  outline-offset: 2px;
+}
+.game-surface .hand .card {
+  position: absolute;
+  left: var(--card-x);
+  top: var(--card-y);
+}
+.game-surface .hand .card:hover,
+.game-surface .hand .card[aria-pressed="true"] {
+  z-index: 2;
+}
+.game-surface .ability-description {
+  color: #c8d9cf;
+}

@@ -3,7 +3,7 @@ import type { Card } from "./placement";
 export const cards: readonly Card[] = [
   {
     id: "wanderer",
-    name: "Viajante das eras",
+    name: "Era Wanderer",
     rank: 1,
     power: 2,
     reach: [
@@ -14,14 +14,14 @@ export const cards: readonly Card[] = [
   },
   {
     id: "sentinel",
-    name: "Sentinela de bronze",
+    name: "Bronze Sentinel",
     rank: 1,
     power: 3,
     reach: [[0, 1]],
   },
   {
     id: "archivist",
-    name: "Guardião do arquivo",
+    name: "Archive Guardian",
     rank: 2,
     power: 5,
     reach: [

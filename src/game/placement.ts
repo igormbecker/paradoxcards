@@ -1,3 +1,5 @@
+import type { Ability } from "./abilities";
+import { affectedIndices, resolveEffects } from "./effects";
 export type Player = 0 | 1;
 export interface Card {
   readonly id: string;
@@ -5,6 +7,14 @@ export interface Card {
   readonly rank: number;
   readonly power: number;
   readonly reach: readonly (readonly [number, number])[];
+  readonly effectOffsets?: readonly (readonly [number, number])[];
+  readonly placementType?: "rank" | "replacement";
+  readonly abilityText?: string;
+  readonly ability?: Ability;
+  readonly image?: string;
+  readonly basePower?: number;
+  readonly modifier?: number;
+  readonly triggered?: readonly string[];
 }
 export interface Cell {
   owner: Player | null;
@@ -15,13 +25,15 @@ export interface State {
   board: Cell[];
 }
 export interface GameEvent {
-  type: "card-placed" | "territory-changed";
+  type:
+    "card-placed" | "territory-changed" | "card-destroyed" | "power-changed";
   index: number;
 }
 export interface Result {
   ok: boolean;
   state: State;
   events: GameEvent[];
+  generated?: [Card[], Card[]];
 }
 export function createState(): State {
   return {
@@ -45,8 +57,9 @@ export function canPlace(
     index < 15 &&
     !!cell &&
     cell.owner === player &&
-    cell.unit === null &&
-    cell.rank >= card.rank
+    (card.placementType === "replacement"
+      ? cell.unit !== null
+      : cell.unit === null && cell.rank >= card.rank)
   );
 }
 export function placeCard(
@@ -57,26 +70,38 @@ export function placeCard(
 ): Result {
   if (!canPlace(state, player, card, index))
     return { ok: false, state, events: [] };
-  const board = state.board.map((cell) => ({ ...cell }));
-  board[index].unit = card;
+  const board = state.board.map((cell) => ({
+    ...cell,
+    unit: cell.unit ? { ...cell.unit } : null,
+  }));
+  const replaced = board[index].unit;
+  board[index].unit = card.ability
+    ? {
+        ...card,
+        basePower: card.basePower ?? card.power,
+        modifier: card.modifier ?? 0,
+        triggered: [],
+      }
+    : card;
   const events: GameEvent[] = [{ type: "card-placed", index }];
-  const row = Math.floor(index / 5),
-    col = index % 5;
-  for (const [dr, dc] of card.reach) {
-    const r = row + dr,
-      c = col + dc * (player === 0 ? 1 : -1);
-    if (r < 0 || r >= 3 || c < 0 || c >= 5) continue;
-    const target = r * 5 + c,
-      cell = board[target];
+  for (const target of affectedIndices(card.reach, index, player)) {
+    const cell = board[target];
     if (cell.unit) continue;
     cell.rank =
       cell.owner === player
-        ? Math.min(3, cell.rank + 1)
+        ? Math.min(
+            3,
+            cell.rank +
+              (card.ability?.kind === "rank" ? card.ability.amount! : 1),
+          )
         : cell.owner === null
-          ? 1
+          ? card.ability?.kind === "rank"
+            ? Math.min(3, card.ability.amount!)
+            : 1
           : cell.rank;
     cell.owner = player;
     events.push({ type: "territory-changed", index: target });
   }
-  return { ok: true, state: { board }, events };
+  const generated = resolveEffects(board, index, player, replaced, events);
+  return { ok: true, state: { board }, events, generated };
 }

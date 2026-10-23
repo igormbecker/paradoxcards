@@ -121,14 +121,18 @@ export async function login(email, password, address) {
       ],
     })
   ).rows[0];
-  return { token, session, user: { id: user.id, email: user.email } };
+  return {
+    token,
+    session,
+    user: { id: user.id, email: user.email, username: user.username },
+  };
 }
 export async function authenticate(token, touch = false) {
   if (typeof token !== "string" || !/^[a-f0-9]{96}$/.test(token))
     fail(401, "UNAUTHENTICATED", "Entre na sua conta para continuar.");
   let session = (
     await query({
-      text: "SELECT s.*,u.email FROM paradox.sessions s JOIN paradox.users u ON u.id=s.user_id WHERE token_hash=$1 AND expires_at>now() AND absolute_expires_at>now()",
+      text: "SELECT s.*,u.email,u.username FROM paradox.sessions s JOIN paradox.users u ON u.id=s.user_id WHERE token_hash=$1 AND expires_at>now() AND absolute_expires_at>now()",
       values: [digest(token)],
     })
   ).rows[0];

@@ -103,9 +103,16 @@ test("reference composition keeps the login over a full-height scene at narrow w
     const panel = await page.locator(".login").boundingBox();
     expect(panel!.y).toBeLessThan(550);
     expect(panel!.width).toBeGreaterThan(width - 100);
-    const stage = await page.locator(".stage").boundingBox();
-    const scene = await page.getByTestId("forest-scene").boundingBox();
-    expect(Math.abs(stage!.height - scene!.height)).toBeLessThan(2);
+    // Read both bounds in one browser frame: fonts may change layout between requests.
+    const heightDifference = await page.evaluate(() =>
+      Math.abs(
+        document.querySelector(".stage")!.getBoundingClientRect().height -
+          document
+            .querySelector('[data-testid="forest-scene"]')!
+            .getBoundingClientRect().height,
+      ),
+    );
+    expect(heightDifference).toBeLessThan(2);
     await expect(page.locator(".scene")).toHaveAttribute(
       "viewBox",
       "230 0 660 900",

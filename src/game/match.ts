@@ -1,4 +1,4 @@
-import { cards } from "./cards";
+import { referenceCards } from "./reference-cards";
 import {
   canPlace,
   createState,
@@ -28,16 +28,6 @@ interface MatchResult {
   state: MatchState;
   events: GameEvent[];
 }
-// Baralho de teste: oito identidades provisórias, no máximo duas cópias por identidade.
-const extras: Card[] = [
-  "Cronista de pedra",
-  "Vigia do portal",
-  "Eco ancestral",
-  "Andarilho de névoa",
-  "Relógio vivo",
-].map((name, i) => ({ ...cards[i % 2], id: `fixture-${i}`, name }));
-const catalog = [...cards, ...extras];
-const demoDeck = [...catalog, ...catalog.slice(0, 7)];
 function shuffle(
   deck: readonly Card[],
   seed: number,
@@ -52,8 +42,30 @@ function shuffle(
   return { deck: result, seed: next };
 }
 export function createMatch(seed = 1): MatchState {
-  const a = shuffle(demoDeck, seed),
-    b = shuffle(demoDeck, a.seed);
+  // All collectible cards are eligible. Keep enough rank-one cards to open a match.
+  const deck = (random: number) => {
+    const pool = shuffle(referenceCards, random);
+    const starters = pool.deck.filter((c) => c.rank === 1).slice(0, 7);
+    const others = pool.deck.filter((c) => !starters.includes(c)).slice(0, 8);
+    const shuffled = shuffle([...starters, ...others], pool.seed);
+    for (let index = 0; index < 2; index++) {
+      if (
+        shuffled.deck.slice(0, 5).filter((card) => card.rank === 1).length >= 2
+      )
+        break;
+      const from = shuffled.deck.findIndex(
+        (card, i) => i >= 5 && card.rank === 1,
+      );
+      const to = shuffled.deck.findIndex((card, i) => i < 5 && card.rank !== 1);
+      [shuffled.deck[from], shuffled.deck[to]] = [
+        shuffled.deck[to],
+        shuffled.deck[from],
+      ];
+    }
+    return shuffled;
+  };
+  const a = deck(seed),
+    b = deck(a.seed);
   return {
     ...createState(),
     hands: [a.deck.slice(0, 5), b.deck.slice(0, 5)],
@@ -139,7 +151,7 @@ function finish(state: MatchState): MatchState {
   return { ...state, phase: "ended", result: { ...points, winner } };
 }
 function finishIfExhausted(state: MatchState): MatchState {
-  // Válido para o catálogo atual, sem substituições nem efeitos fora da colocação.
+  // Replacement cards can still be played on a full board.
   const possible = ([0, 1] as const).some((player) =>
     [...state.hands[player], ...state.decks[player]].some((card) =>
       state.board.some((_, index) => canPlace(state, player, card, index)),
@@ -169,6 +181,8 @@ export function playFromHand(
   );
   const hands: [Card[], Card[]] = [[...state.hands[0]], [...state.hands[1]]];
   hands[player].splice(handIndex, 1);
+  hands[0].push(...(placed.generated?.[0] ?? []));
+  hands[1].push(...(placed.generated?.[1] ?? []));
   return {
     ok: true,
     state: finishIfExhausted(
@@ -202,9 +216,24 @@ export function score(state: State): {
       rows[Math.floor(i / 5)][cell.owner] += cell.unit.power;
   });
   const total: [number, number] = [0, 0];
-  for (const row of rows) {
-    if (row[0] > row[1]) total[0] += row[0];
-    if (row[1] > row[0]) total[1] += row[1];
+  const party = state.board.some(
+    (cell) => cell.unit?.ability?.kind === "party",
+  );
+  for (const [index, row] of rows.entries()) {
+    if (row[0] === row[1]) continue;
+    const winner = row[0] > row[1] ? 0 : 1;
+    const bonus = state.board
+      .slice(index * 5, index * 5 + 5)
+      .reduce(
+        (sum, cell) =>
+          sum +
+          (cell.owner === winner && cell.unit?.ability?.kind === "bonus"
+            ? cell.unit.ability.amount!
+            : 0),
+        0,
+      );
+    total[winner] +=
+      row[winner] + bonus + (party ? row[winner === 0 ? 1 : 0] : 0);
   }
   return { rows, total };
 }
