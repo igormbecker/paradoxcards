@@ -117,7 +117,11 @@ export function createApplicationHandler(origins, options = {}) {
         (path === "/api/v1/session/activity" && method === "POST")
       ) {
         send(200, {
-          user: { id: session.user_id, email: session.email },
+          user: {
+            id: session.user_id,
+            email: session.email,
+            username: session.username,
+          },
           expiresAt: session.expires_at,
           absoluteExpiresAt: session.absolute_expires_at,
         });

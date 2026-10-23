@@ -1,7 +1,14 @@
 import { placeCard, type Card, type Player, type State } from "./placement";
 export interface PreviewChange {
   index: number;
-  kind: "placement" | "capture" | "rank" | "claim";
+  kind:
+    | "placement"
+    | "capture"
+    | "rank"
+    | "claim"
+    | "power"
+    | "destruction"
+    | "spawn";
 }
 export interface PlacementPreview {
   state: State;
@@ -19,6 +26,12 @@ export function previewPlacement(
   result.state.board.forEach((after, i) => {
     const before = state.board[i];
     if (i === index) changes.push({ index: i, kind: "placement" });
+    else if (before.unit && !after.unit)
+      changes.push({ index: i, kind: "destruction" });
+    else if (!before.unit && after.unit)
+      changes.push({ index: i, kind: "spawn" });
+    else if (before.unit?.power !== after.unit?.power)
+      changes.push({ index: i, kind: "power" });
     else if (before.owner !== after.owner)
       changes.push({
         index: i,

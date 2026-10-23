@@ -21,6 +21,7 @@ const StatusPage = lazy(() => import("./presentation/react/StatusPage"));
 interface User {
   id: string;
   email: string;
+  username: string;
 }
 function SessionView({
   user,
@@ -123,9 +124,9 @@ function SessionView({
     };
   }, [claim, controller, failed]);
   return (
-    <>
+    <div className="session-screen">
       <nav className="account-bar" aria-label="Conta">
-        <span>{user.email}</span>
+        <span>{user.username}</span>
         <button
           disabled={busy}
           onClick={async () => {
@@ -162,6 +163,7 @@ function SessionView({
       {ready ? (
         <Suspense fallback={<main>Preparando a mesa…</main>}>
           <Game
+            username={user.username}
             remote={controller}
             enabled={controlled && !busy}
             revision={revision}
@@ -175,7 +177,7 @@ function SessionView({
           )}
         </main>
       )}
-    </>
+    </div>
   );
 }
 function App() {

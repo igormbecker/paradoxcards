@@ -1,5 +1,7 @@
 # Autenticação e controle de partida
 
+As respostas de login, consulta e atividade de sessão incluem `user: { id, email, username }`. O username vem de `paradox.users`, inclusive ao recarregar uma sessão existente; não é inferido do e-mail. No treino, uma conta controla os dois lados, por isso o mesmo username aparece com os rótulos Viajantes e Guardiões.
+
 Datas de sessão, expiração e reserva usam timestamptz e conexões em UTC. O padrão e a comparação com o Trama estão em [database-dates.md](database-dates.md).
 
 Decisão: e-mail/senha com bcryptjs e pepper; cookie HttpOnly com token opaco, armazenado como hash no banco. Inatividade de 24h, limite absoluto de 7 dias e renovação limitada a 15 minutos. Heartbeats não contam como atividade. Sem manter conectado nesta etapa.
